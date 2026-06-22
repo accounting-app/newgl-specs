@@ -1,0 +1,99 @@
+Account name,Account type,Detail type
+Cash,Bank,Cash on hand
+CHASE CHECKING 3623,Bank,Checking
+CHASE COLLEGE CASH 2751,Bank,Checking
+CHASE SAVINGS 7250,Bank,Savings
+CHASE SECURE CASH 1745,Bank,Checking
+Coinbase Cash,Bank,Cash on hand
+Inventory Asset,Other Current Assets,Inventory
+Prepaid Expenses,Other Current Assets,Prepaid Expenses
+Uncategorized Asset,Other Current Assets,Other Current Assets
+Uncategorized Asset ( 205 ),Other Current Assets,Other Current Assets
+Undeposited Funds,Other Current Assets,Undeposited Funds
+CHASE CREDIT 2525,Credit Card,Credit Card
+CHASE CREDIT 9416,Credit Card,Credit Card
+CHASE PRIME,Credit Card,Credit Card
+Payroll Tax Liabilities,Other Current Liabilities,Payroll Tax Payable
+Payroll Tax Liabilities:Federal Withholding,Other Current Liabilities,Payroll Tax Payable
+Payroll Tax Liabilities:Medicare,Other Current Liabilities,Payroll Tax Payable
+Payroll Tax Liabilities:Social Security,Other Current Liabilities,Federal Income Tax Payable
+Opening Balance Equity,Equity,Opening Balance Equity
+Retained Earnings,Equity,Retained Earnings
+Shareholder Contribution,Equity,Owner's Equity
+Billable Expense Income,Income,Service/Fee Income
+Billable Expense Income-1,Income,Service/Fee Income
+Coding Services,Income,Service/Fee Income
+Coding Services:By David Castillo,Income,Service/Fee Income
+Coding Services:By Hector M Garcia,Income,Service/Fee Income
+Fees Billed,Income,Service/Fee Income
+Refunds-Allowances,Income,Discounts/Refunds Given
+Sales of Product Income,Income,Sales of Product Income
+Services,Income,Service/Fee Income
+Uncategorized Income,Income,Service/Fee Income
+Uncategorized Income ( 201 ),Income,Service/Fee Income
+Admin Contractor,Cost of Goods Sold,Cost of labor - COS
+Coding Contractor,Cost of Goods Sold,Cost of labor - COS
+Cost of Goods Sold,Cost of Goods Sold,Supplies & Materials - COGS
+Design Contractor,Cost of Goods Sold,Cost of labor - COS
+Officer Wages,Cost of Goods Sold,Cost of labor - COS
+Research & Development,Cost of Goods Sold,Cost of labor - COS
+Accounting Fees,Expenses,Legal & Professional Fees
+Advertising,Expenses,Advertising/Promotional
+Bank Charges,Expenses,Bank Charges
+Commissions & fees,Expenses,Other Miscellaneous Service Cost
+Dues & Subscriptions,Expenses,Dues & subscriptions
+Insurance,Expenses,Insurance
+Legal & Professional Fees,Expenses,Legal & Professional Fees
+Meals,Expenses,Other Business Expenses
+Meals:Meals with clients,Expenses,Advertising/Promotional
+Meals and Entertainment,Expenses,Entertainment Meals
+Medical Expenses,Expenses,Other Business Expenses
+Medical Expenses:Bloodwork visit,Expenses,Legal & Professional Fees
+Medical Expenses:Dentist visit,Expenses,Other Business Expenses
+Medical Expenses:ENT visit,Expenses,Legal & Professional Fees
+Medical Expenses:Equipment,Expenses,Equipment Rental
+Medical Expenses:ER visit,Expenses,Legal & Professional Fees
+Medical Expenses:Neurologist visit,Expenses,Other Business Expenses
+Medical Expenses:Physician visit,Expenses,Other Business Expenses
+Medical Expenses:Prescription drugs,Expenses,Other Business Expenses
+Medical Expenses:Radiology visit,Expenses,Other Business Expenses
+Medical Expenses:Therapist visit,Expenses,Legal & Professional Fees
+Office Expenses,Expenses,Office/General Administrative Expenses
+Office Expenses:Cleaning,Expenses,Advertising/Promotional
+Office Expenses:Office Supplies,Expenses,Other Business Expenses
+Office Expenses:Shipping,Expenses,"Shipping, Freight & Delivery"
+Office Expenses:Software & Apps,Expenses,Other Business Expenses
+Owner's Compensation,Expenses,Payroll Expenses
+Payroll Tax Expenses,Expenses,Payroll Tax Expenses
+Payroll Tax Expenses:Florida Department of Revenue,Expenses,Payroll Tax Expenses
+Payroll Tax Expenses:FUTA,Expenses,Taxes Paid
+Payroll Tax Expenses:Medicare,Expenses,Payroll Tax Expenses
+Payroll Tax Expenses:Social Security,Expenses,Payroll Tax Expenses
+Promotional,Expenses,Advertising/Promotional
+Rent or Lease,Expenses,Rent or Lease of Buildings
+Repair & Maintenance,Expenses,Repair & Maintenance
+Stationery & Printing,Expenses,Office/General Administrative Expenses
+Storage,Expenses,Other Business Expenses
+Supplies,Expenses,Supplies & Materials
+Taxes & Licenses,Expenses,Taxes Paid
+Travel,Expenses,Travel
+Travel:Airfare,Expenses,Advertising/Promotional
+Travel:Car Rental,Expenses,Advertising/Promotional
+Travel:Gas,Expenses,Travel
+Travel:Hotels,Expenses,Travel
+Travel:Taxis/Shared rides,Expenses,Advertising/Promotional
+Travel:Tolls & Parking,Expenses,Other Business Expenses
+Travel:Train/Buses,Expenses,Other Business Expenses
+Travel Meals,Expenses,Travel Meals
+Uncategorized Expense,Expenses,Other Miscellaneous Service Cost
+Uncategorized Expense ( 203 ),Expenses,Other Miscellaneous Service Cost
+Utilities,Expenses,Utilities
+Utilities:Electricity,Expenses,Other Business Expenses
+Utilities:Gas,Expenses,Advertising/Promotional
+Utilities:Internet,Expenses,Advertising/Promotional
+Utilities:Phone,Expenses,Other Business Expenses
+Interest Earned,Other Income,Interest Earned
+Other Portfolio Income,Other Income,Other Miscellaneous Income
+Miscellaneous,Other Expense,Other Miscellaneous Expense
+Penalties & Settlements,Other Expense,Penalties & Settlements
+Reconciliation Discrepancies,Other Expense,Other Miscellaneous Expense

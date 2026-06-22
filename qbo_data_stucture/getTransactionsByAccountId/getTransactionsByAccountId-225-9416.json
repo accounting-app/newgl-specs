@@ -1,0 +1,3461 @@
+// ENDPOINT: GET https://qbo.intuit.com/api/neo/v1/company/9341454233117488/olb/ng/getTransactions?accountId=225&sort=-txnDate&reviewState=PENDING&ignoreMatching=false
+// PAYLOAD: {}
+
+export const response = {
+    "totalTransactionsCount": 56,
+    "items": [
+        {
+            "id": "6405:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-06-02T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 180.88,
+            "openBalance": 180.88,
+            "olbTxnId": "6405",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 66,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1692,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": true,
+            "fitxnId": "202606031646536260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:7372a084-5fd9-11f1-bb37-aeb4ea9d295d"
+        },
+        {
+            "id": "6404:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-06-02T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 6.27,
+            "openBalance": 6.27,
+            "olbTxnId": "6404",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "199",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the company.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "199"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 54,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1692,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202606031646546260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:7372a085-5fd9-11f1-bb37-aeb4ea9d295d"
+        },
+        {
+            "id": "6403:ofx",
+            "origDescription": "KEY FOOD 1570",
+            "olbTxnDate": "2026-06-01T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -36.63,
+            "openBalance": -36.63,
+            "olbTxnId": "6403",
+            "description": "Key Food",
+            "addAsQboTxn": {
+                "nameId": "191",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 34.51 for KEY FOOD 1570  on 05/17/2026, categorized as Shareholder Contribution\n2. Paid 24.34 for KEY FOOD 1570  on 05/10/2026, categorized as Shareholder Contribution\n3. Paid 14.71 for KEY FOOD 1570  on 05/09/2026, categorized as Shareholder Contribution\n4. Paid 20.14 for KEY FOOD 1570  on 05/06/2026, categorized as Shareholder Contribution\n5. Paid 50.40 for KEY FOOD 1570  on 05/03/2026, categorized as Shareholder Contribution\n6. Paid 81.35 for KEY FOOD 1570  on 04/26/2026, categorized as Shareholder Contribution\n7. Paid 31.93 for KEY FOOD 1570  on 04/11/2026, categorized as Shareholder Contribution\n8. Paid 35.39 for KEY FOOD 1570  on 04/06/2026, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Key Food is a supermarket chain headquartered in the United States, offering a wide variety of grocery items including fresh produce, meat, dairy, and household goods. They serve local communities and emphasize quality and affordability.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "191"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 85,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1692,
+            "catMerchantId": 4084,
+            "merchantName": "Key Food",
+            "automatedPayeeId": 191,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "http://www.keyfood.com",
+            "processSetPayee": "ES_Matched_Entity",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202606031508327260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:7372a082-5fd9-11f1-bb37-aeb4ea9d295d"
+        },
+        {
+            "id": "6402:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-06-01T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 209.76,
+            "openBalance": 209.76,
+            "olbTxnId": "6402",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 66,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1692,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": true,
+            "fitxnId": "202606022018499260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:7372a081-5fd9-11f1-bb37-aeb4ea9d295d"
+        },
+        {
+            "id": "6401:ofx",
+            "origDescription": "SQ *BLUE COLLAR",
+            "olbTxnDate": "2026-06-01T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -19.86,
+            "openBalance": -19.86,
+            "olbTxnId": "6401",
+            "description": "Blue Collar",
+            "addAsQboTxn": {
+                "nameId": "200",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "226",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Meals:Meals with clients.\n1. Paid 31.28 for SQ *BLUE COLLAR  on 05/05/2026, categorized as Meals with clients\n2. Paid 26.92 for SQ *BLUE COLLAR  on 05/05/2026, categorized as Meals with clients\n3. Paid 24.48 for SQ *BLUE COLLAR  on 04/30/2026, categorized as Meals with clients\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Blue Collar specializes in providing a range of services focused on manual labor sectors, catering to various industries that require skilled labor. Their dedicated staff is trained in diverse areas, ensuring high-quality service.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "226"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "200"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 30,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1692,
+            "catMerchantId": 0,
+            "merchantName": "Blue Collar",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202606031508337260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:7372a083-5fd9-11f1-bb37-aeb4ea9d295d"
+        },
+        {
+            "id": "6377:ofx",
+            "origDescription": "AMAZON PRIME*2G2EV7VX3",
+            "olbTxnDate": "2026-05-30T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -5.62,
+            "openBalance": -5.62,
+            "olbTxnId": "6377",
+            "description": "Amazon",
+            "addAsQboTxn": {
+                "nameId": "57",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 5.62 for AMAZON PRIME*BJ1R691G1  on 04/30/2026, categorized as Shareholder Contribution\n2. Paid 15.16 for AMAZON PRIME*0J2J557X3  on 04/22/2026, categorized as Shareholder Contribution\n3. Paid 15.16 for AMAZON PRIME*CC05B2UF3  on 03/22/2026, categorized as Shareholder Contribution\n4. Paid 15.16 for AMAZON PRIME*N21K31AV3  on 02/22/2026, categorized as Shareholder Contribution\n5. Paid 15.16 for AMAZON PRIME*VA7X90O83  on 01/22/2026, categorized as Shareholder Contribution\n6. Paid 15.12 for AMAZON PRIME*ZS0YU5Q63  on 12/22/2025, categorized as Shareholder Contribution\n7. Paid 15.12 for AMAZON PRIME*NU9BV3KI1  on 10/22/2025, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Amazon.com, Inc. is a multinational technology company based in Seattle, Washington, which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It is one of the Big Five companies in the U.S. information technology industry, along with Google, Apple, Microsoft, and Facebook. Amazon Prime is a subscription service that offers users various benefits including free shipping and access to streaming video and music services.",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "MULTIPLE_CATEGORIES_USED",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "57"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "211",
+            "categoryConfidenceScore": 73,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1689,
+            "catMerchantId": 7218,
+            "merchantName": "Amazon Prime",
+            "automatedPayeeId": 57,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "www.amazon.com",
+            "processSetPayee": "ES_Matched_Entity",
+            "scheduleCId": "10016",
+            "complexTransaction": false,
+            "fitxnId": "202606011452134260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:5a0c2197-5e38-11f1-9d71-aa226a9ccd61"
+        },
+        {
+            "id": "6376:ofx",
+            "origDescription": "HAAGEN-DAZS & CINNABON KO",
+            "olbTxnDate": "2026-05-30T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -13.25,
+            "openBalance": -13.25,
+            "olbTxnId": "6376",
+            "description": "Haagen Dazs",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "Uncategorized",
+            "payeeSource": "QBAA_AI_ENGINE_SUGGESTION",
+            "payeeAcceptanceConfidence": "MEDIUM",
+            "payeeAcceptanceConfidenceReason": "SUGGESTED_PAYEE",
+            "categoryAlternativeIds": [
+                "1150040019",
+                "226",
+                "184",
+                "214",
+                "233"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 46,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1689,
+            "catMerchantId": 10146,
+            "merchantName": "HAAGEN-DAZS & CINNABON KO",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "merchantNameMl": "HAAGEN-DAZS & CINNABON KO",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202606011452144260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:5a0c2198-5e38-11f1-9d71-aa226a9ccd61"
+        },
+        {
+            "id": "6375:ofx",
+            "origDescription": "SQ *BANG COOKIES - CITY P",
+            "olbTxnDate": "2026-05-29T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -14.29,
+            "openBalance": -14.29,
+            "olbTxnId": "6375",
+            "description": "Bang",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "Uncategorized",
+            "payeeSource": "QBAA_AI_ENGINE_SUGGESTION",
+            "payeeAcceptanceConfidence": "MEDIUM",
+            "payeeAcceptanceConfidenceReason": "SUGGESTED_PAYEE",
+            "categoryAlternativeIds": [
+                "226",
+                "1150040019",
+                "214",
+                "233",
+                "188"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "226",
+            "categoryConfidenceScore": 57,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1689,
+            "catMerchantId": 1029220590,
+            "merchantName": "Bang Cookies",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "merchantNameMl": "Bang Cookies",
+            "scheduleCId": "10304",
+            "complexTransaction": false,
+            "fitxnId": "202605311800463260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:5a0c2195-5e38-11f1-9d71-aa226a9ccd61"
+        },
+        {
+            "id": "6374:ofx",
+            "origDescription": "PRIMARK CITY POINT FULTON",
+            "olbTxnDate": "2026-05-29T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -27,
+            "openBalance": -27,
+            "olbTxnId": "6374",
+            "description": "Primark City Point",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 41.54 for PRIMARK FLORIDA MALL 128  on 09/05/2025, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_SUGGESTION",
+            "payeeExplanation": "Primark is a British multinational retailer known for its affordable fashion apparel and accessories. They operate large stores in many locations worldwide, offering a wide range of clothing, footwear, and home goods targeted at the budget-conscious consumer.",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "SIMILAR_VENDORS_AND_TRANSACTIONS",
+            "payeeAcceptanceConfidence": "MEDIUM",
+            "payeeAcceptanceConfidenceReason": "SUGGESTED_PAYEE",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 25,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1689,
+            "catMerchantId": 0,
+            "merchantName": "Primark",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "merchantNameMl": "Primark",
+            "payeeWebsite": "www.primark.com",
+            "scheduleCId": "11606",
+            "complexTransaction": false,
+            "fitxnId": "202606011452124260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:5a0c2196-5e38-11f1-9d71-aa226a9ccd61"
+        },
+        {
+            "id": "6373:ofx",
+            "origDescription": "UBER *EATS",
+            "olbTxnDate": "2026-05-28T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -58.82,
+            "openBalance": -58.82,
+            "olbTxnId": "6373",
+            "description": "Uber Eats",
+            "addAsQboTxn": {
+                "nameId": "114",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 28.24 for UBER *EATS  on 05/15/2026, categorized as Shareholder Contribution\n2. Paid 22.63 for UBER *EATS  on 05/15/2026, categorized as Shareholder Contribution\n3. Paid 23.88 for UBER *EATS  on 05/14/2026, categorized as Shareholder Contribution\n4. Paid 69.44 for UBER *EATS  on 05/12/2026, categorized as Shareholder Contribution\n5. Paid 72.92 for UBER *EATS  on 05/08/2026, categorized as Shareholder Contribution\n6. Paid 9.50 for UBER *EATS  on 05/07/2026, categorized as Shareholder Contribution\n7. Paid 26.90 for UBER *EATS  on 05/06/2026, categorized as Shareholder Contribution\n8. Paid 43.99 for UBER *EATS  on 04/21/2026, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Uber Eats is a food delivery app that allows users to order food from nearby restaurants and have it delivered to their doorstep. It operates in multiple cities around the world, providing a diverse range of culinary choices.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "CATEGORY_PATTERN_FOUND",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "114"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 55,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1689,
+            "catMerchantId": 13416,
+            "merchantName": "Uber Eats",
+            "automatedPayeeId": 114,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "https://www.ubereats.com",
+            "processSetPayee": "ES_Matched_Entity",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605311800443260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:5a0c2193-5e38-11f1-9d71-aa226a9ccd61"
+        },
+        {
+            "id": "6372:ofx",
+            "origDescription": "DUMBO MARKET #2634",
+            "olbTxnDate": "2026-05-28T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -26.85,
+            "openBalance": -26.85,
+            "olbTxnId": "6372",
+            "description": "Dumbo Market",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 3.47 for 365 Market J 888 XXX-3299  on 03/18/2026, categorized as Shareholder Contribution\n2. Paid 9.63 for 365 Market J 888 XXX-3299  on 03/18/2026, categorized as Shareholder Contribution\n3. Paid 11.74 for 365 Market J 888 XXX-3299  on 02/02/2026, categorized as Shareholder Contribution\n4. Paid 6.16 for 365 Market J 888 XXX-3299  on 02/02/2026, categorized as Shareholder Contribution\n5. Paid 3.47 for 365 Market J 888 XXX-3299  on 02/02/2026, categorized as Shareholder Contribution\n6. Paid 9.15 for 365 Market J 888 XXX-3299  on 01/30/2026, categorized as Shareholder Contribution\n7. Paid 17.65 for DUMBO MARKET #2634  on 12/16/2025, categorized as Shareholder Contribution\n8. Paid 14.98 for WM SUPERCENTER #2091  on 07/02/2025, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_SUGGESTION",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "SIMILAR_VENDORS_AND_TRANSACTIONS",
+            "payeeAcceptanceConfidence": "MEDIUM",
+            "payeeAcceptanceConfidenceReason": "SUGGESTED_PAYEE",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 72,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1689,
+            "catMerchantId": 0,
+            "merchantName": "Dumbo Market",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "merchantNameMl": "Dumbo Market",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605311800433260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:5a0c2192-5e38-11f1-9d71-aa226a9ccd61"
+        },
+        {
+            "id": "6371:ofx",
+            "origDescription": "TRADER JOE S #558",
+            "olbTxnDate": "2026-05-27T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -29.08,
+            "openBalance": -29.08,
+            "olbTxnId": "6371",
+            "description": "Trader Joe's",
+            "addAsQboTxn": {
+                "nameId": "140",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 24.12 for TRADER JOE S #558  on 05/14/2026, categorized as Shareholder Contribution\n2. Paid 24.41 for TRADER JOE S #558  on 05/09/2026, categorized as Shareholder Contribution\n3. Paid 32.03 for TRADER JOE S #558  on 05/07/2026, categorized as Shareholder Contribution\n4. Paid 13.86 for TRADER JOE S #558  on 05/06/2026, categorized as Shareholder Contribution\n5. Paid 24.01 for TRADER JOE S #558  on 05/06/2026, categorized as Shareholder Contribution\n6. Paid 44.77 for TRADER JOE S #558  on 05/05/2026, categorized as Shareholder Contribution\n7. Paid 25.31 for TRADER JOE S #558  on 05/01/2026, categorized as Shareholder Contribution\n8. Paid 19.78 for TRADER JOE S #558  on 04/30/2026, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Trader Joe's is a popular grocery store known for its unique and high-quality food products, many of which are organic or have distinct flavors and offerings not found in conventional supermarkets. It operates a retail chain across the United States, attracting a loyal customer base with its focus on customer service and affordable pricing.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "140"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 98,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1689,
+            "catMerchantId": 4153,
+            "merchantName": "Trader Joe's",
+            "automatedPayeeId": 140,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "www.traderjoes.com",
+            "processSetPayee": "ES_Matched_Entity",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605311800453260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:5a0c2194-5e38-11f1-9d71-aa226a9ccd61"
+        },
+        {
+            "id": "6359:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-05-26T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 66.45,
+            "openBalance": 66.45,
+            "olbTxnId": "6359",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 52,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1683,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202605281540605260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:d92fe1b9-5b93-11f1-9ca9-e620cee7bb47"
+        },
+        {
+            "id": "6358:ofx",
+            "origDescription": "Netflix",
+            "olbTxnDate": "2026-05-25T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -22.53,
+            "openBalance": -22.53,
+            "olbTxnId": "6358",
+            "description": "Netflix",
+            "addAsQboTxn": {
+                "nameId": "164",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 22.53 for Netflix.com  on 04/26/2026, categorized as Shareholder Contribution\n2. Paid 20.28 for Netflix.com  on 03/26/2026, categorized as Shareholder Contribution\n3. Paid 20.28 for NETFLIX, INC.  on 02/26/2026, categorized as Shareholder Contribution\n4. Paid 20.28 for Netflix  on 01/26/2026, categorized as Shareholder Contribution\n5. Paid 20.28 for NETFLIX.COM  on 12/26/2025, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Netflix is a subscription-based streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more. Users can watch content on various devices without commercials.",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "MULTIPLE_CATEGORIES_USED",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "164"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 94,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1683,
+            "catMerchantId": 7280,
+            "merchantName": "Netflix",
+            "automatedPayeeId": 164,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "www.netflix.com",
+            "processSetPayee": "ES_Matched_Entity",
+            "scheduleCId": "10702",
+            "complexTransaction": false,
+            "fitxnId": "202605281402548260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:d92fe1b8-5b93-11f1-9ca9-e620cee7bb47"
+        },
+        {
+            "id": "6349:ofx",
+            "origDescription": "SQ *BLUE COLLAR",
+            "olbTxnDate": "2026-05-25T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -25.5,
+            "openBalance": -25.5,
+            "olbTxnId": "6349",
+            "description": "Blue Collar",
+            "addAsQboTxn": {
+                "nameId": "200",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "226",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Meals:Meals with clients.\n1. Paid 31.28 for SQ *BLUE COLLAR  on 05/05/2026, categorized as Meals with clients\n2. Paid 26.92 for SQ *BLUE COLLAR  on 05/05/2026, categorized as Meals with clients\n3. Paid 24.48 for SQ *BLUE COLLAR  on 04/30/2026, categorized as Meals with clients\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "\"Blue Collar\" typically refers to industries or jobs that involve manual labor or skilled trades. It represents a sector that is essential for various services, including maintenance, construction, and other physical tasks requiring hands-on work.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "226"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "200"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 30,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1681,
+            "catMerchantId": 0,
+            "merchantName": "Blue Collar",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605271419376260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:07ecf443-5ac6-11f1-8332-92a1152a8783"
+        },
+        {
+            "id": "6348:ofx",
+            "origDescription": "FINI PIZZA BROOKLYN HTS",
+            "olbTxnDate": "2026-05-24T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -12.93,
+            "openBalance": -12.93,
+            "olbTxnId": "6348",
+            "description": "Fini Pizza Hts",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 5.67 for FINI PIZZA BROOKLYN HTS  on 05/01/2026, categorized as Shareholder Contribution\n2. Paid 5.67 for FINI PIZZA BROOKLYN HTS  on 04/11/2026, categorized as Shareholder Contribution\n3. Paid 15.31 for FINI PIZZA BROOKLYN HTS  on 03/25/2026, categorized as Shareholder Contribution\n4. Paid 5.45 for FINI PIZZA BROOKLYN HTS  on 03/25/2026, categorized as Shareholder Contribution\n5. Paid 15.15 for JFK BROOKLYN DELI XXX1416  on 01/14/2026, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_SUGGESTION",
+            "payeeExplanation": "Fini Pizza is a pizza restaurant located in Brooklyn Heights, New York, known for its delicious pizza offerings, including various toppings and styles.",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "SIMILAR_VENDORS_AND_TRANSACTIONS",
+            "payeeAcceptanceConfidence": "MEDIUM",
+            "payeeAcceptanceConfidenceReason": "SUGGESTED_PAYEE",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "226",
+            "categoryConfidenceScore": 76,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1681,
+            "catMerchantId": 0,
+            "merchantName": "Fini Pizza",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "merchantNameMl": "Fini Pizza",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605271419366260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:07ecf442-5ac6-11f1-8332-92a1152a8783"
+        },
+        {
+            "id": "6332:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-05-24T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 23.83,
+            "openBalance": 23.83,
+            "olbTxnId": "6332",
+            "description": "Payment Thank You - Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 52,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1677,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202605251531083260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:3f45b7a2-592d-11f1-98e3-1a0201b10e14"
+        },
+        {
+            "id": "6331:ofx",
+            "origDescription": "SQ *VAN LEEUWEN ICE CREAM",
+            "olbTxnDate": "2026-05-23T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -23.03,
+            "openBalance": -23.03,
+            "olbTxnId": "6331",
+            "description": "VAN LEEUWEN ICE CREAM",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 10.32 for SQ *BOSA DONUTS TEMPE  on 10/04/2025, categorized as Shareholder Contribution\n2. Paid 23.39 for SQ *VAN LEEUWEN ICE CREAM  on 05/26/2025, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_SUGGESTION",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "CATEGORY_PATTERN_FOUND",
+            "payeeAcceptanceConfidence": "MEDIUM",
+            "payeeAcceptanceConfidenceReason": "SUGGESTED_PAYEE",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "226",
+            "categoryConfidenceScore": 71,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1677,
+            "catMerchantId": 0,
+            "merchantName": "Van Leeuwen Ice Cream",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "merchantNameMl": "Van Leeuwen Ice Cream",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605251324307260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:3f45b7a0-592d-11f1-98e3-1a0201b10e14"
+        },
+        {
+            "id": "6327:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-05-23T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 1419.2,
+            "openBalance": 1419.2,
+            "olbTxnId": "6327",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "199",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the company.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "199"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 67,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1674,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": true,
+            "fitxnId": "202605242018515260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:606a8516-5869-11f1-a33a-fe7e4121d5ba"
+        },
+        {
+            "id": "6330:ofx",
+            "origDescription": "SQ *SWALLOW CAFE ATLANTIC",
+            "olbTxnDate": "2026-05-23T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -6.53,
+            "openBalance": -6.53,
+            "olbTxnId": "6330",
+            "description": "Swallow",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "226",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Meals with clients.\n1. Paid 26.14 for SQ *SWALLOW CAFE ATLANTIC  on 03/22/2026, categorized as Meals with clients\n",
+            "payeeSource": "QBAA_AI_ENGINE_SUGGESTION",
+            "payeeExplanation": "A café providing various food and beverage options, focused on a casual dining experience.",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "SIMILAR_VENDORS_AND_TRANSACTIONS",
+            "payeeAcceptanceConfidence": "MEDIUM",
+            "payeeAcceptanceConfidenceReason": "SUGGESTED_PAYEE",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "226",
+                "1150040019"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "226",
+            "categoryConfidenceScore": 31,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1677,
+            "catMerchantId": 1059405568,
+            "merchantName": "Swallow Cafe",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "merchantNameMl": "Swallow Cafe",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605251324287260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:3f45b79e-592d-11f1-98e3-1a0201b10e14"
+        },
+        {
+            "id": "6340:ofx",
+            "origDescription": "TRADER JOE S #558",
+            "olbTxnDate": "2026-05-23T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -42.76,
+            "openBalance": -42.76,
+            "olbTxnId": "6340",
+            "description": "Trader Joe's",
+            "addAsQboTxn": {
+                "nameId": "140",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 24.12 for TRADER JOE S #558  on 05/14/2026, categorized as Shareholder Contribution\n2. Paid 24.41 for TRADER JOE S #558  on 05/09/2026, categorized as Shareholder Contribution\n3. Paid 32.03 for TRADER JOE S #558  on 05/07/2026, categorized as Shareholder Contribution\n4. Paid 13.86 for TRADER JOE S #558  on 05/06/2026, categorized as Shareholder Contribution\n5. Paid 24.01 for TRADER JOE S #558  on 05/06/2026, categorized as Shareholder Contribution\n6. Paid 44.77 for TRADER JOE S #558  on 05/05/2026, categorized as Shareholder Contribution\n7. Paid 25.31 for TRADER JOE S #558  on 05/01/2026, categorized as Shareholder Contribution\n8. Paid 19.78 for TRADER JOE S #558  on 04/30/2026, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Trader Joe's is a popular American grocery store chain known for its unique selection of food and beverages, including organic and gourmet products. It emphasizes high quality at low prices and has a strong focus on customer experience.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "140"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 98,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1679,
+            "catMerchantId": 4153,
+            "merchantName": "Trader Joe's",
+            "automatedPayeeId": 140,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "https://www.traderjoes.com",
+            "processSetPayee": "ES_Matched_Entity",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605261417365260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:6d066e04-59fa-11f1-a10f-d22d1b0fdabf"
+        },
+        {
+            "id": "6329:ofx",
+            "origDescription": "UNION MARKET - COURT S",
+            "olbTxnDate": "2026-05-22T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -3.26,
+            "openBalance": -3.26,
+            "olbTxnId": "6329",
+            "description": "UNION MARKET - COURT S",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "Uncategorized",
+            "payeeSource": "QBAA_AI_ENGINE_SUGGESTION",
+            "payeeAcceptanceConfidence": "MEDIUM",
+            "payeeAcceptanceConfidenceReason": "SUGGESTED_PAYEE",
+            "categoryAlternativeIds": [
+                "1150040019",
+                "226",
+                "214",
+                "224",
+                "223"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 50,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1677,
+            "catMerchantId": 0,
+            "merchantName": "Union Market",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "merchantNameMl": "Union Market",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605251324317260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:3f45b7a1-592d-11f1-98e3-1a0201b10e14"
+        },
+        {
+            "id": "6328:ofx",
+            "origDescription": "PY *THE CHOCOLATE ROOM",
+            "olbTxnDate": "2026-05-22T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -5.94,
+            "openBalance": -5.94,
+            "olbTxnId": "6328",
+            "description": "PY *THE CHOCOLATE ROOM",
+            "addAsQboTxn": {
+                "nameId": "206",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 29.78 for PY *THE CHOCOLATE ROOM  on 05/09/2026, categorized as Shareholder Contribution\n2. Paid 5.94 for PY *THE CHOCOLATE ROOM  on 05/04/2026, categorized as Shareholder Contribution\n3. Paid 10.29 for PY *THE CHOCOLATE ROOM  on 07/27/2025, categorized as Shareholder Contribution\n4. Paid 13.31 for PY *THE CHOCOLATE ROOM  on 02/09/2025, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "The Chocolate Room is a café known for its rich variety of chocolate desserts and cozy atmosphere. They offer a selection of gourmet chocolates, cakes, and hot beverages, appealing to chocolate lovers.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "206"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "226",
+            "categoryConfidenceScore": 56,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1677,
+            "catMerchantId": 0,
+            "merchantName": "The Chocolate Room",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "www.thechocolateroombk.com",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605251324297260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:3f45b79f-592d-11f1-98e3-1a0201b10e14"
+        },
+        {
+            "id": "6326:ofx",
+            "origDescription": "AMAZON PRIME*E67SH6U93",
+            "olbTxnDate": "2026-05-21T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -15.16,
+            "openBalance": -15.16,
+            "olbTxnId": "6326",
+            "description": "Amazon",
+            "addAsQboTxn": {
+                "nameId": "57",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 5.62 for AMAZON PRIME*BJ1R691G1  on 04/30/2026, categorized as Shareholder Contribution\n2. Paid 15.16 for AMAZON PRIME*0J2J557X3  on 04/22/2026, categorized as Shareholder Contribution\n3. Paid 15.16 for AMAZON PRIME*N21K31AV3  on 02/22/2026, categorized as Shareholder Contribution\n4. Paid 15.12 for AMAZON PRIME*ZS0YU5Q63  on 12/22/2025, categorized as Shareholder Contribution\n5. Paid 15.12 for AMAZON PRIME*K41U55X33  on 11/22/2025, categorized as Shareholder Contribution\n6. Paid 15.12 for AMAZON PRIME*NU9BV3KI1  on 10/22/2025, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Amazon is a multinational technology company, best known for its e-commerce platform, as well as services like Amazon Prime.",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "MULTIPLE_CATEGORIES_USED",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019",
+                "211"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "57"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "211",
+            "categoryConfidenceScore": 70,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1674,
+            "catMerchantId": 7218,
+            "merchantName": "Amazon Prime",
+            "automatedPayeeId": 57,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "www.amazon.com",
+            "processSetPayee": "ES_Matched_Entity",
+            "scheduleCId": "10016",
+            "complexTransaction": false,
+            "fitxnId": "202605241800217260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:606a8513-5869-11f1-a33a-fe7e4121d5ba"
+        },
+        {
+            "id": "6325:ofx",
+            "origDescription": "SQ *BLUE COLLAR",
+            "olbTxnDate": "2026-05-21T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -25.5,
+            "openBalance": -25.5,
+            "olbTxnId": "6325",
+            "description": "Blue Collar",
+            "addAsQboTxn": {
+                "nameId": "200",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "226",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Meals:Meals with clients.\n1. Paid 31.28 for SQ *BLUE COLLAR  on 05/05/2026, categorized as Meals with clients\n2. Paid 26.92 for SQ *BLUE COLLAR  on 05/05/2026, categorized as Meals with clients\n3. Paid 24.48 for SQ *BLUE COLLAR  on 04/30/2026, categorized as Meals with clients\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Blue Collar is a term often used to describe individuals who work in manual labor or skilled trades. The term signifies a workforce that typically performs physical work and is often associated with industries such as construction, manufacturing, and maintenance.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "226"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "200"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 52,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1674,
+            "catMerchantId": 0,
+            "merchantName": "Blue Collar",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605241800227260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:606a8514-5869-11f1-a33a-fe7e4121d5ba"
+        },
+        {
+            "id": "6313:ofx",
+            "origDescription": "KEY FOOD 1570",
+            "olbTxnDate": "2026-05-20T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -23.3,
+            "openBalance": -23.3,
+            "olbTxnId": "6313",
+            "description": "Key Food",
+            "addAsQboTxn": {
+                "nameId": "191",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 34.51 for KEY FOOD 1570  on 05/17/2026, categorized as Shareholder Contribution\n2. Paid 24.34 for KEY FOOD 1570  on 05/10/2026, categorized as Shareholder Contribution\n3. Paid 14.71 for KEY FOOD 1570  on 05/09/2026, categorized as Shareholder Contribution\n4. Paid 20.14 for KEY FOOD 1570  on 05/06/2026, categorized as Shareholder Contribution\n5. Paid 50.40 for KEY FOOD 1570  on 05/03/2026, categorized as Shareholder Contribution\n6. Paid 81.35 for KEY FOOD 1570  on 04/26/2026, categorized as Shareholder Contribution\n7. Paid 31.93 for KEY FOOD 1570  on 04/11/2026, categorized as Shareholder Contribution\n8. Paid 35.39 for KEY FOOD 1570  on 04/06/2026, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Key Food is a supermarket chain in the United States offering a variety of groceries, fresh produce, meat, and other household goods. They are well-known for serving local communities with affordable products.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "191"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 83,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1668,
+            "catMerchantId": 4084,
+            "merchantName": "Key Food",
+            "automatedPayeeId": 191,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "http://www.keyfood.com",
+            "processSetPayee": "ES_Matched_Entity",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605221438118260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:a6cc337e-56d1-11f1-90ae-3e12be574d54"
+        },
+        {
+            "id": "6324:ofx",
+            "origDescription": "TRADER JOE S #558",
+            "olbTxnDate": "2026-05-20T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -32.16,
+            "openBalance": -32.16,
+            "olbTxnId": "6324",
+            "description": "Trader Joe's",
+            "addAsQboTxn": {
+                "nameId": "140",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 24.12 for TRADER JOE S #558  on 05/14/2026, categorized as Shareholder Contribution\n2. Paid 24.41 for TRADER JOE S #558  on 05/09/2026, categorized as Shareholder Contribution\n3. Paid 32.03 for TRADER JOE S #558  on 05/07/2026, categorized as Shareholder Contribution\n4. Paid 13.86 for TRADER JOE S #558  on 05/06/2026, categorized as Shareholder Contribution\n5. Paid 24.01 for TRADER JOE S #558  on 05/06/2026, categorized as Shareholder Contribution\n6. Paid 44.77 for TRADER JOE S #558  on 05/05/2026, categorized as Shareholder Contribution\n7. Paid 25.31 for TRADER JOE S #558  on 05/01/2026, categorized as Shareholder Contribution\n8. Paid 19.78 for TRADER JOE S #558  on 04/30/2026, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Trader Joe's is a well-known American grocery store chain specializing in unique and organic products. They pride themselves on offering high-quality items at affordable prices, with an emphasis on customer service and a fun shopping experience.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "140"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 98,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1674,
+            "catMerchantId": 4153,
+            "merchantName": "Trader Joe's",
+            "automatedPayeeId": 140,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "www.traderjoes.com",
+            "processSetPayee": "ES_Matched_Entity",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605241800237260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:606a8515-5869-11f1-a33a-fe7e4121d5ba"
+        },
+        {
+            "id": "6312:ofx",
+            "origDescription": "STARBUCKS STORE X1807",
+            "olbTxnDate": "2026-05-19T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -5.45,
+            "openBalance": -5.45,
+            "olbTxnId": "6312",
+            "description": "Starbucks",
+            "addAsQboTxn": {
+                "nameId": "86",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 4.97 for STARBUCKS STORE X1807  on 03/20/2026, categorized as Shareholder Contribution\n2. Paid 4.97 for STARBUCKS STORE X1807  on 03/19/2026, categorized as Shareholder Contribution\n3. Paid 5.30 for STARBUCKS STORE X1807  on 02/03/2026, categorized as Shareholder Contribution\n4. Paid 17.93 for STARBUCKS STORE X1807  on 01/26/2026, categorized as Shareholder Contribution\n5. Paid 5.30 for STARBUCKS STORE X1807  on 01/23/2026, categorized as Shareholder Contribution\n6. Paid 4.97 for STARBUCKS STORE X1807  on 01/21/2026, categorized as Shareholder Contribution\n7. Paid 11.13 for STARBUCKS STORE X1807  on 01/21/2026, categorized as Shareholder Contribution\n8. Paid 5.30 for STARBUCKS STORE X7393  on 01/21/2026, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Starbucks is a global coffeehouse chain known for its specialty coffee drinks, teas, pastries, and light savory items. The company operates thousands of coffee shops worldwide and is a prominent brand associated with coffee culture.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "86"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "226",
+            "categoryConfidenceScore": 54,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1668,
+            "catMerchantId": 4002,
+            "merchantName": "Starbucks",
+            "automatedPayeeId": 86,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "https://www.starbucks.com",
+            "processSetPayee": "ES_Matched_Entity",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605221438128260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:a6cc337f-56d1-11f1-90ae-3e12be574d54"
+        },
+        {
+            "id": "6304:ofx",
+            "origDescription": "SQ *BLUE COLLAR",
+            "olbTxnDate": "2026-05-19T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -25.5,
+            "openBalance": -25.5,
+            "olbTxnId": "6304",
+            "description": "Blue Collar",
+            "addAsQboTxn": {
+                "nameId": "200",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "226",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Meals:Meals with clients.\n1. Paid 31.28 for SQ *BLUE COLLAR  on 05/05/2026, categorized as Meals with clients\n2. Paid 26.92 for SQ *BLUE COLLAR  on 05/05/2026, categorized as Meals with clients\n3. Paid 24.48 for SQ *BLUE COLLAR  on 04/30/2026, categorized as Meals with clients\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "A term often referring to manual labor or skilled trades, potentially providing services or products for this workforce.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "226"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "200"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 30,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1666,
+            "catMerchantId": 0,
+            "merchantName": "Blue Collar",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605211457524260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:42584ddd-5603-11f1-828b-72c6b9e7c352"
+        },
+        {
+            "id": "6303:ofx",
+            "origDescription": "TRADER JOE S #558",
+            "olbTxnDate": "2026-05-18T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -25.09,
+            "openBalance": -25.09,
+            "olbTxnId": "6303",
+            "description": "Trader Joe's",
+            "addAsQboTxn": {
+                "nameId": "140",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 24.12 for TRADER JOE S #558  on 05/14/2026, categorized as Shareholder Contribution\n2. Paid 24.41 for TRADER JOE S #558  on 05/09/2026, categorized as Shareholder Contribution\n3. Paid 32.03 for TRADER JOE S #558  on 05/07/2026, categorized as Shareholder Contribution\n4. Paid 13.86 for TRADER JOE S #558  on 05/06/2026, categorized as Shareholder Contribution\n5. Paid 24.01 for TRADER JOE S #558  on 05/06/2026, categorized as Shareholder Contribution\n6. Paid 44.77 for TRADER JOE S #558  on 05/05/2026, categorized as Shareholder Contribution\n7. Paid 25.31 for TRADER JOE S #558  on 05/01/2026, categorized as Shareholder Contribution\n8. Paid 19.78 for TRADER JOE S #558  on 04/30/2026, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "Trader Joe's is a popular grocery store chain known for its unique, high-quality food products and affordable prices. They focus on providing a wide range of organic and specialty items, including fresh produce, snacks, and prepared meals. The store has a distinctive atmosphere and often features products that are not available in conventional grocery stores.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "140"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "1150040019",
+            "categoryConfidenceScore": 98,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1666,
+            "catMerchantId": 4153,
+            "merchantName": "Trader Joe's",
+            "automatedPayeeId": 140,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "payeeWebsite": "https://www.traderjoes.com",
+            "processSetPayee": "ES_Matched_Entity",
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605211457514260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:42584ddc-5603-11f1-828b-72c6b9e7c352"
+        },
+        {
+            "id": "6302:ofx",
+            "origDescription": "PY *THE CHOCOLATE ROOM",
+            "olbTxnDate": "2026-05-17T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -5.94,
+            "openBalance": -5.94,
+            "olbTxnId": "6302",
+            "description": "Py Chocolate Room",
+            "addAsQboTxn": {
+                "nameId": "206",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 29.78 for PY *THE CHOCOLATE ROOM  on 05/09/2026, categorized as Shareholder Contribution\n2. Paid 5.94 for PY *THE CHOCOLATE ROOM  on 05/04/2026, categorized as Shareholder Contribution\n3. Paid 10.29 for PY *THE CHOCOLATE ROOM  on 07/27/2025, categorized as Shareholder Contribution\n4. Paid 13.31 for PY *THE CHOCOLATE ROOM  on 02/09/2025, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "A dessert establishment specializing in chocolate-based sweets and treats.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "206"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "226",
+            "categoryConfidenceScore": 58,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1665,
+            "catMerchantId": 0,
+            "merchantName": "The Chocolate Room",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605201439073260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:185be7ee-5535-11f1-b4ee-2e11c6282a82"
+        },
+        {
+            "id": "6287:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-05-17T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 112,
+            "openBalance": 112,
+            "olbTxnId": "6287",
+            "description": "Payment Thank You - Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 66,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1658,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": true,
+            "fitxnId": "202605181634212260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:89dc4f95-5397-11f1-8b66-2675c15f4d24"
+        },
+        {
+            "id": "6293:ofx",
+            "origDescription": "TST* MAMAN - COBBLE HILL",
+            "olbTxnDate": "2026-05-16T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -9.17,
+            "openBalance": -9.17,
+            "olbTxnId": "6293",
+            "description": "Tst Maman Cobble",
+            "addAsQboTxn": {
+                "nameId": "201",
+                "nameTypeFdmName": "Vendor",
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Paid 5.24 for TST* MAMAN - COBBLE HILL  on 05/14/2026, categorized as Shareholder Contribution\n2. Paid 5.24 for TST* MAMAN - COBBLE HILL  on 05/10/2026, categorized as Shareholder Contribution\n3. Paid 5.89 for TST* MAMAN - COBBLE HILL  on 05/04/2026, categorized as Shareholder Contribution\n4. Paid 5.24 for TST* MAMAN - COBBLE HILL  on 04/30/2026, categorized as Shareholder Contribution\n5. Paid 5.24 for TST* MAMAN - COBBLE HILL  on 04/30/2026, categorized as Shareholder Contribution\n6. Paid 5.24 for TST* MAMAN - COBBLE HILL  on 04/29/2026, categorized as Shareholder Contribution\n7. Paid 5.24 for TST* MAMAN - COBBLE HILL  on 04/29/2026, categorized as Shareholder Contribution\n8. Paid 5.24 for TST* MAMAN - COBBLE HILL  on 04/28/2026, categorized as Shareholder Contribution\n",
+            "payeeSource": "QBAA_AI_ENGINE_MATCH",
+            "payeeExplanation": "TST Maman appears to be a restaurant located in Cobble Hill.",
+            "categoryAcceptanceConfidence": "HIGH",
+            "categoryAcceptanceConfidenceReason": "ALWAYS_USED_FOR_VENDOR",
+            "payeeAcceptanceConfidence": "HIGH",
+            "payeeAcceptanceConfidenceReason": "PAYEE_IN_LIST",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "trackingInfo": {
+                "initialPayeeId": "201"
+            },
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "226",
+            "categoryConfidenceScore": 52,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1663,
+            "catMerchantId": 0,
+            "merchantName": "Maman",
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "10701",
+            "complexTransaction": false,
+            "fitxnId": "202605191420299260505#20260505",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:4bdb3d6c-5467-11f1-a4de-0e8ec4eff1d6"
+        },
+        {
+            "id": "6189:ofx",
+            "origDescription": "PURCHASE INTEREST CHARGE",
+            "olbTxnDate": "2026-05-02T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -74.47,
+            "openBalance": -74.47,
+            "olbTxnId": "6189",
+            "description": "Interest Charge",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "196",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Interest Earned.\n1. Received 0.01 for INTEREST PAYMENT  on 12/31/2025, categorized as Interest Earned\n",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "SIMILAR_TRANSACTIONS_FOUND",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "196"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "179",
+            "categoryConfidenceScore": 64,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1611,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "10602",
+            "complexTransaction": false,
+            "fitxnId": "202605042337505260405#20260405",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:7ce477b3-48c9-11f1-99f3-9207261b7758"
+        },
+        {
+            "id": "6148:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-04-28T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 54.13,
+            "openBalance": 54.13,
+            "olbTxnId": "6148",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "199",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by MILY Labs Inc.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "199"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 52,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1596,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202604291634179260405#20260405",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:7f2a5d0c-44b8-11f1-a906-3eb74278fa79"
+        },
+        {
+            "id": "6139:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-04-27T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 567.52,
+            "openBalance": 567.52,
+            "olbTxnId": "6139",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 66,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1588,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": true,
+            "fitxnId": "202604281529069260405#20260405",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:835e0cca-43d5-11f1-9f89-0233206a42ee"
+        },
+        {
+            "id": "6062:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-04-19T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 80.37,
+            "openBalance": 80.37,
+            "olbTxnId": "6062",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 52,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1564,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202604201528323260405#20260405",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:7d11c2cd-3d50-11f1-a7d6-128d2be76750"
+        },
+        {
+            "id": "6056:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-04-17T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 30.98,
+            "openBalance": 30.98,
+            "olbTxnId": "6056",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 52,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1564,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202604191800209260405#20260405",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:7d11c2cb-3d50-11f1-a7d6-128d2be76750"
+        },
+        {
+            "id": "6042:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-04-16T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 58.07,
+            "openBalance": 58.07,
+            "olbTxnId": "6042",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 52,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1559,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202604171653312260405#20260405",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:f5ce9c5d-3b8a-11f1-b4bb-2a61ee6e56a5"
+        },
+        {
+            "id": "6032:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-04-13T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 5.24,
+            "openBalance": 5.24,
+            "olbTxnId": "6032",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "199",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "199"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 54,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1557,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202604151534036260405#20260405",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:2baf6c0c-3abe-11f1-b870-2e81fb4c48d1"
+        },
+        {
+            "id": "6030:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-04-13T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 173.55,
+            "openBalance": 173.55,
+            "olbTxnId": "6030",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 66,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1557,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": true,
+            "fitxnId": "202604141520263260405#20260405",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:2baf6c0a-3abe-11f1-b870-2e81fb4c48d1"
+        },
+        {
+            "id": "5977:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-04-09T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 672.39,
+            "openBalance": 672.39,
+            "olbTxnId": "5977",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 65,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1545,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202604102018499260405#20260405",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:8961c876-3587-11f1-a60f-76d4bd37d303"
+        },
+        {
+            "id": "5931:ofx",
+            "origDescription": "PURCHASE INTEREST CHARGE",
+            "olbTxnDate": "2026-04-01T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": -57.29,
+            "openBalance": -57.29,
+            "olbTxnId": "5931",
+            "description": "Interest Charge",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "54",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040019",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as Shareholder Contribution.\n1. Received 0.01 for INTEREST PAYMENT  on 11/28/2025, categorized as Shareholder Contribution\n2. Received 0.01 for INTEREST PAYMENT  on 10/31/2025, categorized as Shareholder Contribution\n3. Received 0.01 for INTEREST PAYMENT  on 09/30/2025, categorized as Shareholder Contribution\n4. Received 0.02 for INTEREST PAYMENT  on 08/29/2025, categorized as Shareholder Contribution\n5. Received 0.01 for INTEREST PAYMENT  on 07/31/2025, categorized as Shareholder Contribution\n6. Received 0.02 for INTEREST PAYMENT  on 06/30/2025, categorized as Shareholder Contribution\n7. Received 0.02 for INTEREST PAYMENT  on 05/30/2025, categorized as Shareholder Contribution\n",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "SIMILAR_TRANSACTIONS_FOUND",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040019"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "179",
+            "categoryConfidenceScore": 64,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1531,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "10602",
+            "complexTransaction": false,
+            "fitxnId": "202604032434127260305#20260305",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:6bec859e-3091-11f1-98f0-d2c3367880e9"
+        },
+        {
+            "id": "5922:ofx",
+            "origDescription": "Payment Thank You-Mobile",
+            "olbTxnDate": "2026-04-01T17:00:00-07:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 17.3,
+            "openBalance": 17.3,
+            "olbTxnId": "5922",
+            "description": "Thank You Mobile",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "199",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The transaction memo \"Thank You-Mobile\" implies a payment received for services rendered, likely digital in nature.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "payeeAcceptanceConfidence": "MEDIUM",
+            "payeeAcceptanceConfidenceReason": "SUGGESTED_PAYEE",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "199"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 45,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1526,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202604022106251260305#20260305",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:1898d84e-2f82-11f1-afb2-82b1a5234981"
+        },
+        {
+            "id": "5704:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-03-07T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 4.32,
+            "openBalance": 4.32,
+            "olbTxnId": "5704",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "199",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the company.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "199"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 47,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1458,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202603082018457260305#20260305",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:33af0dde-1c14-11f1-b21b-46bd99f28e00"
+        },
+        {
+            "id": "5667:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-03-03T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 538.54,
+            "openBalance": 538.54,
+            "olbTxnId": "5667",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 56,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1449,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202603051521039260305#20260305",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:a90527e7-19ad-11f1-a02e-163346c710fe"
+        },
+        {
+            "id": "5579:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-02-22T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 363.15,
+            "openBalance": 363.15,
+            "olbTxnId": "5579",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 56,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1422,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202602232018263260205#20260205",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:87b02506-11a5-11f1-b86f-eea8adaabe4d"
+        },
+        {
+            "id": "5480:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-02-08T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 1608.08,
+            "openBalance": 1608.08,
+            "olbTxnId": "5480",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 57,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1387,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202602101512308260205#20260205",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:a9fbe534-07ec-11f1-bb6e-eea6c34329b5"
+        },
+        {
+            "id": "5287:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-01-20T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 133.42,
+            "openBalance": 133.42,
+            "olbTxnId": "5287",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "199",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the company.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "199"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 56,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1334,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202601221517100260105#20260105",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:065305be-f87d-11f0-a50f-c22fe7061ec4"
+        },
+        {
+            "id": "5258:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-01-19T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 332.47,
+            "openBalance": 332.47,
+            "olbTxnId": "5258",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "1150040009",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "The memo \"Payment Thank You - Web\" suggests a payment for services rendered, likely related to coding services provided by the business.",
+            "categoryAcceptanceConfidence": "LOW",
+            "categoryAcceptanceConfidenceReason": "NO_HISTORICAL_TRANSACTIONS",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "1150040009"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 56,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1326,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202601201515064260105#20260105",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:86bf0194-f6df-11f0-babc-2e1408f6e6c7"
+        },
+        {
+            "id": "5185:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-01-17T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 256.56,
+            "openBalance": 256.56,
+            "olbTxnId": "5185",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "Uncategorized",
+            "payeeAcceptanceConfidence": "MEDIUM",
+            "payeeAcceptanceConfidenceReason": "SUGGESTED_PAYEE",
+            "categoryAlternativeIds": [
+                "235",
+                "225",
+                "216",
+                "236",
+                "234"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 42,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1320,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202601182018545260105#20260105",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:c917f539-f598-11f0-ba81-ba34560e5194"
+        },
+        {
+            "id": "5184:ofx",
+            "origDescription": "Payment Thank You-Mobile",
+            "olbTxnDate": "2026-01-17T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 335.25,
+            "openBalance": 335.25,
+            "olbTxnId": "5184",
+            "description": "Thank You Mobile",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "Uncategorized",
+            "payeeAcceptanceConfidence": "MEDIUM",
+            "payeeAcceptanceConfidenceReason": "SUGGESTED_PAYEE",
+            "categoryAlternativeIds": [
+                "235",
+                "225",
+                "216",
+                "236",
+                "234"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 39,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1320,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202601181850488260105#20260105",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:c917f53a-f598-11f0-ba81-ba34560e5194"
+        },
+        {
+            "id": "5114:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-01-12T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 150.28,
+            "openBalance": 150.28,
+            "olbTxnId": "5114",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "235",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as CHASE CREDIT 2525.\n1. Received 488.78 for Payment Thank You - Web  on 10/11/2025, categorized as CHASE CREDIT 2525\n",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "SIMILAR_TRANSACTIONS_FOUND",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "235"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 54,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1306,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202601131656202260105#20260105",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:21c021f3-f19b-11f0-bbc3-52aeb951d6b5"
+        },
+        {
+            "id": "5085:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-01-10T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 361.76,
+            "openBalance": 361.76,
+            "olbTxnId": "5085",
+            "description": "Payment Thank You - Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "235",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as CHASE CREDIT 2525.\n1. Received 488.78 for Payment Thank You - Web  on 10/11/2025, categorized as CHASE CREDIT 2525\n",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "SIMILAR_TRANSACTIONS_FOUND",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "235"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 42,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1300,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202601112019033260105#20260105",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:4cc5f9e7-effe-11f0-b192-ba9d4c94231e"
+        },
+        {
+            "id": "5084:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-01-10T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 586.89,
+            "openBalance": 586.89,
+            "olbTxnId": "5084",
+            "description": "Payment Thank You - Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "235",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as CHASE CREDIT 2525.\n1. Received 488.78 for Payment Thank You - Web  on 10/11/2025, categorized as CHASE CREDIT 2525\n",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "SIMILAR_TRANSACTIONS_FOUND",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "235"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 42,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1300,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202601112019023260105#20260105",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:4cc5f9e8-effe-11f0-b192-ba9d4c94231e"
+        },
+        {
+            "id": "5045:ofx",
+            "origDescription": "Payment Thank You - Web",
+            "olbTxnDate": "2026-01-04T16:00:00-08:00",
+            "qboAccountId": "225",
+            "acceptType": "ADD",
+            "creditCardPayment": false,
+            "transfer": false,
+            "amount": 354.66,
+            "openBalance": 354.66,
+            "olbTxnId": "5045",
+            "description": "Thank You Web",
+            "addAsQboTxn": {
+                "nameTypeId": 0,
+                "createName": false,
+                "createAccount": false,
+                "txnTypeId": "11",
+                "txnFdmName": "Purchase",
+                "currencyType": {
+                    "isoCode": "USD",
+                    "displayName": "United States Dollar",
+                    "symbol": "$"
+                },
+                "details": [
+                    {
+                        "categoryId": "235",
+                        "billable": false
+                    }
+                ]
+            },
+            "suggestionConfidence": "NeedsReview",
+            "linkedTxns": [],
+            "mapOfAccounts": {},
+            "categorySource": "QbaaAiEngine",
+            "categoryExplanation": "\n\nPrevious transactions with similar bank descriptions were consistently categorized as CHASE CREDIT 2525.\n1. Received 488.78 for Payment Thank You - Web  on 10/11/2025, categorized as CHASE CREDIT 2525\n",
+            "categoryAcceptanceConfidence": "MEDIUM",
+            "categoryAcceptanceConfidenceReason": "SIMILAR_TRANSACTIONS_FOUND",
+            "categoryTaxGuidance": "",
+            "categoryAlternativeIds": [
+                "235"
+            ],
+            "addMatchType": "NO_INFO_ADD",
+            "matchTransactionsMap": {},
+            "originalCategoryId": "235",
+            "categoryConfidenceScore": 54,
+            "userDeleted": false,
+            "olbAccountId": 17,
+            "olbSessionId": 1282,
+            "catMerchantId": 0,
+            "complexTransactionScore": 0,
+            "lowContext": false,
+            "isHighConfidenceAdd": false,
+            "scheduleCId": "12201",
+            "complexTransaction": false,
+            "fitxnId": "202601051517366260105#20260105",
+            "fdptransactionId": "urn:transaction:fdp::transactionid:91ebd491-eb53-11f0-894c-d20bf9b0c017"
+        }
+    ]
+}

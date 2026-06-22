@@ -1,0 +1,4107 @@
+// ENDPOINT: GET https://universalreportinsights.api.intuit.com/v1/system/reports/?locale=en-us&includeListedReportsOnly=false&modelDimensionsAsLinkedRef=true&isMultiEntitySupported=false&sku=QBO_SIMPLE_START
+// PAYLOAD: {}
+
+export const response = [
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:ff5a0cd0-0a47-4f96-90a1-82f46285be9f",
+            "name": "Transaction List by Tag Group",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352194168586,
+            "lastModifiedUserId": 9130352194168586,
+            "createdDate": "2026-04-29T08:49:15.069Z",
+            "lastModifiedDate": "2026-05-18T10:43:57.501Z",
+            "localizedName": "Transaction List by Tag Group",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "TX_LIST_BY_TAG_TYPE",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "tx_list_by_date",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "TRANSACTION",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:f3bea294-98a5-4ed7-94a7-b87c01d5aa52",
+            "name": "Profit and Loss by Customer",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130354458011296,
+            "createdDate": "2024-05-24T11:20:01.955Z",
+            "lastModifiedDate": "2026-05-25T11:50:19.954Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                }
+            ],
+            "localizedName": "Profit and Loss by Customer",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "BUSINESS_OVERVIEW",
+            "visibleToCustomer": false,
+            "reportToken": "PANDL_BYCUST",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "pandl_bycust",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "EMPLOYEE",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:f2c33c26-7f57-4a45-a122-65aa1cae3699",
+            "name": "Open Invoices Report",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130351748376376,
+            "lastModifiedUserId": 9130356629940196,
+            "createdDate": "2023-11-21T07:13:07.556Z",
+            "lastModifiedDate": "2026-05-07T13:09:00.828Z",
+            "localizedName": "Open Invoices Report",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_RECEIVABLE",
+            "visibleToCustomer": false,
+            "reportToken": "OPEN_INVOICES",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "open_invoices",
+            "uniqueEntities": [
+                "AR_AGING",
+                "CUSTOMER",
+                "TRANSACTION",
+                "DEPARTMENT",
+                "TERM"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:f14c1b5b-533b-4ef0-ab3b-e20f7bcd2b94",
+            "name": "Balance Sheet Summary",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130351748376376,
+            "lastModifiedUserId": 9130355803139166,
+            "createdDate": "2024-10-28T05:21:39.424Z",
+            "lastModifiedDate": "2026-05-08T12:35:14.651Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                },
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ESSENTIALS,QBO_ADVANCED,QBO_SIMPLE_START"
+                }
+            ],
+            "localizedName": "Balance Sheet Summary",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "BAL_SHEET_SUM",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "if($COMPANY_IS_MULTICURRENCY_ENABLED == true, featureflag(\"INTUPLAT-RPTG-MULTIC-DEFAULTING\"), featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\"))",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "bal_sheet_sum",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:ef9b4c65-ff5f-4505-8cfe-3cb7aa28f4e5",
+            "name": "Trial Balance",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352591812686,
+            "lastModifiedUserId": 9130355803139166,
+            "createdDate": "2024-09-18T09:03:38.255Z",
+            "lastModifiedDate": "2026-05-13T09:30:58.056Z",
+            "localizedName": "Trial Balance",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "TRIAL_BAL",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "trial_bal",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:edf36075-0a20-4ac9-b859-146817f05194",
+            "name": "Estimates & Progress Invoicing Summary by Customer",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352194168586,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2025-05-02T13:13:59.268Z",
+            "lastModifiedDate": "2026-05-26T12:17:28.308Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                },
+                {
+                    "on": {
+                        "name": "customEvaluationCriteria",
+                        "qualifier": null
+                    },
+                    "operator": "EQUALS",
+                    "value": "$COMPANY_IS_TAXES_ENABLED == false"
+                }
+            ],
+            "localizedName": "Estimates & Progress Invoicing Summary by Customer",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "CUSTOM_DETAIL_REPORT/EST_VS_PI",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "c_det_est_vs_pi",
+            "uniqueEntities": [
+                "ESTIMATE_INVOICE",
+                "CUSTOMER"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:ecea1937-9063-4915-8cb5-15d39d66a7ce",
+            "name": "Customer Balance Summary",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352674483756,
+            "lastModifiedUserId": 9411825212474246,
+            "createdDate": "2024-12-06T13:00:04.062Z",
+            "lastModifiedDate": "2026-05-13T10:48:07.326Z",
+            "localizedName": "Customer Balance Summary",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "CUST_BAL_DET",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_RECEIVABLE",
+            "visibleToCustomer": false,
+            "reportToken": "CUST_BAL",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "if($COMPANY_IS_MULTICURRENCY_ENABLED == true, featureflag(\"INTUPLAT-RPTG-MULTIC-DEFAULTING\"), featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\"))",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "cust_bal",
+            "uniqueEntities": [
+                "AR_AGING",
+                "TRANSACTION_DETAILS_V1",
+                "CUSTOMER",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:ebb2ef91-58a0-427f-8ee9-bd20108f24fa",
+            "name": "Accounts payable",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130353626936156,
+            "lastModifiedUserId": 9130355803139166,
+            "createdDate": "2025-07-14T19:17:31.949Z",
+            "lastModifiedDate": "2026-05-12T04:54:48.266Z",
+            "localizedName": "Accounts payable",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC_CHART",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": {
+                            "visualizationType": "DONUT_CHART",
+                            "heroNumberColumn": "TOTAL",
+                            "heroNumberLabelPrefix": null
+                        },
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "AR_AGING_DET",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "CUSTOM_REPORT_BUILDER",
+            "visibleToCustomer": false,
+            "reportToken": "AP_BAL_SHEET_ME_KPI",
+            "multiEntitySupported": false,
+            "evaluatedModeCriteria": false,
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "ap_aging",
+            "uniqueEntities": [
+                "AR_AGING",
+                "VENDOR",
+                "PURPOSE_TYPE_MAPPING_ACCOUNT_ELIMINATION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:ea4100ff-9f63-4bc1-a26f-7b49c582c068",
+            "name": "Profit and Loss Comparison",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130354458011296,
+            "createdDate": "2024-05-24T11:03:08.104Z",
+            "lastModifiedDate": "2026-05-25T11:47:46.137Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                }
+            ],
+            "localizedName": "Profit and Loss Comparison",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "BUSINESS_OVERVIEW",
+            "visibleToCustomer": false,
+            "reportToken": "PANDL_COMP",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "pandl_comp",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "EMPLOYEE",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:e6c720ec-8ade-4c03-a081-7fcc4f7b736d",
+            "name": "Employee Contact List",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130353853195726,
+            "createdDate": "2023-07-19T07:13:39.879Z",
+            "lastModifiedDate": "2026-03-05T14:02:25.704Z",
+            "localizedName": "Employee Contact List",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "EMPLOYEES",
+            "visibleToCustomer": false,
+            "reportToken": "EMP_CONTACT",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "emp_contact",
+            "uniqueEntities": [
+                "EMPLOYEE"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:e3088e53-831a-482a-a340-da2c88a89659",
+            "name": "Account List",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130352194168586,
+            "createdDate": "2023-07-19T09:46:05.610Z",
+            "lastModifiedDate": "2026-03-09T07:25:19.231Z",
+            "localizedName": "Account List",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "ACCT_LIST",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "acct_list",
+            "uniqueEntities": [
+                "CHART_OF_ACCOUNT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:e02def55-1c48-441b-8163-aec88f3ff67d",
+            "name": "Invoices and Received Payments",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352194168586,
+            "lastModifiedUserId": 9130353853195726,
+            "createdDate": "2025-05-02T09:09:19.795Z",
+            "lastModifiedDate": "2026-06-02T06:55:11.544Z",
+            "localizedName": "Invoices and Received Payments",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_RECEIVABLE",
+            "visibleToCustomer": false,
+            "reportToken": "INVOICE_PAYMENT",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "invoice_payment",
+            "uniqueEntities": [
+                "PAYMENT_LINKED_TRANSACTIONS",
+                "CHART_OF_ACCOUNT",
+                "CUSTOMER",
+                "DEPARTMENT",
+                "TERM"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:e001c4e8-a778-490f-876b-50ee58c10ff5",
+            "name": "Product/Service List",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9411825212474246,
+            "createdDate": "2023-05-24T15:12:32.566Z",
+            "lastModifiedDate": "2026-05-13T09:26:17.479Z",
+            "localizedName": "Product/Service List",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "ITEM_PRICE",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "item_price",
+            "uniqueEntities": [
+                "ITEM",
+                "TAX_CODES"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:dff478c4-1b44-4db6-90b8-0e8962ebbf96",
+            "name": "Terms List",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130352194168586,
+            "createdDate": "2023-07-19T10:28:03.678Z",
+            "lastModifiedDate": "2026-03-09T07:29:21.439Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ESSENTIALS,QBO_SIMPLE_START,QBO_ADVANCED"
+                }
+            ],
+            "localizedName": "Terms List",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_RECEIVABLE",
+            "visibleToCustomer": false,
+            "reportToken": "TERM_LIST",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "term_list",
+            "uniqueEntities": [
+                "TERM"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:d605baff-fb61-49f2-aeb6-b3bb72ee0f98",
+            "name": "Vendor Phone List",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130353853195726,
+            "createdDate": "2023-07-19T07:15:42.944Z",
+            "lastModifiedDate": "2026-03-09T09:24:18.836Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ADVANCED,QBO_ESSENTIALS,QBO_SIMPLE_START"
+                }
+            ],
+            "localizedName": "Vendor Phone List",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_EXPENSES_PURCHASES",
+            "visibleToCustomer": false,
+            "reportToken": "VEND_PHONE",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "vend_phone",
+            "uniqueEntities": [
+                "VENDOR"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:cef4d5ab-496d-446e-9807-8a2a8b5dadef",
+            "name": "Transaction List by Customer",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-05-24T15:10:13.120Z",
+            "lastModifiedDate": "2026-05-26T11:22:45.646Z",
+            "localizedName": "Transaction List by Customer",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "TX_LIST_BY_CUST",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "tx_list_by_cust",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "CUSTOMER",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:cbe6fa12-96f4-46ad-9d6e-b13349076ee9",
+            "name": "Balance Sheet",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130355803139166,
+            "createdDate": "2024-05-24T09:07:55.507Z",
+            "lastModifiedDate": "2026-05-13T08:32:13.432Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                }
+            ],
+            "localizedName": "Balance Sheet",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "BAL_SHEET",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "if($COMPANY_IS_MULTICURRENCY_ENABLED == true, featureflag(\"INTUPLAT-RPTG-MULTIC-DEFAULTING\"), featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\"))",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "bal_sheet",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "subTitle": "As of null",
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:cb485167-afa2-496d-9eef-c433d2b2ec4e",
+            "name": "Bills and Applied Payments",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352194168586,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2025-05-02T09:12:30.924Z",
+            "lastModifiedDate": "2026-05-26T11:39:25.653Z",
+            "localizedName": "Bills and Applied Payments",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_PAYABLE",
+            "visibleToCustomer": false,
+            "reportToken": "BILL_PAYMENT",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "bill_payment",
+            "uniqueEntities": [
+                "PAYMENT_LINKED_TRANSACTIONS",
+                "CHART_OF_ACCOUNT",
+                "VENDOR",
+                "DEPARTMENT",
+                "TERM"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:c8e6c40a-6901-4b7f-a8df-1ca9b3ccc82e",
+            "name": "Customer Phone List",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130352194168586,
+            "createdDate": "2023-06-06T10:29:22.599Z",
+            "lastModifiedDate": "2026-03-09T07:26:53.459Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ADVANCED,QBO_ESSENTIALS,QBO_SIMPLE_START"
+                }
+            ],
+            "localizedName": "Customer Phone List",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "CUST_PHONE",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "cust_phone",
+            "uniqueEntities": [
+                "CUSTOMER"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:c7325521-712e-40a8-83e4-86b7a94ca48b",
+            "name": "Profit and Loss by Month",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130354458011296,
+            "createdDate": "2024-05-24T09:50:40.031Z",
+            "lastModifiedDate": "2026-05-25T11:51:41.236Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                }
+            ],
+            "localizedName": "Profit and Loss by Month",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "BUSINESS_OVERVIEW",
+            "visibleToCustomer": false,
+            "reportToken": "PANDL_BY_MONTH",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "pandl_by_month",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "EMPLOYEE",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:c46c823a-8641-4641-b08a-dda0e499066f",
+            "name": "Profit and Loss",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 123146075683814,
+            "lastModifiedUserId": 9411825212474246,
+            "createdDate": "2023-06-22T10:57:19.720Z",
+            "lastModifiedDate": "2026-05-25T05:45:59.177Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                }
+            ],
+            "localizedName": "Profit and Loss",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "PANDL",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "pandl",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "EMPLOYEE",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:c37512c9-2109-4390-a961-0ded92fe1772",
+            "name": "Physical Inventory Worksheet",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9411821980117398,
+            "createdDate": "2024-03-07T07:44:04.168Z",
+            "lastModifiedDate": "2026-05-11T10:11:33.799Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ADVANCED,QBO_ESSENTIALS,QBO_SIMPLE_START"
+                }
+            ],
+            "localizedName": "Physical Inventory Worksheet",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "MANAGE_PRODUCTS_INVENTORY",
+            "visibleToCustomer": false,
+            "reportToken": "PHYSICAL_INV_WS",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "physical_inv_ws",
+            "uniqueEntities": [
+                "ITEM",
+                "TAX_CODES"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:c257b4c2-29a5-48f8-a4da-35ddf2fa55b4",
+            "name": "Transaction Detail by Account",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9411828535375886,
+            "createdDate": "2023-05-24T15:09:41.752Z",
+            "lastModifiedDate": "2026-03-23T07:15:33.305Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ADVANCED,QBO_ESSENTIALS,QBO_SIMPLE_START,QBO_SOLOPRENEUR"
+                }
+            ],
+            "localizedName": "Transaction Detail by Account",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "TX_DET_BY_ACCT",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "tx_det_by_acct",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "TRANSACTION",
+                "DEPARTMENT",
+                "TRANSACTION_DETAILS"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:c0499904-3b68-4a09-98e6-75c193352571",
+            "name": "A/R Aging Summary Report",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130351748376376,
+            "lastModifiedUserId": 9411825078549196,
+            "createdDate": "2023-11-20T06:06:15.328Z",
+            "lastModifiedDate": "2026-05-26T10:06:25.357Z",
+            "localizedName": "A/R Aging Summary Report",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "AR_AGING_DET",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_RECEIVABLE",
+            "visibleToCustomer": false,
+            "reportToken": "AR_AGING",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "if($COMPANY_IS_MULTICURRENCY_ENABLED == true, featureflag(\"INTUPLAT-RPTG-MULTIC-DEFAULTING\"), featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\"))",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "ar_aging",
+            "uniqueEntities": [
+                "AR_AGING",
+                "CUSTOMER",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:bfee05d9-4bfa-4569-9bd0-b5abe729a1ca",
+            "name": "Quarterly Profit and Loss Summary",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130354458011296,
+            "createdDate": "2024-05-24T11:16:24.732Z",
+            "lastModifiedDate": "2026-05-25T11:54:07.389Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                }
+            ],
+            "localizedName": "Quarterly Profit and Loss Summary",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "BUSINESS_OVERVIEW",
+            "visibleToCustomer": false,
+            "reportToken": "QRTR_PANDL",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "qrtr_pandl",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "EMPLOYEE",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:be53cbb0-d2cd-4e59-abf5-5755e22c8c5f",
+            "name": "Statement of Cash Flows",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130355982517876,
+            "lastModifiedUserId": 9411828959941936,
+            "createdDate": "2025-04-04T10:11:27.816Z",
+            "lastModifiedDate": "2026-05-08T12:48:24.070Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                }
+            ],
+            "localizedName": "Statement of Cash Flows",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT_SOCF",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "CASH_FLOW",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "if($COMPANY_IS_MULTICURRENCY_ENABLED == true, featureflag(\"INTUPLAT-RPTG-MULTIC-DEFAULTING\"), featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\"))",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "cash_flow",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:bd7d1eb6-9120-44f3-b34c-a7fa65efce2c",
+            "name": "Expenses by Vendor Summary",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130355982517876,
+            "lastModifiedUserId": 9130351748376376,
+            "createdDate": "2023-11-28T06:04:49.906Z",
+            "lastModifiedDate": "2026-05-19T07:00:48.804Z",
+            "localizedName": "Expenses by Vendor Summary",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_EXPENSES_PURCHASES",
+            "visibleToCustomer": false,
+            "reportToken": "VEND_EXP",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "vend_exp",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "KLASS",
+                "EMPLOYEE",
+                "VENDOR",
+                "CUSTOMER",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:ba11238b-a329-4e50-82c6-c287f27729a1",
+            "name": "Journal",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-05-24T15:14:16.028Z",
+            "lastModifiedDate": "2026-06-01T20:56:49.486Z",
+            "localizedName": "Journal",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "JOURNAL",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "journal",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "TRANSACTION",
+                "PAYMENT_METHOD"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:b10fbec6-7115-4139-8b91-addee342e76d",
+            "name": "Project profitability",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9411821825077944,
+            "lastModifiedUserId": 9130356629940196,
+            "createdDate": "2025-04-23T11:15:27.685Z",
+            "lastModifiedDate": "2026-06-01T03:38:45.672Z",
+            "localizedName": "Project profitability",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZ_PROJECT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "PROJECTS",
+            "visibleToCustomer": false,
+            "reportToken": "PANDL_BYCUST_PROJECT",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "c_sum_prof_proj",
+            "uniqueEntities": [
+                "PROJECT",
+                "PROJECT_TXN"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:b00801e1-3d69-4531-8041-98f5a2fd1cab",
+            "name": "Sales by Customer Detail",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-05-24T15:11:19.218Z",
+            "lastModifiedDate": "2026-05-26T11:14:43.884Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ADVANCED,QBO_ESSENTIALS,QBO_SIMPLE_START"
+                }
+            ],
+            "localizedName": "Sales by Customer Detail",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "CUST_SALES_DET",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "cust_sales_det",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CUSTOMER",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:adb1b48f-443d-4b22-bb47-f8dc2487e2d5",
+            "name": "Open Purchase Order List by Vendor",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9411828069020170,
+            "createdDate": "2023-11-30T10:15:58.331Z",
+            "lastModifiedDate": "2026-05-06T14:40:42.937Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ESSENTIALS,QBO_ADVANCED,QBO_SIMPLE_START"
+                }
+            ],
+            "localizedName": "Open Purchase Order List by Vendor",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "MANAGE_PRODUCTS_INVENTORY",
+            "visibleToCustomer": false,
+            "reportToken": "OPEN_PO_LIST",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "open_po_list",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "VENDOR",
+                "TRANSACTION",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:9fa2fdd9-84e3-4055-9e63-b0b9f6d9155c",
+            "name": "Time Summary by Pay Type",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130354667296826,
+            "createdDate": "2026-05-05T06:16:16.130Z",
+            "lastModifiedDate": "2026-05-12T05:15:02.613Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "featureflag",
+                        "qualifier": "SBSEG-QBO-Enable-time-standard-reports-time-totals"
+                    },
+                    "operator": "EQUALS",
+                    "value": "TRUE"
+                }
+            ],
+            "localizedName": "Time Summary by Pay Type",
+            "multiEntityLocalisedName": "Payroll Totals",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "TIME",
+            "visibleToCustomer": false,
+            "reportToken": "TIME_ACTIVITY_V2_PAYROLL_TOTALS",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "multiEntityName": "Payroll Totals",
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "time_activities",
+            "uniqueEntities": [
+                "TIME_ACTIVITY"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:97046176-38d6-4272-986c-ede2334d2636",
+            "name": "Customer Contact List",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-06-05T10:44:05.094Z",
+            "lastModifiedDate": "2026-05-29T18:03:00.675Z",
+            "localizedName": "Customer Contact List",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "CUST_CONTACT",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "cust_contact",
+            "uniqueEntities": [
+                "CUSTOMER"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:91d046f9-5283-4138-a06a-6a7f72d9c06e",
+            "name": "Accounts receivable",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130353626936156,
+            "lastModifiedUserId": 9130355803139166,
+            "createdDate": "2025-07-14T19:18:34.307Z",
+            "lastModifiedDate": "2026-05-12T04:58:33.704Z",
+            "localizedName": "Accounts receivable",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC_CHART",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": {
+                            "visualizationType": "DONUT_CHART",
+                            "heroNumberColumn": "TOTAL",
+                            "heroNumberLabelPrefix": null
+                        },
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "AR_AGING_DET",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "CUSTOM_REPORT_BUILDER",
+            "visibleToCustomer": false,
+            "reportToken": "AR_BAL_SHEET_ME_KPI",
+            "multiEntitySupported": false,
+            "evaluatedModeCriteria": false,
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "ar_aging",
+            "uniqueEntities": [
+                "AR_AGING",
+                "CUSTOMER",
+                "PURPOSE_TYPE_MAPPING_ACCOUNT_ELIMINATION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:89a37cf4-6a54-44f3-a234-379e7f968792",
+            "name": "Timesheet Detail by Employee",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130354667296826,
+            "createdDate": "2026-05-05T06:44:10.888Z",
+            "lastModifiedDate": "2026-05-12T07:27:00.167Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "featureflag",
+                        "qualifier": "SBSEG-QBO-Enable-time-standard-reports-itemized-total-time"
+                    },
+                    "operator": "EQUALS",
+                    "value": "TRUE"
+                }
+            ],
+            "localizedName": "Timesheet Detail by Employee",
+            "multiEntityLocalisedName": "Itemised Total Time",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "TIME",
+            "visibleToCustomer": false,
+            "reportToken": "TIME_ACTIVITY_V2_ITEMISED_TOTAL_TIME",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "multiEntityName": "Itemised Total Time",
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "time_activities",
+            "uniqueEntities": [
+                "TIME_ACTIVITY",
+                "CUSTOMER"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:86b3e6b0-0bde-4906-8a88-2020f76c0eec",
+            "name": "Customer heirarchy metaData",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130355803139166,
+            "lastModifiedUserId": 9130355803139166,
+            "createdDate": "2025-12-16T10:39:15.524Z",
+            "lastModifiedDate": "2025-12-16T10:40:02.239Z",
+            "localizedName": "Customer heirarchy metaData",
+            "multiEntityLocalisedName": "Check2",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "METADATA_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "CUSTOMER_HEIRARCHY_METADATA",
+            "multiEntitySupported": false,
+            "multiEntityName": "Check2",
+            "evaluatedModeCriteria": false,
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "ar_aging",
+            "uniqueEntities": [
+                "CUSTOMER_HEIRARCHY",
+                "CUSTOMER"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:7f6d5c68-b667-4db5-8591-e6d02b7571dd",
+            "name": "Vendor Balance Summary",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352674483756,
+            "lastModifiedUserId": 9130356629940196,
+            "createdDate": "2024-12-06T13:05:26.476Z",
+            "lastModifiedDate": "2026-04-30T10:19:51.662Z",
+            "localizedName": "Vendor Balance Summary",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "VEND_BAL_DET",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_PAYABLE",
+            "visibleToCustomer": false,
+            "reportToken": "VEND_BAL",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "if($COMPANY_IS_MULTICURRENCY_ENABLED == true, featureflag(\"INTUPLAT-RPTG-MULTIC-DEFAULTING\"), featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\"))",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "vend_bal",
+            "uniqueEntities": [
+                "AR_AGING",
+                "TRANSACTION_DETAILS_V1",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:7c155f20-cfe8-4ba0-8f46-f2b4f50a3add",
+            "name": "Unbilled Charges",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 123145842346294,
+            "lastModifiedUserId": 9130353853195726,
+            "createdDate": "2024-05-17T11:55:43.424Z",
+            "lastModifiedDate": "2026-03-25T10:16:23.984Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ADVANCED,QBO_ESSENTIALS,QBO_SIMPLE_START"
+                }
+            ],
+            "localizedName": "Unbilled Charges",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_RECEIVABLE",
+            "visibleToCustomer": false,
+            "reportToken": "UNBILLED_CHARGES",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "unbilled_charges",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CUSTOMER",
+                "TRANSACTION",
+                "DEPARTMENT",
+                "TRANSACTION_DETAILS"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:76cb7416-b1ab-49df-aa55-fe59aeca5471",
+            "name": "Balance Sheet Detail",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130355425328236,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2025-02-13T07:17:19.090Z",
+            "lastModifiedDate": "2026-05-26T11:32:31.341Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "NOT_IN",
+                    "value": "CA,GB"
+                }
+            ],
+            "localizedName": "Balance Sheet Detail",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Entity",
+                            "reportToken": null,
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "BAL_SHEET_DET",
+            "migrationCriteria": "if($COMPANY_IS_MULTICURRENCY_ENABLED == true, false, true)",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "bal_sheet_det",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "EMPLOYEE",
+                "CUSTOMER",
+                "VENDOR",
+                "TRANSACTION",
+                "DEPARTMENT",
+                "PAYMENT_METHOD"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:7577fb3e-5a98-4dd1-a94e-a0039ce978af",
+            "name": "A/P Aging Detail Report",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130351748376376,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-11-20T06:14:30.287Z",
+            "lastModifiedDate": "2026-05-26T11:07:40.803Z",
+            "localizedName": "A/P Aging Detail Report",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_PAYABLE",
+            "visibleToCustomer": false,
+            "reportToken": "AP_AGING_DET",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "ap_aging_det",
+            "uniqueEntities": [
+                "AR_AGING",
+                "TRANSACTION_DETAILS_V1",
+                "VENDOR",
+                "TRANSACTION",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:73f15f2c-2671-4831-9f24-1faef280cfa2",
+            "name": "A/R Aging Detail Report",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130351748376376,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-11-20T06:11:06.883Z",
+            "lastModifiedDate": "2026-06-03T09:00:19.984Z",
+            "localizedName": "A/R Aging Detail Report",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_RECEIVABLE",
+            "visibleToCustomer": false,
+            "reportToken": "AR_AGING_DET",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "ar_aging_det",
+            "uniqueEntities": [
+                "AR_AGING",
+                "TRANSACTION_DETAILS_V1",
+                "CUSTOMER",
+                "TRANSACTION",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:736d5115-5331-471d-ab88-1a7c80dbee60",
+            "name": "General Ledger",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130355852394316,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2024-09-20T06:48:29.326Z",
+            "lastModifiedDate": "2026-05-26T10:50:21.362Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                }
+            ],
+            "localizedName": "General Ledger",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "GEN_LEDGER",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "gen_ledger",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:670c00a6-d5b3-4eff-84f3-e36cac7ddc77",
+            "name": "Transaction Report",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-09-21T10:06:10.383Z",
+            "lastModifiedDate": "2026-05-26T11:59:14.187Z",
+            "localizedName": "Transaction Report",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "RECENT_TX",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "c_det_1099workflow",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "EMPLOYEE",
+                "CUSTOMER",
+                "VENDOR",
+                "TRANSACTION",
+                "DEPARTMENT",
+                "TRANSACTION_DETAILS"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:64305ffc-2663-45aa-b3fc-1b844e6228dd",
+            "name": "Profit and Loss By Tag Group",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130355425328236,
+            "lastModifiedUserId": 9130354458011296,
+            "createdDate": "2025-02-13T07:03:11.122Z",
+            "lastModifiedDate": "2026-05-25T11:53:01.156Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                }
+            ],
+            "localizedName": "Profit and Loss By Tag Group",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "BUSINESS_OVERVIEW",
+            "visibleToCustomer": false,
+            "reportToken": "PANDL_BY_TAG_TYPE",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "pandl_by_tag_type",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "EMPLOYEE",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:64238b06-0064-4ed8-9459-b3c505b322a3",
+            "name": "Transaction List by Vendor",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-05-24T15:10:27.532Z",
+            "lastModifiedDate": "2026-06-01T17:58:06.010Z",
+            "localizedName": "Transaction List by Vendor",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_EXPENSES_PURCHASES",
+            "visibleToCustomer": false,
+            "reportToken": "TX_LIST_BY_VENDOR",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "tx_list_by_vendor",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "VENDOR",
+                "TRANSACTION",
+                "PAYMENT_METHOD"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:61f1bef3-ec0d-49b9-8f2c-80bd7107cebb",
+            "name": "Collections Report",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352194168586,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2025-01-23T14:39:09.912Z",
+            "lastModifiedDate": "2026-06-01T09:35:14.874Z",
+            "localizedName": "Collections Report",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_RECEIVABLE",
+            "visibleToCustomer": false,
+            "reportToken": "COLLECTIONS",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "ar_aging",
+            "uniqueEntities": [
+                "AR_AGING",
+                "TRANSACTION_DETAILS_V1",
+                "CUSTOMER",
+                "TRANSACTION",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:5f258cc8-4df3-4bdd-b4e1-f578d85c91d9",
+            "name": "Bill Payment List",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 123145842346294,
+            "lastModifiedUserId": 9130352194168586,
+            "createdDate": "2024-05-15T11:53:58.017Z",
+            "lastModifiedDate": "2026-03-11T12:35:35.357Z",
+            "localizedName": "Bill Payment List",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_PAYABLE",
+            "visibleToCustomer": false,
+            "reportToken": "BILL_PAY_LIST",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "bill_pay_list",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "VENDOR",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:56a65f00-7fc6-47c2-a1e0-98c175b1c3db",
+            "name": "Unbilled time and expenses ",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130351281709256,
+            "lastModifiedUserId": 9130353853195726,
+            "createdDate": "2026-02-09T07:17:58.754Z",
+            "lastModifiedDate": "2026-03-26T06:18:21.807Z",
+            "localizedName": "Unbilled time and expenses ",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "PROJECTS",
+            "visibleToCustomer": false,
+            "reportToken": "UNBILLED_TIME_EXP_CHARGES",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "unbld_time_exp_proj",
+            "uniqueEntities": [
+                "PROJECT",
+                "TRANSACTION_DETAILS_V1",
+                "CUSTOMER",
+                "TRANSACTION",
+                "DEPARTMENT",
+                "TRANSACTION_DETAILS"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:52f7dc24-f557-4f7f-85e2-a64562ecdbf8",
+            "name": "Customer Balance Detail Report",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352674483756,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2024-12-06T13:09:13.841Z",
+            "lastModifiedDate": "2026-06-01T21:12:15.557Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ESSENTIALS,QBO_ADVANCED,QBO_SIMPLE_START"
+                }
+            ],
+            "localizedName": "Customer Balance Detail Report",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_RECEIVABLE",
+            "visibleToCustomer": false,
+            "reportToken": "CUST_BAL_DET",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "cust_bal_det",
+            "uniqueEntities": [
+                "AR_AGING",
+                "TRANSACTION_DETAILS_V1",
+                "CUSTOMER",
+                "TRANSACTION",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:4f712709-1549-46ba-a2f9-0c897d588a6f",
+            "name": "Invalid Journal Transactions",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352194168586,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2025-05-02T13:04:08.889Z",
+            "lastModifiedDate": "2026-05-26T12:15:12.335Z",
+            "localizedName": "Invalid Journal Transactions",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "CUSTOM_DETAIL_REPORT/INVALID_JE",
+            "migrationCriteria": "if($COMPANY_IS_MULTICURRENCY_ENABLED == true, true, false)",
+            "evaluatedMigrationCriteria": false,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "journal_entry_report",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "CUSTOMER",
+                "VENDOR",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:4884e98f-6f27-4380-9c44-9abfc7f11656",
+            "name": "Bill Approval Status",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130356042908906,
+            "createdDate": "2023-05-24T15:02:32.406Z",
+            "lastModifiedDate": "2025-08-22T07:51:44.801Z",
+            "localizedName": "Bill Approval Status",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "CUSTOM_REPORT_BUILDER",
+            "visibleToCustomer": true,
+            "reportToken": "BILL_APPROVAL",
+            "multiEntitySupported": false,
+            "evaluatedModeCriteria": false,
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "bill_approval",
+            "uniqueEntities": [
+                "BILL",
+                "VENDOR"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:43b62bab-3bd9-43e2-a577-b38c99d4b9a6",
+            "name": "Check Detail Report",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-05-24T15:11:50.968Z",
+            "lastModifiedDate": "2026-06-01T15:59:47.898Z",
+            "localizedName": "Check Detail Report",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_EXPENSES_PURCHASES",
+            "visibleToCustomer": false,
+            "reportToken": "CHECK_DETAIL",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "check_detail",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:41476b71-0fdc-4724-9e46-4150495f60d1",
+            "name": "A/P Aging Summary Report",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130351748376376,
+            "lastModifiedUserId": 9411825212474246,
+            "createdDate": "2023-11-20T06:12:46.519Z",
+            "lastModifiedDate": "2026-05-13T11:30:04.930Z",
+            "localizedName": "A/P Aging Summary Report",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "AP_AGING_DET",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_PAYABLE",
+            "visibleToCustomer": false,
+            "reportToken": "AP_AGING",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "if($COMPANY_IS_MULTICURRENCY_ENABLED == true, featureflag(\"INTUPLAT-RPTG-MULTIC-DEFAULTING\"), featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\"))",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "ap_aging",
+            "uniqueEntities": [
+                "AR_AGING",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:40b27501-860b-4705-99b9-768040bf785a",
+            "name": "Deposit Detail",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-07-12T10:00:46.540Z",
+            "lastModifiedDate": "2026-05-26T11:23:48.584Z",
+            "localizedName": "Deposit Detail",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "DEPOSIT_DETAIL",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "deposit_detail",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "CUSTOMER",
+                "VENDOR",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:4023ce03-d69d-49f5-b56d-a62b54cf55a5",
+            "name": "Transaction List by Date",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-05-24T15:13:59.567Z",
+            "lastModifiedDate": "2026-05-27T08:19:06.398Z",
+            "localizedName": "Transaction List by Date",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "TX_LIST_BY_DATE",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "tx_list_by_date",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "TRANSACTION",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:3d5a48ae-03fa-4abb-9c30-baf55b369427",
+            "name": "Sales by Product/Service Detail",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 123146341087784,
+            "createdDate": "2023-07-12T05:59:20.597Z",
+            "lastModifiedDate": "2026-06-03T09:06:56.668Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ADVANCED,QBO_ESSENTIALS,QBO_SIMPLE_START"
+                }
+            ],
+            "localizedName": "Sales by Product/Service Detail",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "ITEM_SALES_DET",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "item_sales_det",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CUSTOMER",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:3c7105ca-c203-4fc4-9488-0422d8fc07db",
+            "name": "Product/Item Profitability by Customer",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352338786036,
+            "lastModifiedUserId": 9130356042908906,
+            "createdDate": "2023-05-24T16:37:39.852Z",
+            "lastModifiedDate": "2025-08-22T08:07:29.752Z",
+            "localizedName": "Product/Item Profitability by Customer",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "CUSTOM_REPORT_BUILDER",
+            "visibleToCustomer": true,
+            "reportToken": "ITM_PROFITABILIY_CST_SUM",
+            "multiEntitySupported": false,
+            "evaluatedModeCriteria": false,
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "itm_prft_cst_sum",
+            "uniqueEntities": [
+                "ITEM",
+                "INVOICE_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "CUSTOMER",
+                "INVOICE"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:38363bf9-2ec9-4972-a515-46abf8e98034",
+            "name": "Sales by Customer Summary",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352591812686,
+            "lastModifiedUserId": 9130355803139166,
+            "createdDate": "2023-07-12T06:28:43.530Z",
+            "lastModifiedDate": "2026-05-13T10:14:35.994Z",
+            "localizedName": "Sales by Customer Summary",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "CUST_SALES_DET",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "CUST_SALES",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "cust_sales",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "KLASS",
+                "CUSTOMER",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:37dd32b7-3d0c-4999-b454-d88dc429eb1f",
+            "name": "Sales by Customer Type Detail",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-07-03T05:16:43.292Z",
+            "lastModifiedDate": "2026-05-26T11:45:21.337Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ADVANCED,QBO_ESSENTIALS,QBO_SIMPLE_START"
+                }
+            ],
+            "localizedName": "Sales by Customer Type Detail",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "CUSTOMER_TYPE_SALES_DET",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "cst_type_sales_det",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CUSTOMER",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:377ec128-023c-4a0e-b5c8-ed54a0646664",
+            "name": "Vendor Contact List",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-06-05T10:46:49.023Z",
+            "lastModifiedDate": "2026-06-01T17:59:35.020Z",
+            "localizedName": "Vendor Contact List",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_EXPENSES_PURCHASES",
+            "visibleToCustomer": false,
+            "reportToken": "VEND_CONTACT",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "vend_contact",
+            "uniqueEntities": [
+                "VENDOR"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:33b2e72d-525b-452d-84ff-9cec32397ade",
+            "name": "Sales by Product/Service Summary",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352194168586,
+            "lastModifiedUserId": 123146341087784,
+            "createdDate": "2025-01-23T14:32:29.600Z",
+            "lastModifiedDate": "2026-06-03T09:06:32.429Z",
+            "localizedName": "Sales by Product/Service Summary",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "ITEM_SALES_DET",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "ITEM_SALES",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "item_sales",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "TRANSACTION_DETAILS"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:2ebd9d01-416e-49fb-90ca-4c3700c7558a",
+            "name": "Invoice List by Date",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2023-05-24T15:07:34.344Z",
+            "lastModifiedDate": "2026-06-01T10:47:43.945Z",
+            "localizedName": "Invoice List by Date",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_RECEIVABLE",
+            "visibleToCustomer": false,
+            "reportToken": "INVOICE_LIST",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "invoice_list",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "TRANSACTION",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:2af326b7-fa2c-43a1-a2d5-504e9398e06d",
+            "name": "Income by Customer Summary",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 123145842346294,
+            "lastModifiedUserId": 9130356629940196,
+            "createdDate": "2024-10-14T12:31:38.371Z",
+            "lastModifiedDate": "2026-04-30T10:37:41.478Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_ADVANCED,QBO_PLUS,QBO_SIMPLE_START,QBO_ESSENTIALS"
+                }
+            ],
+            "localizedName": "Income by Customer Summary",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "PANDL",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "CUST_INC",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "cust_inc",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CUSTOMER"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:2a587736-77f3-49d7-9278-343666d951c0",
+            "name": "Vendor Balance Detail Report",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130352674483756,
+            "lastModifiedUserId": 9130352811700026,
+            "createdDate": "2024-12-06T13:15:14.436Z",
+            "lastModifiedDate": "2026-06-02T08:35:09.392Z",
+            "localizedName": "Vendor Balance Detail Report",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_PAYABLE",
+            "visibleToCustomer": false,
+            "reportToken": "VEND_BAL_DET",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "vend_bal_del",
+            "uniqueEntities": [
+                "AR_AGING",
+                "TRANSACTION_DETAILS_V1",
+                "VENDOR",
+                "TRANSACTION",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:2293ccfa-e972-42bf-b6e6-36ea0929d245",
+            "name": "Project Profitability Summary",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130350790377166,
+            "lastModifiedUserId": 9130352450372186,
+            "createdDate": "2025-03-26T11:28:26.210Z",
+            "lastModifiedDate": "2025-09-26T09:02:22.953Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "featureflag",
+                        "qualifier": "INTUPLAT-RPTG-IES-REPORTING-MARCH-CAPABILITY-ENABLED"
+                    },
+                    "operator": "EQUALS",
+                    "value": "TRUE"
+                }
+            ],
+            "localizedName": "Project Profitability Summary",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "PROJECT_PROFITABILITY_QZ",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "PROJECTS",
+            "visibleToCustomer": false,
+            "reportToken": "PROJECT_PROFITABILITY_SUMMARY",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "OPT_IN",
+            "evaluatedMigrationMode": "OPT_IN",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "c_sum_prof_proj",
+            "uniqueEntities": [
+                "PROJECT",
+                "PROJECT_TXN",
+                "CUSTOMER"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:21a5a5fc-a0fa-4f76-a857-e79fb0382871",
+            "name": "Balance Sheet Comparison",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130351748376376,
+            "lastModifiedUserId": 9130355803139166,
+            "createdDate": "2024-10-28T05:08:42.813Z",
+            "lastModifiedDate": "2026-05-13T08:26:14.000Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                },
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_SIMPLE_START,QBO_ESSENTIALS,QBO_ADVANCED"
+                }
+            ],
+            "localizedName": "Balance Sheet Comparison",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "BAL_SHEET_COMP",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "if($COMPANY_IS_MULTICURRENCY_ENABLED == true, featureflag(\"INTUPLAT-RPTG-MULTIC-DEFAULTING\"), featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\"))",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "bal_sheet_comp",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:1bd1dfaf-e548-4462-a68e-e4ca3b09ce33",
+            "name": "Invoice Approval Status",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130356042908906,
+            "createdDate": "2023-05-24T15:03:31.086Z",
+            "lastModifiedDate": "2025-08-22T08:08:30.342Z",
+            "localizedName": "Invoice Approval Status",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "CUSTOM_REPORT_BUILDER",
+            "visibleToCustomer": true,
+            "reportToken": "INV_APPROVAL_SUM",
+            "multiEntitySupported": false,
+            "evaluatedModeCriteria": false,
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "inv_approval_sum",
+            "uniqueEntities": [
+                "CUSTOMER",
+                "INVOICE"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:1bbb0ca2-4dd3-480f-a7c3-afaeb5dde5c0",
+            "name": "Profit and Loss YTD Comparison",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130354458011296,
+            "createdDate": "2024-05-24T10:49:37.633Z",
+            "lastModifiedDate": "2026-05-25T11:49:03.398Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                }
+            ],
+            "localizedName": "Profit and Loss YTD Comparison",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "BUSINESS_OVERVIEW",
+            "visibleToCustomer": false,
+            "reportToken": "PANDL_YTD_COMP",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "pandl_ytd_comp",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "EMPLOYEE",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:15a3d6bc-4836-4658-8c56-e8847efc1993",
+            "name": "Estimates by Customer",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130353853195726,
+            "createdDate": "2023-05-24T15:15:00.838Z",
+            "lastModifiedDate": "2026-03-18T10:31:33.545Z",
+            "localizedName": "Estimates by Customer",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "ESTIMATE_LIST",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "estimate_list",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CUSTOMER",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:159bbcaa-2884-4526-ba40-9687c623cf52",
+            "name": "Unpaid Bills Report",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130351748376376,
+            "lastModifiedUserId": 9130353853195726,
+            "createdDate": "2023-11-21T07:14:19.368Z",
+            "lastModifiedDate": "2026-05-27T08:12:06.818Z",
+            "localizedName": "Unpaid Bills Report",
+            "dataRequest": {
+                "includeResponse": true
+            },
+            "type": "MANAGE_ACCOUNTS_PAYABLE",
+            "visibleToCustomer": false,
+            "reportToken": "UNPAID_BILLS",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "unpaid_bills",
+            "uniqueEntities": [
+                "AR_AGING",
+                "TRANSACTION_DETAILS_V1",
+                "VENDOR",
+                "TRANSACTION",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:12fd1761-d590-49cf-892a-c05df31bf27f",
+            "name": "General Ledger List",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 123145842346294,
+            "lastModifiedUserId": 9411829111867596,
+            "createdDate": "2024-10-18T11:15:14.672Z",
+            "lastModifiedDate": "2026-05-12T05:34:52.061Z",
+            "localizedName": "General Ledger List",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "ACCOUNTANT_REPORTS",
+            "visibleToCustomer": false,
+            "reportToken": "GL_LISTING_DET",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "gen_ledger",
+            "uniqueEntities": [
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "TRANSACTION"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:1157e486-e5db-4f58-b267-b1f41ef7dd1c",
+            "name": "Profit and Loss % of Total Income",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130349857945346,
+            "lastModifiedUserId": 9130354458011296,
+            "createdDate": "2024-05-24T11:26:26.217Z",
+            "lastModifiedDate": "2026-05-25T11:46:33.658Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "region",
+                        "qualifier": null
+                    },
+                    "operator": "IN",
+                    "value": "US"
+                }
+            ],
+            "localizedName": "Profit and Loss % of Total Income",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "DYNAMIC",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": true,
+                        "metadata": null,
+                        "drilldownTarget": {
+                            "type": "Report",
+                            "reportToken": "GENERIC_QZREPORT",
+                            "filters": null
+                        },
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "BUSINESS_OVERVIEW",
+            "visibleToCustomer": false,
+            "reportToken": "PANDL_PCT_TOT_INC",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "featureflag(\"INTUPLAT-RPTG-REPORTS-DEFAULTING\")",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "pandl_pct_tot_inc",
+            "uniqueEntities": [
+                "ITEM",
+                "TRANSACTION_DETAILS_V1",
+                "CHART_OF_ACCOUNT",
+                "KLASS",
+                "EMPLOYEE",
+                "CUSTOMER",
+                "VENDOR",
+                "DEPARTMENT"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    },
+    {
+        "report": {
+            "reportKindEnum": "CRB_REPORT",
+            "id": "sbg:0359024c-4cbf-4b17-beb6-5c8fcb05d833",
+            "name": "Payment Method List",
+            "active": true,
+            "reportingNamespace": "qbo",
+            "createdUserId": 9130354667296826,
+            "lastModifiedUserId": 9130352194168586,
+            "createdDate": "2023-06-06T10:31:38.569Z",
+            "lastModifiedDate": "2026-03-09T07:26:36.899Z",
+            "targeting": [
+                {
+                    "on": {
+                        "name": "sku",
+                        "qualifier": "Intuit.sbe.salsa.default"
+                    },
+                    "operator": "IN",
+                    "value": "QBO_PLUS,QBO_ADVANCED,QBO_ESSENTIALS,QBO_SIMPLE_START"
+                }
+            ],
+            "localizedName": "Payment Method List",
+            "dataRequest": {
+                "layouts": [
+                    {
+                        "type": "PIVOT",
+                        "reportLayoutType": null,
+                        "reportSubLayoutType": null,
+                        "enabled": false,
+                        "metadata": null,
+                        "drilldownTarget": null,
+                        "options": null,
+                        "documentOptions": null,
+                        "definition": {
+                            "rows": null,
+                            "columns": null
+                        }
+                    }
+                ],
+                "includeResponse": true
+            },
+            "type": "REVIEW_SALES",
+            "visibleToCustomer": false,
+            "reportToken": "PAYMENTMETHOD_LIST",
+            "migrationCriteria": "true",
+            "evaluatedMigrationCriteria": true,
+            "multiEntitySupported": false,
+            "modeCriteria": "true",
+            "evaluatedModeCriteria": true,
+            "migrationMode": "DEFAULT",
+            "evaluatedMigrationMode": "DEFAULT",
+            "modelDimensionsAsLinkedRefTag": true,
+            "authzResource": "paymentmethod_list",
+            "uniqueEntities": [
+                "PAYMENT_METHOD"
+            ],
+            "accountingMethodSource": "SELF_SERVE",
+            "favorite": false
+        }
+    }
+]

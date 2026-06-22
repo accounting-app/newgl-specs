@@ -1,0 +1,4098 @@
+{
+    "data": {
+        "accountingAccountsV2": {
+            "edges": [
+                {
+                    "node": {
+                        "id": "1150040008",
+                        "name": "Cash",
+                        "accountType": "BANK",
+                        "accountTypeEnum": {
+                            "id": "BANK",
+                            "localizedValue": "Bank",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "CASH_ON_HAND",
+                            "localizedValue": "Cash on hand",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Cash",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 0,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "236",
+                        "name": "CHASE CHECKING 3623",
+                        "accountType": "BANK",
+                        "accountTypeEnum": {
+                            "id": "BANK",
+                            "localizedValue": "Bank",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "CHECKING",
+                            "localizedValue": "Checking",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "CHASE CHECKING 3623",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 41538.94,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": "40000.00",
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "213",
+                        "name": "CHASE COLLEGE CASH 2751",
+                        "accountType": "BANK",
+                        "accountTypeEnum": {
+                            "id": "BANK",
+                            "localizedValue": "Bank",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "CHECKING",
+                            "localizedValue": "Checking",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "CHASE COLLEGE CASH 2751",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 0,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 5,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "234",
+                        "name": "CHASE SAVINGS 7250",
+                        "accountType": "BANK",
+                        "accountTypeEnum": {
+                            "id": "BANK",
+                            "localizedValue": "Bank",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SAVINGS",
+                            "localizedValue": "Savings",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "CHASE SAVINGS 7250",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 5,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": "5.00",
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "219",
+                        "name": "CHASE SECURE (deleted)",
+                        "accountType": "BANK",
+                        "accountTypeEnum": {
+                            "id": "BANK",
+                            "localizedValue": "Bank",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "CHECKING",
+                            "localizedValue": "Checking",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "CHASE SECURE (deleted)",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 0,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": false,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "222",
+                        "name": "CHASE SECURE CASH 1745",
+                        "accountType": "BANK",
+                        "accountTypeEnum": {
+                            "id": "BANK",
+                            "localizedValue": "Bank",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "CHECKING",
+                            "localizedValue": "Checking",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "CHASE SECURE CASH 1745",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 11284.14,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": "569.55",
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040034",
+                        "name": "Coinbase Cash",
+                        "accountType": "BANK",
+                        "accountTypeEnum": {
+                            "id": "BANK",
+                            "localizedValue": "Bank",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "CASH_ON_HAND",
+                            "localizedValue": "Cash on hand",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Coinbase Cash",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 2850.76,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "240",
+                        "name": "Inventory Asset",
+                        "accountType": "OTHER_CUR_ASSETS",
+                        "accountTypeEnum": {
+                            "id": "OTHER_CUR_ASSETS",
+                            "localizedValue": "Other Current Assets",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "INVENTORY",
+                            "localizedValue": "Inventory",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Inventory Asset",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 0,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "174",
+                        "name": "Prepaid Expenses",
+                        "accountType": "OTHER_CUR_ASSETS",
+                        "accountTypeEnum": {
+                            "id": "OTHER_CUR_ASSETS",
+                            "localizedValue": "Other Current Assets",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "PREPAID_EXPENSES",
+                            "localizedValue": "Prepaid Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Prepaid Expenses",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 0,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "206",
+                        "name": "Uncategorized Asset",
+                        "accountType": "OTHER_CUR_ASSETS",
+                        "accountTypeEnum": {
+                            "id": "OTHER_CUR_ASSETS",
+                            "localizedValue": "Other Current Assets",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_CURRENT_ASSETS",
+                            "localizedValue": "Other Current Assets",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Uncategorized Asset",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 0,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "205",
+                        "name": "Uncategorized Asset ( 205 )",
+                        "accountType": "OTHER_CUR_ASSETS",
+                        "accountTypeEnum": {
+                            "id": "OTHER_CUR_ASSETS",
+                            "localizedValue": "Other Current Assets",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_CURRENT_ASSETS",
+                            "localizedValue": "Other Current Assets",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Uncategorized Asset ( 205 )",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 0,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "175",
+                        "name": "Undeposited Funds",
+                        "accountType": "OTHER_CUR_ASSETS",
+                        "accountTypeEnum": {
+                            "id": "OTHER_CUR_ASSETS",
+                            "localizedValue": "Other Current Assets",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "UNDEPOSITED_FUNDS",
+                            "localizedValue": "Undeposited Funds",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Undeposited Funds",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 0,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "235",
+                        "name": "CHASE CREDIT 2525",
+                        "accountType": "CREDIT_CARD",
+                        "accountTypeEnum": {
+                            "id": "CREDIT_CARD",
+                            "localizedValue": "Credit Card",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "CREDIT_CARD",
+                            "localizedValue": "Credit Card",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "CHASE CREDIT 2525",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 13816.66,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": "-4575.59",
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "225",
+                        "name": "CHASE CREDIT 9416",
+                        "accountType": "CREDIT_CARD",
+                        "accountTypeEnum": {
+                            "id": "CREDIT_CARD",
+                            "localizedValue": "Credit Card",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "CREDIT_CARD",
+                            "localizedValue": "Credit Card",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "CHASE CREDIT 9416",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 10616.17,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": "-4677.23",
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "209",
+                        "name": "CHASE PRIME",
+                        "accountType": "CREDIT_CARD",
+                        "accountTypeEnum": {
+                            "id": "CREDIT_CARD",
+                            "localizedValue": "Credit Card",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "CREDIT_CARD",
+                            "localizedValue": "Credit Card",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "CHASE PRIME",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 1459.95,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": "Amazon Prime credit card",
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": "0.00",
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "220",
+                        "name": "CREDIT CARD - 9416 (deleted)",
+                        "accountType": "CREDIT_CARD",
+                        "accountTypeEnum": {
+                            "id": "CREDIT_CARD",
+                            "localizedValue": "Credit Card",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "CREDIT_CARD",
+                            "localizedValue": "Credit Card",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "CREDIT CARD - 9416 (deleted)",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 0,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": false,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 2,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040024",
+                        "name": "Payroll Tax Liabilities",
+                        "accountType": "OTHER_CUR_LIABILITIES",
+                        "accountTypeEnum": {
+                            "id": "OTHER_CUR_LIABILITIES",
+                            "localizedValue": "Other Current Liabilities",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "PAYROLL_TAX_PAYABLE",
+                            "localizedValue": "Payroll Tax Payable",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Payroll Tax Liabilities",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 25396.11,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040027",
+                        "name": "Federal Withholding",
+                        "accountType": "OTHER_CUR_LIABILITIES",
+                        "accountTypeEnum": {
+                            "id": "OTHER_CUR_LIABILITIES",
+                            "localizedValue": "Other Current Liabilities",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "PAYROLL_TAX_PAYABLE",
+                            "localizedValue": "Payroll Tax Payable",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Payroll Tax Liabilities:Federal Withholding",
+                        "level": 1,
+                        "totalBalance": {
+                            "value": -2000,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040024",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040026",
+                        "name": "Medicare",
+                        "accountType": "OTHER_CUR_LIABILITIES",
+                        "accountTypeEnum": {
+                            "id": "OTHER_CUR_LIABILITIES",
+                            "localizedValue": "Other Current Liabilities",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "PAYROLL_TAX_PAYABLE",
+                            "localizedValue": "Payroll Tax Payable",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Payroll Tax Liabilities:Medicare",
+                        "level": 1,
+                        "totalBalance": {
+                            "value": -400,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040024",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040025",
+                        "name": "Social Security",
+                        "accountType": "OTHER_CUR_LIABILITIES",
+                        "accountTypeEnum": {
+                            "id": "OTHER_CUR_LIABILITIES",
+                            "localizedValue": "Other Current Liabilities",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "FEDERAL_INCOME_TAX_PAYABLE",
+                            "localizedValue": "Federal Income Tax Payable",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Payroll Tax Liabilities:Social Security",
+                        "level": 1,
+                        "totalBalance": {
+                            "value": -1700,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040024",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "210",
+                        "name": "Opening Balance Equity",
+                        "accountType": "EQUITY",
+                        "accountTypeEnum": {
+                            "id": "EQUITY",
+                            "localizedValue": "Equity",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OPENING_BALANCE_EQUITY",
+                            "localizedValue": "Opening Balance Equity",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Opening Balance Equity",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 0,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "200",
+                        "name": "Retained Earnings",
+                        "accountType": "EQUITY",
+                        "accountTypeEnum": {
+                            "id": "EQUITY",
+                            "localizedValue": "Equity",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "RETAINED_EARNINGS",
+                            "localizedValue": "Retained Earnings",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Retained Earnings",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040019",
+                        "name": "Shareholder Contribution",
+                        "accountType": "EQUITY",
+                        "accountTypeEnum": {
+                            "id": "EQUITY",
+                            "localizedValue": "Equity",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OWNER_S_EQUITY",
+                            "localizedValue": "Owner's Equity",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Shareholder Contribution",
+                        "level": 0,
+                        "totalBalance": {
+                            "value": 45230.14,
+                            "__typename": "Common_MoneyAmountV2"
+                        },
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "207",
+                        "name": "Billable Expense Income",
+                        "accountType": "INCOME",
+                        "accountTypeEnum": {
+                            "id": "INCOME",
+                            "localizedValue": "Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SERVICE_FEE_INCOME",
+                            "localizedValue": "Service/Fee Income",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Billable Expense Income",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "208",
+                        "name": "Billable Expense Income-1",
+                        "accountType": "INCOME",
+                        "accountTypeEnum": {
+                            "id": "INCOME",
+                            "localizedValue": "Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SERVICE_FEE_INCOME",
+                            "localizedValue": "Service/Fee Income",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Billable Expense Income-1",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040009",
+                        "name": "Coding Services",
+                        "accountType": "INCOME",
+                        "accountTypeEnum": {
+                            "id": "INCOME",
+                            "localizedValue": "Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SERVICE_FEE_INCOME",
+                            "localizedValue": "Service/Fee Income",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Coding Services",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040010",
+                        "name": "By David Castillo",
+                        "accountType": "INCOME",
+                        "accountTypeEnum": {
+                            "id": "INCOME",
+                            "localizedValue": "Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SERVICE_FEE_INCOME",
+                            "localizedValue": "Service/Fee Income",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Coding Services:By David Castillo",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040009",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "215",
+                        "name": "By Hector M Garcia",
+                        "accountType": "INCOME",
+                        "accountTypeEnum": {
+                            "id": "INCOME",
+                            "localizedValue": "Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SERVICE_FEE_INCOME",
+                            "localizedValue": "Service/Fee Income",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Coding Services:By Hector M Garcia",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040009",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "176",
+                        "name": "Fees Billed",
+                        "accountType": "INCOME",
+                        "accountTypeEnum": {
+                            "id": "INCOME",
+                            "localizedValue": "Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SERVICE_FEE_INCOME",
+                            "localizedValue": "Service/Fee Income",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Fees Billed",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "177",
+                        "name": "Refunds-Allowances",
+                        "accountType": "INCOME",
+                        "accountTypeEnum": {
+                            "id": "INCOME",
+                            "localizedValue": "Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "DISCOUNTS_REFUNDS_GIVEN",
+                            "localizedValue": "Discounts/Refunds Given",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Refunds-Allowances",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "238",
+                        "name": "Sales of Product Income",
+                        "accountType": "INCOME",
+                        "accountTypeEnum": {
+                            "id": "INCOME",
+                            "localizedValue": "Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SALES_OF_PRODUCT_INCOME",
+                            "localizedValue": "Sales of Product Income",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Sales of Product Income",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "199",
+                        "name": "Services",
+                        "accountType": "INCOME",
+                        "accountTypeEnum": {
+                            "id": "INCOME",
+                            "localizedValue": "Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SERVICE_FEE_INCOME",
+                            "localizedValue": "Service/Fee Income",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Services",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "202",
+                        "name": "Uncategorized Income",
+                        "accountType": "INCOME",
+                        "accountTypeEnum": {
+                            "id": "INCOME",
+                            "localizedValue": "Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SERVICE_FEE_INCOME",
+                            "localizedValue": "Service/Fee Income",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Uncategorized Income",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "201",
+                        "name": "Uncategorized Income ( 201 )",
+                        "accountType": "INCOME",
+                        "accountTypeEnum": {
+                            "id": "INCOME",
+                            "localizedValue": "Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SERVICE_FEE_INCOME",
+                            "localizedValue": "Service/Fee Income",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Uncategorized Income ( 201 )",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040012",
+                        "name": "Admin Contractor",
+                        "accountType": "COGS",
+                        "accountTypeEnum": {
+                            "id": "COGS",
+                            "localizedValue": "Cost of Goods Sold",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "COST_OF_LABOR_COS",
+                            "localizedValue": "Cost of labor - COS",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Admin Contractor",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040011",
+                        "name": "Coding Contractor",
+                        "accountType": "COGS",
+                        "accountTypeEnum": {
+                            "id": "COGS",
+                            "localizedValue": "Cost of Goods Sold",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "COST_OF_LABOR_COS",
+                            "localizedValue": "Cost of labor - COS",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Coding Contractor",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "239",
+                        "name": "Cost of Goods Sold",
+                        "accountType": "COGS",
+                        "accountTypeEnum": {
+                            "id": "COGS",
+                            "localizedValue": "Cost of Goods Sold",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SUPPLIES_MATERIALS_COGS",
+                            "localizedValue": "Supplies & Materials - COGS",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Cost of Goods Sold",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040013",
+                        "name": "Design Contractor",
+                        "accountType": "COGS",
+                        "accountTypeEnum": {
+                            "id": "COGS",
+                            "localizedValue": "Cost of Goods Sold",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "COST_OF_LABOR_COS",
+                            "localizedValue": "Cost of labor - COS",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Design Contractor",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040030",
+                        "name": "Officer Wages",
+                        "accountType": "COGS",
+                        "accountTypeEnum": {
+                            "id": "COGS",
+                            "localizedValue": "Cost of Goods Sold",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "COST_OF_LABOR_COS",
+                            "localizedValue": "Cost of labor - COS",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Officer Wages",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040016",
+                        "name": "Research & Development",
+                        "accountType": "COGS",
+                        "accountTypeEnum": {
+                            "id": "COGS",
+                            "localizedValue": "Cost of Goods Sold",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "COST_OF_LABOR_COS",
+                            "localizedValue": "Cost of labor - COS",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Research & Development",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040014",
+                        "name": "Accounting Fees",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "LEGAL_PROFESSIONAL_FEES",
+                            "localizedValue": "Legal & Professional Fees",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Accounting Fees",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "178",
+                        "name": "Advertising",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "ADVERTISING_PROMOTIONAL",
+                            "localizedValue": "Advertising/Promotional",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Advertising",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "179",
+                        "name": "Bank Charges",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "BANK_CHARGES",
+                            "localizedValue": "Bank Charges",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Bank Charges",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "180",
+                        "name": "Commissions & fees",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_MISCELLANEOUS_SERVICE_COST",
+                            "localizedValue": "Other Miscellaneous Service Cost",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Commissions & fees",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "181",
+                        "name": "Dues & Subscriptions",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "DUES_SUBSCRIPTIONS",
+                            "localizedValue": "Dues & subscriptions",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Dues & Subscriptions",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "182",
+                        "name": "Insurance",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "INSURANCE",
+                            "localizedValue": "Insurance",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Insurance",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "183",
+                        "name": "Legal & Professional Fees",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "LEGAL_PROFESSIONAL_FEES",
+                            "localizedValue": "Legal & Professional Fees",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Legal & Professional Fees",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040017",
+                        "name": "Meals",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Meals",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "226",
+                        "name": "Meals with clients",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "ADVERTISING_PROMOTIONAL",
+                            "localizedValue": "Advertising/Promotional",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Meals:Meals with clients",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040017",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "184",
+                        "name": "Meals and Entertainment",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "ENTERTAINMENT_MEALS",
+                            "localizedValue": "Entertainment Meals",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Meals and Entertainment",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040018",
+                        "name": "Medical Expenses",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Medical Expenses",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040037",
+                        "name": "Bloodwork visit",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "LEGAL_PROFESSIONAL_FEES",
+                            "localizedValue": "Legal & Professional Fees",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Medical Expenses:Bloodwork visit",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040018",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "229",
+                        "name": "Dentist visit",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Medical Expenses:Dentist visit",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040018",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040036",
+                        "name": "ENT visit",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "LEGAL_PROFESSIONAL_FEES",
+                            "localizedValue": "Legal & Professional Fees",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Medical Expenses:ENT visit",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040018",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040033",
+                        "name": "Equipment",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "EQUIPMENT_RENTAL",
+                            "localizedValue": "Equipment Rental",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Medical Expenses:Equipment",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040018",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040038",
+                        "name": "ER visit",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "LEGAL_PROFESSIONAL_FEES",
+                            "localizedValue": "Legal & Professional Fees",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Medical Expenses:ER visit",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040018",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "231",
+                        "name": "Neurologist visit",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Medical Expenses:Neurologist visit",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040018",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "228",
+                        "name": "Physician visit",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Medical Expenses:Physician visit",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040018",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040028",
+                        "name": "Prescription drugs",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Medical Expenses:Prescription drugs",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040018",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "230",
+                        "name": "Radiology visit",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Medical Expenses:Radiology visit",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040018",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "242",
+                        "name": "Therapist visit",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "LEGAL_PROFESSIONAL_FEES",
+                            "localizedValue": "Legal & Professional Fees",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Medical Expenses:Therapist visit",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040018",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "186",
+                        "name": "Office Expenses",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OFFICE_GENERAL_ADMINISTRATIVE_EXPENSES",
+                            "localizedValue": "Office/General Administrative Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Office Expenses",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040032",
+                        "name": "Cleaning",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "ADVERTISING_PROMOTIONAL",
+                            "localizedValue": "Advertising/Promotional",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Office Expenses:Cleaning",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "186",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "211",
+                        "name": "Office Supplies",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Office Expenses:Office Supplies",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "186",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040029",
+                        "name": "Shipping",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SHIPPING_FREIGHT_DELIVERY",
+                            "localizedValue": "Shipping, Freight & Delivery",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Office Expenses:Shipping",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "186",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "214",
+                        "name": "Software & Apps",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Office Expenses:Software & Apps",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "186",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040035",
+                        "name": "Owner's Compensation",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "PAYROLL_EXPENSES",
+                            "localizedValue": "Payroll Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Owner's Compensation",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040020",
+                        "name": "Payroll Tax Expenses",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "PAYROLL_TAX_EXPENSES",
+                            "localizedValue": "Payroll Tax Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Payroll Tax Expenses",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "241",
+                        "name": "Florida Department of Revenue",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "PAYROLL_TAX_EXPENSES",
+                            "localizedValue": "Payroll Tax Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Payroll Tax Expenses:Florida Department of Revenue",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040020",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040023",
+                        "name": "FUTA",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "TAXES_PAID",
+                            "localizedValue": "Taxes Paid",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Payroll Tax Expenses:FUTA",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040020",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040022",
+                        "name": "Medicare",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "PAYROLL_TAX_EXPENSES",
+                            "localizedValue": "Payroll Tax Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Payroll Tax Expenses:Medicare",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040020",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040021",
+                        "name": "Social Security",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "PAYROLL_TAX_EXPENSES",
+                            "localizedValue": "Payroll Tax Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Payroll Tax Expenses:Social Security",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "1150040020",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "187",
+                        "name": "Promotional",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "ADVERTISING_PROMOTIONAL",
+                            "localizedValue": "Advertising/Promotional",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Promotional",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "188",
+                        "name": "Rent or Lease",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "RENT_OR_LEASE_OF_BUILDINGS",
+                            "localizedValue": "Rent or Lease of Buildings",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Rent or Lease",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "189",
+                        "name": "Repair & Maintenance",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "REPAIR_MAINTENANCE",
+                            "localizedValue": "Repair & Maintenance",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Repair & Maintenance",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "190",
+                        "name": "Stationery & Printing",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OFFICE_GENERAL_ADMINISTRATIVE_EXPENSES",
+                            "localizedValue": "Office/General Administrative Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Stationery & Printing",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040015",
+                        "name": "Storage",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Storage",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "191",
+                        "name": "Supplies",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "SUPPLIES_MATERIALS",
+                            "localizedValue": "Supplies & Materials",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Supplies",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "192",
+                        "name": "Taxes & Licenses",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "TAXES_PAID",
+                            "localizedValue": "Taxes Paid",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Taxes & Licenses",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "193",
+                        "name": "Travel",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "TRAVEL",
+                            "localizedValue": "Travel",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Travel",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "217",
+                        "name": "Airfare",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "ADVERTISING_PROMOTIONAL",
+                            "localizedValue": "Advertising/Promotional",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Travel:Airfare",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "193",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "216",
+                        "name": "Car Rental",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "ADVERTISING_PROMOTIONAL",
+                            "localizedValue": "Advertising/Promotional",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Travel:Car Rental",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "193",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "224",
+                        "name": "Gas",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "TRAVEL",
+                            "localizedValue": "Travel",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Travel:Gas",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "193",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "233",
+                        "name": "Hotels",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "TRAVEL",
+                            "localizedValue": "Travel",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Travel:Hotels",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "193",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "218",
+                        "name": "Taxis/Shared rides",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "ADVERTISING_PROMOTIONAL",
+                            "localizedValue": "Advertising/Promotional",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Travel:Taxis/Shared rides",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "193",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 1,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "223",
+                        "name": "Tolls & Parking",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Travel:Tolls & Parking",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "193",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "232",
+                        "name": "Train/Buses",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Travel:Train/Buses",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "193",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "194",
+                        "name": "Travel Meals",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "TRAVEL_MEALS",
+                            "localizedValue": "Travel Meals",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Travel Meals",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "204",
+                        "name": "Uncategorized Expense",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_MISCELLANEOUS_SERVICE_COST",
+                            "localizedValue": "Other Miscellaneous Service Cost",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Uncategorized Expense",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "203",
+                        "name": "Uncategorized Expense ( 203 )",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_MISCELLANEOUS_SERVICE_COST",
+                            "localizedValue": "Other Miscellaneous Service Cost",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Uncategorized Expense ( 203 )",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "195",
+                        "name": "Utilities",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "UTILITIES",
+                            "localizedValue": "Utilities",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Utilities",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "212",
+                        "name": "Electricity",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Utilities:Electricity",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "195",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "1150040031",
+                        "name": "Gas",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "ADVERTISING_PROMOTIONAL",
+                            "localizedValue": "Advertising/Promotional",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Utilities:Gas",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "195",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "227",
+                        "name": "Internet",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "ADVERTISING_PROMOTIONAL",
+                            "localizedValue": "Advertising/Promotional",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Utilities:Internet",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "195",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "237",
+                        "name": "Phone",
+                        "accountType": "EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "EXPENSE",
+                            "localizedValue": "Expenses",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_BUSINESS_EXPENSES",
+                            "localizedValue": "Other Business Expenses",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Utilities:Phone",
+                        "level": 1,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": "195",
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "196",
+                        "name": "Interest Earned",
+                        "accountType": "OTHER_INCOME",
+                        "accountTypeEnum": {
+                            "id": "OTHER_INCOME",
+                            "localizedValue": "Other Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "INTEREST_EARNED",
+                            "localizedValue": "Interest Earned",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Interest Earned",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "197",
+                        "name": "Other Portfolio Income",
+                        "accountType": "OTHER_INCOME",
+                        "accountTypeEnum": {
+                            "id": "OTHER_INCOME",
+                            "localizedValue": "Other Income",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_MISCELLANEOUS_INCOME",
+                            "localizedValue": "Other Miscellaneous Income",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Other Portfolio Income",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "185",
+                        "name": "Miscellaneous",
+                        "accountType": "OTHER_EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "OTHER_EXPENSE",
+                            "localizedValue": "Other Expense",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_MISCELLANEOUS_EXPENSE",
+                            "localizedValue": "Other Miscellaneous Expense",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Miscellaneous",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "198",
+                        "name": "Penalties & Settlements",
+                        "accountType": "OTHER_EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "OTHER_EXPENSE",
+                            "localizedValue": "Other Expense",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "PENALTIES_SETTLEMENTS",
+                            "localizedValue": "Penalties & Settlements",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Penalties & Settlements",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "9341454233117513",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                },
+                {
+                    "node": {
+                        "id": "221",
+                        "name": "Reconciliation Discrepancies",
+                        "accountType": "OTHER_EXPENSE",
+                        "accountTypeEnum": {
+                            "id": "OTHER_EXPENSE",
+                            "localizedValue": "Other Expense",
+                            "__typename": "Accounting_AccountType"
+                        },
+                        "detailTypeEnum": {
+                            "id": "OTHER_MISCELLANEOUS_EXPENSE",
+                            "localizedValue": "Other Miscellaneous Expense",
+                            "__typename": "Accounting_DetailType"
+                        },
+                        "currency": "USD",
+                        "fullName": "Reconciliation Discrepancies",
+                        "level": 0,
+                        "totalBalance": null,
+                        "description": null,
+                        "number": null,
+                        "active": true,
+                        "legacyTaxCodeId": null,
+                        "legacyTaxCodeName": null,
+                        "legacyBankBalance": null,
+                        "parentAccountId": null,
+                        "isNonPosting": false,
+                        "purposeMappings": {
+                            "nodes": [
+                                {
+                                    "id": "75154753",
+                                    "accountId": "221",
+                                    "purpose": {
+                                        "externalEntityId": null,
+                                        "purposeTypeDetails": {
+                                            "displayName": "Reconciliation Discrepancies",
+                                            "intuitManaged": false,
+                                            "purposeType": "RECONCILIATION_DISCREPANCIES",
+                                            "__typename": "Accounting_PurposeType"
+                                        },
+                                        "__typename": "Accounting_Purpose"
+                                    },
+                                    "__typename": "Accounting_AccountPurposeMappingV2"
+                                }
+                            ],
+                            "__typename": "Accounting_AccountPurposeMappingConnectionV2"
+                        },
+                        "meta": {
+                            "createdByUser": "0",
+                            "__typename": "QB_Metadata"
+                        },
+                        "version": 0,
+                        "__typename": "Accounting_AccountV2"
+                    },
+                    "__typename": "Accounting_AccountEdgeV2"
+                }
+            ],
+            "pageInfo": {
+                "startCursor": "0",
+                "endCursor": "99",
+                "hasNextPage": false,
+                "hasPreviousPage": false,
+                "__typename": "Common_PageInfo"
+            },
+            "__typename": "Accounting_AccountConnectionV2"
+        }
+    }
+}

@@ -1,0 +1,1002 @@
+// ENDPOINT: POST https://qbo.intuit.com/api/v4/entities
+// PAYLOAD: [
+//     {
+//         "$type": "/Query",
+//         "graphQuery": "{\n    company {\n        reportDefinitions (first: 99999) {\n            edges {\n                node {\n                    id\n                    displayName\n                    reportCategoryInfo {\n                        displayName\n                        categoryCode\n                    }\n                    qboAppData {\n                        reportDescription\n                        reportUrl\n                        reportMode\n                        activityLogEnabled\n                    }\n                    attributes {\n                        name\n                        type\n                        value\n                    }\n                }\n            }\n        }\n    }\n}",
+//         "variables": []
+//     }
+// ]
+
+const payload = [
+    {
+        "$type": "/Query",
+        "graphQuery": "{\n    company {\n        reportDefinitions (first: 99999) {\n            edges {\n                node {\n                    id\n                    displayName\n                    reportCategoryInfo {\n                        displayName\n                        categoryCode\n                    }\n                    qboAppData {\n                        reportDescription\n                        reportUrl\n                        reportMode\n                        activityLogEnabled\n                    }\n                    attributes {\n                        name\n                        type\n                        value\n                    }\n                }\n            }\n        }\n    }\n}",
+        "variables": []
+    }
+]
+
+const response = [
+    {
+        "$type": "/Result",
+        "data": [
+            {
+                "company": {
+                    "reportDefinitions": {
+                        "edges": [
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Expenses and Purchases",
+                                            "categoryCode": "REVIEW_EXPENSES_PURCHASES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": true,
+                                        "reportDescription": "This report shows your total expenses for each vendor.",
+                                        "reportUrl": "VEND_EXP&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Expenses by Vendor Summary",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:VEND_EXP"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Expenses and Purchases",
+                                            "categoryCode": "REVIEW_EXPENSES_PURCHASES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists all vendor-related transactions that occurred within a period of time. The report groups transactions under each vendor's name.  The report is useful if you need a listing of all the transactions your company made for a particular vendor.",
+                                        "reportUrl": "TX_LIST_BY_VENDOR&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Transaction List by Vendor",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:TX_LIST_BY_VENDOR"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Expenses and Purchases",
+                                            "categoryCode": "REVIEW_EXPENSES_PURCHASES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists each vendor's contact information.",
+                                        "reportUrl": "VEND_CONTACT&&list=Vendors&orderby=OrderName",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Vendor Contact List",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:VEND_CONTACT"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Expenses and Purchases",
+                                            "categoryCode": "REVIEW_EXPENSES_PURCHASES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report shows detailed information about the checks you've written.",
+                                        "reportUrl": "CHECK_DETAIL&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Check Detail",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:CHECK_DETAIL"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Expenses and Purchases",
+                                            "categoryCode": "REVIEW_EXPENSES_PURCHASES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Transactions and total for each contractor and their account number, tax ID, with splits.",
+                                        "reportUrl": "CUSTOM_DETAIL_REPORT&SubToken=1099DetailReport",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "1099 Transaction Detail Report",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:CUSTOM_DETAIL_REPORT/1099DetailReport"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Payable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_PAYABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report summarizes the status of unpaid bills and unapplied vendor credits in accounts payable. For each vendor your company owes money to, the report shows (1) what your company owes for the current period and (2) what your company still owes from previous periods.",
+                                        "reportUrl": "AP_AGING&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "A/P Aging Summary",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:AP_AGING"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Payable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_PAYABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report shows all the bills and credits related to each vendor's current balance.",
+                                        "reportUrl": "VEND_BAL_DET&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Vendor Balance Detail",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:VEND_BAL_DET"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Payable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_PAYABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report shows all bill payment transactions dated this month.",
+                                        "reportUrl": "BILL_PAY_LIST&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Bill Payment List",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:BILL_PAY_LIST"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Payable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_PAYABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists the unpaid bills and unapplied vendor credits in accounts payable, grouped by when the bill was due. To see unpaid bills by vendor, see Vendor Balance Detail.",
+                                        "reportUrl": "AP_AGING_DET&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "A/P Aging Detail",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:AP_AGING_DET"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Payable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_PAYABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report shows all the unpaid bills for each vendor and when they were due. If a bill is overdue, it shows the number of days past due. The vendor's phone number is included.",
+                                        "reportUrl": "UNPAID_BILLS&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Unpaid Bills",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:UNPAID_BILLS"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Payable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_PAYABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report shows your company's unpaid bills and unapplied credits with each vendor. It also breaks down when the bills were due.",
+                                        "reportUrl": "VEND_BAL&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Vendor Balance Summary",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:VEND_BAL"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Payable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_PAYABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Payments you’ve made and the bills that go with them.",
+                                        "reportUrl": "BILL_PAYMENT&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Bills and Applied Payments",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:BILL_PAYMENT"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report shows the name, type, description and balance of all the accounts in your chart of accounts.",
+                                        "reportUrl": "ACCT_LIST&&orderby=$MACRO.ACCT_LIST_ORDERBY$",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Account List",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:ACCT_LIST"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists all the accounts that have been reconciled, their most recent reconcile date, and the date of the statement they were reconciled against. On the report, click an account name to view its most recent reconcile report.",
+                                        "reportUrl": "reconcile?showHistory=true",
+                                        "reportMode": "launch_plugin_report"
+                                    },
+                                    "displayName": "Reconciliation Reports",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:RECONCILE_REPORTS"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report summarizes the debit and credit balances of each account on your chart of accounts during a period of time.",
+                                        "reportUrl": "TRIAL_BAL&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Trial Balance",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:TRIAL_BAL"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report breaks down every transaction during a period of time into debits and credits and displays them chronologically. Transaction List by Date also lists transactions chronologically, but not as debits and credits.",
+                                        "reportUrl": "JOURNAL&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Journal",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:JOURNAL"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        },
+                                        {
+                                            "displayName": "Favourites",
+                                            "categoryCode": "FAVOURITES"
+                                        },
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report is also called an income statement. It summarizes your income and expenses for each income or expense account on your chart of accounts, so you can tell if you're operating at a profit or a loss.",
+                                        "reportUrl": "PANDL&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Profit and Loss",
+                                    "attributes": [
+                                        {
+                                            "name": "isFavouriteReport",
+                                            "type": "boolean",
+                                            "value": "true"
+                                        }
+                                    ],
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:PANDL"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        },
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Shows a year-over-year comparison of income and expenses.",
+                                        "reportUrl": "PANDL_COMP&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Profit and Loss Comparison",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:PANDL_COMP"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        },
+                                        {
+                                            "displayName": "Favourites",
+                                            "categoryCode": "FAVOURITES"
+                                        },
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report provides a financial snapshot of your company. It lists the balances for each asset, liability and equity account as of a specific date. It also calculates what your business is worth (the equity) by subtracting what your company owes (liabilities) from everything it owns (assets).",
+                                        "reportUrl": "BAL_SHEET&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Balance Sheet",
+                                    "attributes": [
+                                        {
+                                            "name": "isFavouriteReport",
+                                            "type": "boolean",
+                                            "value": "true"
+                                        }
+                                    ],
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:BAL_SHEET"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        },
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Lists what you own (assets), what your debts are (liabilities), and what you've invested in your company (equity).",
+                                        "reportUrl": "BAL_SHEET_COMP&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Balance Sheet Comparison ",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:BAL_SHEET_COMP"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "For each account in your chart of accounts, the report shows all the transactions that occurred in that account over a period of time. It includes the beginning balance and total for each account.",
+                                        "reportUrl": "GEN_LEDGER&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "General Ledger",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:GEN_LEDGER"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        },
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report shows how your cash position changed over time. It shows the amount of cash earned from profit, where you received additional cash, and where your cash was spent. It uses all Bank type accounts from your chart of accounts.",
+                                        "reportUrl": "CASH_FLOW&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Statement of Cash Flows",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:CASH_FLOW"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists all the transactions that occurred within a period of time. The report is useful if you need a straight chronological listing of all the transactions your company made.",
+                                        "reportUrl": "TX_LIST_BY_DATE&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Transaction List by Date",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:TX_LIST_BY_DATE"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report shows the transactions most recently modified within the last 4 days.",
+                                        "reportUrl": "RECENT_TX&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Recent Transactions",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:RECENT_TX"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists recurring templates from which transactions can be created. The report groups templates by template type (Scheduled, Reminder, and Unscheduled).",
+                                        "reportUrl": "MEM_TXN_REPORT&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Recurring Template List",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:MEM_TXN_REPORT"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Accountant Reports",
+                                            "categoryCode": "ACCOUNTANT_REPORTS"
+                                        },
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Your income, expenses, and net income listed by tag group.",
+                                        "reportUrl": "PANDL_BY_TAG_TYPE&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Profit and Loss by Tag Group",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:PANDL_BY_TAG_TYPE"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Payroll",
+                                            "categoryCode": "MANAGE_PAYROLL"
+                                        },
+                                        {
+                                            "displayName": "Employees",
+                                            "categoryCode": "EMPLOYEES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists each employee's phone number, address, and other contact information.",
+                                        "reportUrl": "EMP_CONTACT&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Employee Contact List",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:EMP_CONTACT"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Favourites",
+                                            "categoryCode": "FAVOURITES"
+                                        },
+                                        {
+                                            "displayName": "Manage Accounts Receivable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_RECEIVABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report summarizes the status of unpaid invoices and unapplied credit memos. For each customer who owes money, the report shows (1) total invoices that were billed but unpaid in the current period and (2) totals the customer hasn't paid from previous periods.",
+                                        "reportUrl": "AR_AGING&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "A/R Aging Summary",
+                                    "attributes": [
+                                        {
+                                            "name": "isFavouriteReport",
+                                            "type": "boolean",
+                                            "value": "true"
+                                        }
+                                    ],
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:AR_AGING"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Shows a more detailed version of the standard balance sheet report",
+                                        "reportUrl": "BAL_SHEET_DET&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Balance Sheet Detail",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:BAL_SHEET_DET"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Displays your expense as a percentage of the total income so you can identify what share of your total income is going to each expense for the period you choose",
+                                        "reportUrl": "PANDL_PCT_TOT_INC&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Profit and Loss % of Total Income ",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:PANDL_PCT_TOT_INC"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This summarizes how much you are making or losing for each Customer.",
+                                        "reportUrl": "PANDL_BYCUST&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Profit and Loss by Customer",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:PANDL_BYCUST"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Shows your income, expense, and profits (or losses) for each month in one report so you can compare them and identify any unusual variations",
+                                        "reportUrl": "PANDL_BY_MONTH&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Profit and Loss by Month",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:PANDL_BY_MONTH"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Shows a year-to-date comparison of {{income}} and {{expenses}}.",
+                                        "reportUrl": "PANDL_YTD_COMP&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Profit and Loss YTD Comparison",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:PANDL_YTD_COMP"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Business Overview",
+                                            "categoryCode": "BUSINESS_OVERVIEW"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Shows your income, expense, and profits (or losses) for each quarter together in one report so you can compare and identify trends",
+                                        "reportUrl": "QRTR_PANDL&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Quarterly Profit and Loss Summary",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:QRTR_PANDL"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Receivable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_RECEIVABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report shows a total of all unpaid invoices and unapplied credit memos for each customer. To see when invoices were due, see the A/R Aging Summary or Collections Report.",
+                                        "reportUrl": "CUST_BAL&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Customer Balance Summary",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:CUST_BAL"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Receivable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_RECEIVABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Lists unpaid invoices and statement charges, grouped and subtotaled by customer.",
+                                        "reportUrl": "OPEN_INVOICES&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Open Invoices",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:OPEN_INVOICES"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Receivable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_RECEIVABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists overdue invoices and unapplied credit memos grouped by customer. It includes when the invoice was due, the number of days past due, as well as the customer's phone number.",
+                                        "reportUrl": "COLLECTIONS&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Collections Report",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:COLLECTIONS"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Receivable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_RECEIVABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists all the invoices that occurred within a period of time. The report is useful if you need a straight chronological listing of all the invoices your company made.  Journal also lists transactions chronologically, but presents them as debits and credits.",
+                                        "reportUrl": "INVOICE_LIST&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Invoice List",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:INVOICE_LIST"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Receivable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_RECEIVABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists statements that were created during this month-to-date.",
+                                        "reportUrl": "STATEMENT_INVOICE&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Statement List",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:STATEMENT_INVOICE"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Manage Accounts Receivable",
+                                            "categoryCode": "MANAGE_ACCOUNTS_RECEIVABLE"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Payments you’ve received and the invoices that go with them.",
+                                        "reportUrl": "INVOICE_PAYMENT&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Invoices and Received Payments",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:INVOICE_PAYMENT"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Sales",
+                                            "categoryCode": "REVIEW_SALES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report summarizes your sales income by customer. If you have expenses associated with customers, you may also be interested in the Income by Customer Summary.",
+                                        "reportUrl": "CUST_SALES&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Sales by Customer Summary",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:CUST_SALES"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Sales",
+                                            "categoryCode": "REVIEW_SALES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report summarizes your sales for all the products and services on your Products and Services List.",
+                                        "reportUrl": "ITEM_SALES&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Sales by Product/Service Summary",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:ITEM_SALES"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Sales",
+                                            "categoryCode": "REVIEW_SALES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report shows the sales price, name, and description [and if applicable, the purchase cost and quantity on hand] of each product or service on the Products and Services List.",
+                                        "reportUrl": "ITEM_PRICE&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Product/Service List",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:ITEM_PRICE"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Sales",
+                                            "categoryCode": "REVIEW_SALES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists each customer's phone number, email and billing address, and other contact information.",
+                                        "reportUrl": "CUST_CONTACT&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Customer Contact List",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:CUST_CONTACT"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Sales",
+                                            "categoryCode": "REVIEW_SALES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report lists all the estimates that occurred within a period of time. The report is useful if you need a straight chronological listing of all the estimates your company made.  Journal also lists transactions chronologically, but presents them as debits and credits.",
+                                        "reportUrl": "ESTIMATE_LIST&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Estimates by Customer",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:ESTIMATE_LIST"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Sales",
+                                            "categoryCode": "REVIEW_SALES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "This report shows detailed information about the deposits you've made.",
+                                        "reportUrl": "DEPOSIT_DETAIL&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Deposit Detail",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:DEPOSIT_DETAIL"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Sales",
+                                            "categoryCode": "REVIEW_SALES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Your tagged transactions (income and expenses), listed by tag group.",
+                                        "reportUrl": "TX_LIST_BY_TAG_TYPE&",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Transaction List by Tag Group",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:TX_LIST_BY_TAG_TYPE"
+                                }
+                            },
+                            {
+                                "node": {
+                                    "reportCategoryInfo": [
+                                        {
+                                            "displayName": "Review Sales",
+                                            "categoryCode": "REVIEW_SALES"
+                                        }
+                                    ],
+                                    "qboAppData": {
+                                        "activityLogEnabled": null,
+                                        "reportDescription": "Estimates by customer, invoiced amounts, and remaining amounts to invoice.",
+                                        "reportUrl": "CUSTOM_DETAIL_REPORT&SubToken=EST_VS_PI",
+                                        "reportMode": "launch_report"
+                                    },
+                                    "displayName": "Estimates & Progress Invoicing Summary by Customer",
+                                    "attributes": null,
+                                    "id": "djQuMTo5MzQxNDU0MjMzMTE3NDg4OjQ4M2I2ZDU2NGI:CUSTOM_DETAIL_REPORT/EST_VS_PI"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+]

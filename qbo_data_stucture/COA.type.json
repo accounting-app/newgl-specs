@@ -1,0 +1,200 @@
+/**
+ * Types for the QuickBooks GraphQL chart-of-accounts response
+ * stored in ./index.json
+ *
+ * Root shape: AccountingAccountEdgeList (= AccountingAccountEdgeV2[])
+ */
+
+// ---------------------------------------------------------------------------
+// GraphQL primitives
+// ---------------https://coa-core.api.intuit.com/graphql------------------------------------------------------------
+
+export type GraphQlTypename<T extends string> = {
+    readonly __typename: T;
+  };
+  
+  export type LocalizedEnum<
+    TId extends string,
+    TTypename extends string,
+  > = GraphQlTypename<TTypename> & {
+    readonly id: TId;
+    readonly localizedValue: string;
+  };
+  
+  // ---------------------------------------------------------------------------
+  // Account type / detail type IDs (from your sample data)
+  // ---------------------------------------------------------------------------
+  
+  export type AccountingAccountTypeId =
+    | "AP"
+    | "AR"
+    | "BANK"
+    | "COGS"
+    | "CREDIT_CARD"
+    | "EQUITY"
+    | "EXPENSE"
+    | "INCOME"
+    | "OTHER_CUR_ASSETS"
+    | "OTHER_CUR_LIABILITIES"
+    | "OTHER_EXPENSE"
+    | "OTHER_INCOME";
+  
+  export type AccountingDetailTypeId =
+    | "ACCOUNTS_PAYABLE"
+    | "ACCOUNTS_RECEIVABLE"
+    | "ADVERTISING_PROMOTIONAL"
+    | "BANK_CHARGES"
+    | "CASH_ON_HAND"
+    | "CHECKING"
+    | "COST_OF_LABOR_COS"
+    | "CREDIT_CARD"
+    | "DISCOUNTS_REFUNDS_GIVEN"
+    | "FEDERAL_INCOME_TAX_PAYABLE"
+    | "LEGAL_PROFESSIONAL_FEES"
+    | "OPENING_BALANCE_EQUITY"
+    | "OTHER_BUSINESS_EXPENSES"
+    | "OTHER_CURRENT_ASSETS"
+    | "OTHER_MISCELLANEOUS_EXPENSE"
+    | "OTHER_MISCELLANEOUS_INCOME"
+    | "OWNER_S_EQUITY"
+    | "PAYROLL_TAX_PAYABLE"
+    | "PREPAID_EXPENSES"
+    | "RETAINED_EARNINGS"
+    | "SALES_OF_PRODUCT_INCOME"
+    | "SERVICE_FEE_INCOME"
+    | "SUPPLIES_MATERIALS"
+    | "UNDEPOSITED_FUNDS"
+    | (string & {}); // allow unknown detail types from API
+  
+  // ---------------------------------------------------------------------------
+  // Nested GraphQL objects
+  // ---------------------------------------------------------------------------
+  
+  export type CommonMoneyAmountV2 = GraphQlTypename<"Common_MoneyAmountV2"> & {
+    readonly value: number;
+  };
+  
+  export type AccountingAccountTypeEnum = LocalizedEnum<
+    AccountingAccountTypeId,
+    "Accounting_AccountType"
+  >;
+  
+  export type AccountingDetailTypeEnum = LocalizedEnum<
+    AccountingDetailTypeId,
+    "Accounting_DetailType"
+  >;
+  
+  /** Empty in current sample; widen when you have non-empty nodes */
+  export type AccountingAccountPurposeMapping = GraphQlTypename<
+    "Accounting_AccountPurposeMappingV2"
+  > & {
+    readonly id?: string;
+    readonly purpose?: string;
+  };
+  
+  export type AccountingAccountPurposeMappingConnection = GraphQlTypename<
+    "Accounting_AccountPurposeMappingConnectionV2"
+  > & {
+    readonly nodes: readonly AccountingAccountPurposeMapping[];
+  };
+  
+  export type QbMetadata = GraphQlTypename<"QB_Metadata"> & {
+    readonly createdByUser: string;
+  };
+  
+  // ---------------------------------------------------------------------------
+  // Core account node
+  // ---------------------------------------------------------------------------
+  
+  export type AccountingAccountV2 = GraphQlTypename<"Accounting_AccountV2"> & {
+    readonly id: string;
+    readonly name: string;
+    readonly accountType: AccountingAccountTypeId;
+    readonly accountTypeEnum: AccountingAccountTypeEnum;
+    readonly detailTypeEnum: AccountingDetailTypeEnum;
+    readonly currency: string;
+    readonly fullName: string;
+    readonly level: number;
+    readonly totalBalance: CommonMoneyAmountV2 | null;
+    readonly description: string | null;
+    readonly number: string | null;
+    readonly active: boolean;
+    readonly legacyTaxCodeId: string | null;
+    readonly legacyTaxCodeName: string | null;
+    readonly legacyBankBalance: string | null;
+    readonly parentAccountId: string | null;
+    readonly isNonPosting: boolean;
+    readonly purposeMappings: AccountingAccountPurposeMappingConnection;
+    readonly meta: QbMetadata;
+    readonly version: number;
+  };
+  
+  // ---------------------------------------------------------------------------
+  // Edge wrapper + root array (= index.json)
+  // ---------------------------------------------------------------------------
+  
+  export type AccountingAccountEdgeV2 = GraphQlTypename<
+    "Accounting_AccountEdgeV2"
+  > & {
+    readonly node: AccountingAccountV2;
+  };
+  
+  /** The full array shape of index.json */
+  export type AccountingAccountEdgeList = readonly AccountingAccountEdgeV2[];
+  
+  // ---------------------------------------------------------------------------
+  // Convenience aliases
+  // ---------------------------------------------------------------------------
+  
+  export type AccountNode = AccountingAccountV2;
+  export type AccountEdge = AccountingAccountEdgeV2;
+  export type AccountList = AccountingAccountEdgeList;
+  
+  // ---------------------------------------------------------------------------
+  // Optional helpers
+  // ---------------------------------------------------------------------------
+  
+  /** Unwrap edges to just the account nodes */
+  export function toAccountNodes(
+    edges: AccountingAccountEdgeList,
+  ): AccountingAccountV2[] {
+    return edges.map((edge) => edge.node);
+  }
+  
+  /** Active accounts only */
+  export function filterActiveAccounts(
+    accounts: readonly AccountingAccountV2[],
+  ): AccountingAccountV2[] {
+    return accounts.filter((account) => account.active);
+  }
+  
+  /** Top-level accounts (no parent) */
+  export function filterRootAccounts(
+    accounts: readonly AccountingAccountV2[],
+  ): AccountingAccountV2[] {
+    return accounts.filter((account) => account.parentAccountId === null);
+  }
+  
+  /** Child accounts for a given parent id */
+  export function filterChildAccounts(
+    accounts: readonly AccountingAccountV2[],
+    parentAccountId: string,
+  ): AccountingAccountV2[] {
+    return accounts.filter(
+      (account) => account.parentAccountId === parentAccountId,
+    );
+  }
+  
+  /** Numeric balance; null when totalBalance is missing */
+  export function getAccountBalance(account: AccountingAccountV2): number | null {
+    return account.totalBalance?.value ?? null;
+  }
+  
+  // ---------------------------------------------------------------------------
+  // Typed JSON import (requires resolveJsonModule in tsconfig)
+  // ---------------------------------------------------------------------------
+  
+  import accountEdgesJson from "./index.json";
+  
+  export const accountEdges = accountEdgesJson as AccountingAccountEdgeList;
+  export const accounts = toAccountNodes(accountEdges);

@@ -1,0 +1,1250 @@
+// ENDPOINT: https://universalreportinsights.api.intuit.com/v1/reports/sbg:034ebd61-a742-4acf-8a18-0f39f3d794ce?locale=en-us&type=user&previousRoute=customreports&previousRouteText=Back%20to%20custom%20reports
+// PAYLOAD: {}
+
+export const response = {
+    "reportKindEnum": "CRB_REPORT",
+    "id": "sbg:034ebd61-a742-4acf-8a18-0f39f3d794ce",
+    "name": "2025 P&L",
+    "active": true,
+    "reportingNamespace": "qbo",
+    "createdUserId": 9411826693750710,
+    "lastModifiedUserId": 9411826693750710,
+    "createdDate": "2026-01-11T23:53:41.790Z",
+    "lastModifiedDate": "2026-01-11T23:53:41.790Z",
+    "reportOwnerType": "USER",
+    "dataRequest": {
+        "filters": [
+            {
+                "on": {
+                    "name": "DETAIL_TRANSACTION_DATE",
+                    "datasetId": "TRANSACTION_DETAILS_V1",
+                    "type": "RAW",
+                    "linkedFields": null
+                },
+                "operator": "DATE_MACRO",
+                "value": {
+                    "macroName": "LAST_YEAR",
+                    "startDate": null,
+                    "endDate": null
+                },
+                "id": null,
+                "expression": null,
+                "criteria": null,
+                "subFilters": null,
+                "type": "RAW",
+                "isHidden": false,
+                "isPrimary": true
+            },
+            {
+                "on": {
+                    "name": "DETAIL_ACCOUNT_TYPE",
+                    "datasetId": "TRANSACTION_DETAILS_V1",
+                    "type": "RAW",
+                    "linkedFields": null
+                },
+                "operator": "IN",
+                "value": [
+                    "INCOME",
+                    "OTHER_INCOME",
+                    "OTHER_EXPENSE",
+                    "COGS",
+                    "EXPENSE"
+                ],
+                "id": null,
+                "expression": null,
+                "criteria": null,
+                "subFilters": null,
+                "type": "RAW",
+                "isHidden": true,
+                "isPrimary": false
+            },
+            {
+                "on": {
+                    "name": "DETAIL_IS_POSTING",
+                    "datasetId": "TRANSACTION_DETAILS_V1",
+                    "type": "RAW",
+                    "linkedFields": null
+                },
+                "operator": "EQUALS",
+                "value": true,
+                "id": null,
+                "expression": null,
+                "criteria": null,
+                "subFilters": null,
+                "type": "RAW",
+                "isHidden": true,
+                "isPrimary": false
+            }
+        ],
+        "comparison": [],
+        "groups": [
+            {
+                "on": {
+                    "name": "DETAIL_ACCOUNT_TYPE",
+                    "datasetId": "TRANSACTION_DETAILS_V1",
+                    "type": "RAW",
+                    "linkedFields": null
+                },
+                "id": "system_g2",
+                "by": null,
+                "as": "ACCOUNT_TYPE_ID",
+                "criteria": null,
+                "isHidden": true
+            },
+            {
+                "on": {
+                    "name": "DETAIL_ACCOUNT_ID_REF",
+                    "datasetId": "TRANSACTION_DETAILS_V1",
+                    "type": "REF",
+                    "linkedFields": {
+                        "id": "ACCOUNT_NAME",
+                        "datasetId": "CHART_OF_ACCOUNT",
+                        "type": "RAW"
+                    }
+                },
+                "id": "system_g1",
+                "by": "HIERARCHY",
+                "as": "ACCOUNT_NAME",
+                "criteria": null,
+                "isHidden": false
+            }
+        ],
+        "projections": [
+            {
+                "id": "system_p1",
+                "of": {
+                    "operation": null,
+                    "on": [
+                        {
+                            "name": "DETAIL_ACCOUNT_ID_REF",
+                            "datasetId": "TRANSACTION_DETAILS_V1",
+                            "type": "REF",
+                            "linkedFields": {
+                                "id": "ACCOUNT_NAME",
+                                "datasetId": "CHART_OF_ACCOUNT",
+                                "type": "RAW"
+                            }
+                        }
+                    ]
+                },
+                "as": "ACCOUNT_NAME",
+                "type": "RAW",
+                "criteria": "in(\"0\", $COMPANY_SHOW_ACCOUNT_NUMBER)",
+                "drilldownDisabled": false,
+                "isHidden": false
+            },
+            {
+                "id": "system_p2",
+                "of": {
+                    "operation": null,
+                    "on": [
+                        {
+                            "name": "DETAIL_ACCOUNT_TYPE",
+                            "datasetId": "TRANSACTION_DETAILS_V1",
+                            "type": "RAW",
+                            "linkedFields": null
+                        }
+                    ]
+                },
+                "as": "ACCOUNT_TYPE_ID",
+                "type": "RAW",
+                "criteria": null,
+                "drilldownDisabled": false,
+                "isHidden": true
+            },
+            {
+                "id": "system_p3",
+                "of": {
+                    "operation": "TOTAL",
+                    "on": [
+                        {
+                            "name": "DETAIL_NATURAL_HOME_AMOUNT",
+                            "datasetId": "TRANSACTION_DETAILS_V1",
+                            "type": "RAW",
+                            "linkedFields": null
+                        }
+                    ]
+                },
+                "as": "DETAIL_NATURAL_HOME_AMOUNT__TOTAL",
+                "type": "AGGREGATION",
+                "criteria": null,
+                "drilldownDisabled": false,
+                "isHidden": false
+            },
+            {
+                "id": "system_p4",
+                "of": {
+                    "operation": "TOTAL_WITHOUT_SUBGROUPS",
+                    "on": [
+                        {
+                            "name": "DETAIL_NATURAL_HOME_AMOUNT",
+                            "datasetId": "TRANSACTION_DETAILS_V1",
+                            "type": "RAW",
+                            "linkedFields": null
+                        }
+                    ]
+                },
+                "as": "DETAIL_NATURAL_HOME_AMOUNT__TOTAL_WITHOUT_SUBGROUPS",
+                "type": "AGGREGATION",
+                "criteria": null,
+                "drilldownDisabled": false,
+                "isHidden": false
+            },
+            {
+                "id": "system_p5",
+                "of": {
+                    "operation": null,
+                    "on": [
+                        {
+                            "name": "DETAIL_TRANSACTION_DATE",
+                            "datasetId": "TRANSACTION_DETAILS_V1",
+                            "type": "RAW",
+                            "linkedFields": null
+                        }
+                    ]
+                },
+                "as": "TRANSACTION_DATE",
+                "type": "RAW",
+                "criteria": null,
+                "drilldownDisabled": false,
+                "isHidden": true
+            },
+            {
+                "id": "system_p6",
+                "of": {
+                    "operation": null,
+                    "on": [
+                        {
+                            "name": "DETAIL_CUSTOMER_ID_REF",
+                            "datasetId": "TRANSACTION_DETAILS_V1",
+                            "type": "REF",
+                            "linkedFields": {
+                                "id": "CUSTOMER_NAME",
+                                "datasetId": "CUSTOMER",
+                                "type": "RAW"
+                            }
+                        }
+                    ]
+                },
+                "as": "CUSTOMER_NAME",
+                "type": "RAW",
+                "criteria": null,
+                "drilldownDisabled": false,
+                "isHidden": true
+            },
+            {
+                "id": "system_p7",
+                "of": {
+                    "operation": null,
+                    "on": [
+                        {
+                            "name": "DETAIL_VENDOR_ID_REF",
+                            "datasetId": "TRANSACTION_DETAILS_V1",
+                            "type": "REF",
+                            "linkedFields": {
+                                "id": "VENDOR_NAME",
+                                "datasetId": "VENDOR",
+                                "type": "RAW"
+                            }
+                        }
+                    ]
+                },
+                "as": "VENDOR_NAME",
+                "type": "RAW",
+                "criteria": null,
+                "drilldownDisabled": false,
+                "isHidden": true
+            },
+            {
+                "id": "system_p8",
+                "of": {
+                    "operation": null,
+                    "on": [
+                        {
+                            "name": "DETAIL_EMPLOYEE_ID_REF",
+                            "datasetId": "TRANSACTION_DETAILS_V1",
+                            "type": "REF",
+                            "linkedFields": {
+                                "id": "EMPLOYEE_NAME",
+                                "datasetId": "EMPLOYEE",
+                                "type": "RAW"
+                            }
+                        }
+                    ]
+                },
+                "as": "EMPLOYEE_NAME",
+                "type": "RAW",
+                "criteria": null,
+                "drilldownDisabled": false,
+                "isHidden": true
+            },
+            {
+                "id": "system_p9",
+                "of": {
+                    "operation": null,
+                    "on": [
+                        {
+                            "name": "DETAIL_ITEM_ID_REF",
+                            "datasetId": "TRANSACTION_DETAILS_V1",
+                            "type": "REF",
+                            "linkedFields": {
+                                "id": "ITEM_NAME",
+                                "datasetId": "ITEM",
+                                "type": "RAW"
+                            }
+                        }
+                    ]
+                },
+                "as": "ITEM_NAME",
+                "type": "RAW",
+                "criteria": null,
+                "drilldownDisabled": false,
+                "isHidden": true
+            },
+            {
+                "id": "system_p10",
+                "of": {
+                    "operation": null,
+                    "on": [
+                        {
+                            "name": "DETAIL_KLASS_ID_REF",
+                            "datasetId": "TRANSACTION_DETAILS_V1",
+                            "type": "REF",
+                            "linkedFields": {
+                                "id": "KLASS_NAME",
+                                "datasetId": "KLASS",
+                                "type": "RAW"
+                            }
+                        }
+                    ]
+                },
+                "as": "KLASS_NAME",
+                "type": "RAW",
+                "criteria": null,
+                "drilldownDisabled": false,
+                "isHidden": true
+            },
+            {
+                "id": "system_p11",
+                "of": {
+                    "operation": null,
+                    "on": [
+                        {
+                            "name": "DETAIL_DEPARTMENT_ID_REF",
+                            "datasetId": "TRANSACTION_DETAILS_V1",
+                            "type": "REF",
+                            "linkedFields": {
+                                "id": "DEPARTMENT_NAME",
+                                "datasetId": "DEPARTMENT",
+                                "type": "RAW"
+                            }
+                        }
+                    ]
+                },
+                "as": "DEPARTMENT_NAME",
+                "type": "RAW",
+                "criteria": null,
+                "drilldownDisabled": false,
+                "isHidden": true
+            }
+        ],
+        "sorts": [
+            {
+                "on": {
+                    "name": "DETAIL_ACCOUNT_ID_REF",
+                    "datasetId": "TRANSACTION_DETAILS_V1",
+                    "type": "REF",
+                    "linkedFields": {
+                        "id": "ACCOUNT_NAME",
+                        "datasetId": "CHART_OF_ACCOUNT",
+                        "type": "RAW"
+                    }
+                },
+                "by": "ASCENDING",
+                "criteria": null
+            }
+        ],
+        "customizationOptions": [
+            {
+                "key": "accounting_method",
+                "value": "accrual"
+            },
+            {
+                "key": "date_options",
+                "value": {
+                    "startDayOfWeek": 1,
+                    "startMonthOfYear": 1,
+                    "format": "MM/dd/yyyy"
+                }
+            },
+            {
+                "key": "locale_options",
+                "value": {
+                    "locale": "en-us"
+                }
+            },
+            {
+                "key": "browser_timezone",
+                "value": "GMT-05:00"
+            },
+            {
+                "key": "document_options",
+                "value": {
+                    "header": {
+                        "reportTitle": {
+                            "enabled": true,
+                            "value": "2025 P&L"
+                        },
+                        "logo": {
+                            "enabled": false,
+                            "value": ""
+                        },
+                        "reportPeriod": {
+                            "enabled": true,
+                            "value": ""
+                        },
+                        "companyName": {
+                            "enabled": true
+                        },
+                        "alignment": {
+                            "enabled": true,
+                            "value": "center"
+                        }
+                    },
+                    "footer": {
+                        "datePrepared": {
+                            "enabled": true,
+                            "value": ""
+                        },
+                        "timePrepared": {
+                            "enabled": true,
+                            "value": ""
+                        },
+                        "reportBasis": {
+                            "enabled": true,
+                            "value": ""
+                        },
+                        "alignment": {
+                            "enabled": true,
+                            "value": "center"
+                        }
+                    }
+                }
+            },
+            {
+                "key": "column_configuration_options",
+                "value": {
+                    "showEntityNames": false
+                }
+            },
+            {
+                "key": "drill_down_options",
+                "value": {
+                    "enabled": true,
+                    "type": [
+                        "ROW"
+                    ]
+                }
+            },
+            {
+                "key": "fetch_metadata_type",
+                "value": true
+            },
+            {
+                "key": "title",
+                "value": "2025 P&L"
+            },
+            {
+                "key": "group_ordering",
+                "value": "MERGED"
+            },
+            {
+                "key": "currency_options",
+                "value": {
+                    "applicableOn": [
+                        "SUMMARY"
+                    ],
+                    "currencyISOFormat": "USD",
+                    "divideBy1000": false,
+                    "exceptZeroAmount": true,
+                    "negativeFormattingType": "USE_PARENTHESIS",
+                    "showNegativeNumberInRed": true,
+                    "withoutCents": false,
+                    "noOfDecimalPlaces": "2"
+                }
+            },
+            {
+                "key": "group_summary_options",
+                "value": {
+                    "supportsAggregationSummary": true,
+                    "supportsAggregationSummaryWithoutSubGroups": true,
+                    "skipDetailedRows": false
+                }
+            },
+            {
+                "key": "active_or_non_zero_options",
+                "value": {
+                    "rowOptions": "ACTIVE",
+                    "colOptions": "ACTIVE"
+                }
+            },
+            {
+                "key": "aggregate_entity",
+                "value": "TRANSACTION_DETAIL_AGGREGATE"
+            },
+            {
+                "key": "fetch_options",
+                "value": {
+                    "freshness": "DEFAULT"
+                }
+            },
+            {
+                "key": "is_summary_report",
+                "value": true
+            },
+            {
+                "key": "beginning_balance_options",
+                "value": {
+                    "type": "BEGINNING_BALANCE",
+                    "enabled": false
+                }
+            },
+            {
+                "key": "column_beginning_balance",
+                "value": {
+                    "enabled": false,
+                    "type": "BALANCE_SHEET"
+                }
+            },
+            {
+                "key": "as_of_Report_options",
+                "value": {
+                    "enabled": false
+                }
+            }
+        ],
+        "layouts": [
+            {
+                "type": "DYNAMIC",
+                "reportLayoutType": null,
+                "reportSubLayoutType": null,
+                "enabled": true,
+                "metadata": null,
+                "drilldownTarget": {
+                    "type": "Report",
+                    "reportToken": "GENERIC_QZREPORT",
+                    "filters": null
+                },
+                "options": null,
+                "documentOptions": null,
+                "definition": {
+                    "rows": [
+                        {
+                            "description": null,
+                            "id": "income",
+                            "as": null,
+                            "groupId": null,
+                            "rows": [
+                                {
+                                    "description": null,
+                                    "id": "Income_Accounts",
+                                    "as": null,
+                                    "groupId": "system_g1",
+                                    "rows": null,
+                                    "drilldownTarget": null,
+                                    "filters": null,
+                                    "projections": null,
+                                    "type": "ENTITY",
+                                    "hiddenRow": false,
+                                    "extension": false,
+                                    "by": null,
+                                    "disableTotalRow": false,
+                                    "includeOthers": false,
+                                    "limit": 0,
+                                    "rowVisibilityType": "DYNAMIC",
+                                    "sorted": false
+                                }
+                            ],
+                            "drilldownTarget": null,
+                            "filters": [
+                                {
+                                    "on": {
+                                        "name": "DETAIL_ACCOUNT_TYPE",
+                                        "datasetId": "TRANSACTION_DETAILS_V1",
+                                        "type": "RAW",
+                                        "linkedFields": null
+                                    },
+                                    "operator": "EQUALS",
+                                    "value": "INCOME",
+                                    "id": null,
+                                    "expression": null,
+                                    "criteria": null,
+                                    "subFilters": null,
+                                    "type": "RAW",
+                                    "isHidden": false,
+                                    "isPrimary": false
+                                }
+                            ],
+                            "projections": [
+                                {
+                                    "id": "system_p3",
+                                    "of": {
+                                        "operation": "TOTAL",
+                                        "on": [
+                                            {
+                                                "name": "DETAIL_NATURAL_HOME_AMOUNT",
+                                                "datasetId": "TRANSACTION_DETAILS_V1",
+                                                "type": "RAW",
+                                                "linkedFields": null
+                                            }
+                                        ]
+                                    },
+                                    "as": null,
+                                    "type": "AGGREGATION",
+                                    "criteria": null,
+                                    "drilldownDisabled": false,
+                                    "isHidden": false
+                                }
+                            ],
+                            "type": "GROUP",
+                            "hiddenRow": false,
+                            "extension": false,
+                            "by": null,
+                            "disableTotalRow": false,
+                            "includeOthers": false,
+                            "limit": 0,
+                            "sorted": false
+                        },
+                        {
+                            "description": null,
+                            "id": "cogs",
+                            "as": null,
+                            "groupId": null,
+                            "rows": [
+                                {
+                                    "description": null,
+                                    "id": "CogsAccounts",
+                                    "as": null,
+                                    "groupId": "system_g1",
+                                    "rows": null,
+                                    "drilldownTarget": null,
+                                    "filters": null,
+                                    "projections": null,
+                                    "type": "ENTITY",
+                                    "hiddenRow": false,
+                                    "extension": false,
+                                    "by": null,
+                                    "disableTotalRow": false,
+                                    "includeOthers": false,
+                                    "limit": 0,
+                                    "sorted": false
+                                }
+                            ],
+                            "drilldownTarget": null,
+                            "filters": [
+                                {
+                                    "on": {
+                                        "name": "DETAIL_ACCOUNT_TYPE",
+                                        "datasetId": "TRANSACTION_DETAILS_V1",
+                                        "type": "RAW",
+                                        "linkedFields": null
+                                    },
+                                    "operator": "EQUALS",
+                                    "value": "COGS",
+                                    "id": null,
+                                    "expression": null,
+                                    "criteria": null,
+                                    "subFilters": null,
+                                    "type": "RAW",
+                                    "isHidden": false,
+                                    "isPrimary": false
+                                }
+                            ],
+                            "projections": [
+                                {
+                                    "id": "system_p3",
+                                    "of": {
+                                        "operation": "TOTAL",
+                                        "on": [
+                                            {
+                                                "name": "DETAIL_NATURAL_HOME_AMOUNT",
+                                                "datasetId": "TRANSACTION_DETAILS_V1",
+                                                "type": "RAW",
+                                                "linkedFields": null
+                                            }
+                                        ]
+                                    },
+                                    "as": null,
+                                    "type": "AGGREGATION",
+                                    "criteria": null,
+                                    "drilldownDisabled": false,
+                                    "isHidden": false
+                                }
+                            ],
+                            "type": "GROUP",
+                            "hiddenRow": false,
+                            "extension": false,
+                            "by": null,
+                            "disableTotalRow": false,
+                            "includeOthers": false,
+                            "limit": 0,
+                            "rowVisibilityType": "DYNAMIC",
+                            "sorted": false
+                        },
+                        {
+                            "description": "The cost of manufacturing and distributing goods or services subtracted from total revenue.",
+                            "id": "gross_profit",
+                            "as": null,
+                            "groupId": null,
+                            "rows": null,
+                            "drilldownTarget": {
+                                "type": "Report",
+                                "reportToken": "PANDL_DET",
+                                "filters": null
+                            },
+                            "filters": null,
+                            "projections": [
+                                {
+                                    "id": "system_p3",
+                                    "of": {
+                                        "operation": "$attr1 - $attr2",
+                                        "on": [
+                                            {
+                                                "name": null,
+                                                "datasetId": null,
+                                                "type": null,
+                                                "linkedFields": null,
+                                                "projectionId": "system_p3",
+                                                "id": "attr1",
+                                                "ref": "income",
+                                                "refType": "ROW"
+                                            },
+                                            {
+                                                "name": null,
+                                                "datasetId": null,
+                                                "type": null,
+                                                "linkedFields": null,
+                                                "projectionId": "system_p3",
+                                                "id": "attr2",
+                                                "ref": "cogs",
+                                                "refType": "ROW"
+                                            }
+                                        ],
+                                        "dataType": "CURRENCY"
+                                    },
+                                    "as": null,
+                                    "type": "COMPUTED",
+                                    "criteria": null,
+                                    "drilldownDisabled": false,
+                                    "isHidden": false
+                                }
+                            ],
+                            "type": "FORMULA",
+                            "hiddenRow": false,
+                            "extension": false,
+                            "by": null,
+                            "disableTotalRow": false,
+                            "includeOthers": false,
+                            "limit": 0,
+                            "sorted": false
+                        },
+                        {
+                            "description": null,
+                            "id": "expense",
+                            "as": null,
+                            "groupId": null,
+                            "rows": [
+                                {
+                                    "description": null,
+                                    "id": "ExpenseAccounts",
+                                    "as": null,
+                                    "groupId": "system_g1",
+                                    "rows": null,
+                                    "drilldownTarget": null,
+                                    "filters": null,
+                                    "projections": null,
+                                    "type": "ENTITY",
+                                    "hiddenRow": false,
+                                    "extension": false,
+                                    "by": null,
+                                    "disableTotalRow": false,
+                                    "includeOthers": false,
+                                    "limit": 0,
+                                    "rowVisibilityType": "DYNAMIC",
+                                    "sorted": false
+                                }
+                            ],
+                            "drilldownTarget": null,
+                            "filters": [
+                                {
+                                    "on": {
+                                        "name": "DETAIL_ACCOUNT_TYPE",
+                                        "datasetId": "TRANSACTION_DETAILS_V1",
+                                        "type": "RAW",
+                                        "linkedFields": null
+                                    },
+                                    "operator": "EQUALS",
+                                    "value": "EXPENSE",
+                                    "id": null,
+                                    "expression": null,
+                                    "criteria": null,
+                                    "subFilters": null,
+                                    "type": "RAW",
+                                    "isHidden": false,
+                                    "isPrimary": false
+                                }
+                            ],
+                            "projections": [
+                                {
+                                    "id": "system_p3",
+                                    "of": {
+                                        "operation": "TOTAL",
+                                        "on": [
+                                            {
+                                                "name": "DETAIL_NATURAL_HOME_AMOUNT",
+                                                "datasetId": "TRANSACTION_DETAILS_V1",
+                                                "type": "RAW",
+                                                "linkedFields": null
+                                            }
+                                        ]
+                                    },
+                                    "as": "DETAIL_NATURAL_HOME_AMOUNT",
+                                    "type": "AGGREGATION",
+                                    "criteria": null,
+                                    "drilldownDisabled": false,
+                                    "isHidden": false
+                                }
+                            ],
+                            "type": "GROUP",
+                            "hiddenRow": false,
+                            "extension": false,
+                            "by": null,
+                            "disableTotalRow": false,
+                            "includeOthers": false,
+                            "limit": 0,
+                            "sorted": false
+                        },
+                        {
+                            "description": "Expenses subtracted from gross profit.",
+                            "id": "net_operating_income",
+                            "as": null,
+                            "groupId": null,
+                            "rows": null,
+                            "drilldownTarget": {
+                                "type": "Report",
+                                "reportToken": "PANDL_DET",
+                                "filters": null
+                            },
+                            "filters": null,
+                            "projections": [
+                                {
+                                    "id": "system_p3",
+                                    "of": {
+                                        "operation": "$attr1-$attr2",
+                                        "on": [
+                                            {
+                                                "name": null,
+                                                "datasetId": null,
+                                                "type": null,
+                                                "linkedFields": null,
+                                                "projectionId": "system_p3",
+                                                "id": "attr1",
+                                                "ref": "gross_profit",
+                                                "refType": "ROW"
+                                            },
+                                            {
+                                                "name": null,
+                                                "datasetId": null,
+                                                "type": null,
+                                                "linkedFields": null,
+                                                "projectionId": "system_p3",
+                                                "id": "attr2",
+                                                "ref": "expense",
+                                                "refType": "ROW"
+                                            }
+                                        ],
+                                        "dataType": "CURRENCY"
+                                    },
+                                    "as": null,
+                                    "type": "COMPUTED",
+                                    "criteria": null,
+                                    "drilldownDisabled": false,
+                                    "isHidden": false
+                                }
+                            ],
+                            "type": "FORMULA",
+                            "hiddenRow": false,
+                            "extension": false,
+                            "by": null,
+                            "disableTotalRow": false,
+                            "includeOthers": false,
+                            "limit": 0,
+                            "sorted": false
+                        },
+                        {
+                            "description": null,
+                            "id": "other_income",
+                            "as": null,
+                            "groupId": null,
+                            "rows": [
+                                {
+                                    "description": null,
+                                    "id": "OtherIncomeAccounts",
+                                    "as": null,
+                                    "groupId": "system_g1",
+                                    "rows": null,
+                                    "drilldownTarget": null,
+                                    "filters": null,
+                                    "projections": null,
+                                    "type": "ENTITY",
+                                    "hiddenRow": false,
+                                    "extension": false,
+                                    "by": null,
+                                    "disableTotalRow": false,
+                                    "includeOthers": false,
+                                    "limit": 0,
+                                    "sorted": false
+                                }
+                            ],
+                            "drilldownTarget": null,
+                            "filters": [
+                                {
+                                    "on": {
+                                        "name": "DETAIL_ACCOUNT_TYPE",
+                                        "datasetId": "TRANSACTION_DETAILS_V1",
+                                        "type": "RAW",
+                                        "linkedFields": null
+                                    },
+                                    "operator": "EQUALS",
+                                    "value": "OTHER_INCOME",
+                                    "id": null,
+                                    "expression": null,
+                                    "criteria": null,
+                                    "subFilters": null,
+                                    "type": "RAW",
+                                    "isHidden": false,
+                                    "isPrimary": false
+                                }
+                            ],
+                            "projections": [
+                                {
+                                    "id": "system_p3",
+                                    "of": {
+                                        "operation": "TOTAL",
+                                        "on": [
+                                            {
+                                                "name": "DETAIL_NATURAL_HOME_AMOUNT",
+                                                "datasetId": "TRANSACTION_DETAILS_V1",
+                                                "type": "RAW",
+                                                "linkedFields": null
+                                            }
+                                        ]
+                                    },
+                                    "as": null,
+                                    "type": "AGGREGATION",
+                                    "criteria": null,
+                                    "drilldownDisabled": false,
+                                    "isHidden": false
+                                }
+                            ],
+                            "type": "GROUP",
+                            "hiddenRow": false,
+                            "extension": false,
+                            "by": null,
+                            "disableTotalRow": false,
+                            "includeOthers": false,
+                            "limit": 0,
+                            "rowVisibilityType": "DYNAMIC",
+                            "sorted": false
+                        },
+                        {
+                            "description": null,
+                            "id": "other_expense",
+                            "as": null,
+                            "groupId": null,
+                            "rows": [
+                                {
+                                    "description": null,
+                                    "id": "unrealized_gain_or_loss",
+                                    "as": "Unrealized Gain or Loss",
+                                    "groupId": null,
+                                    "rows": null,
+                                    "drilldownTarget": {
+                                        "type": "Report",
+                                        "reportToken": "ADJUSTED_GAIN_LOSS_QZ",
+                                        "filters": null
+                                    },
+                                    "filters": [],
+                                    "projections": [
+                                        {
+                                            "id": "system_p3",
+                                            "of": {
+                                                "operation": "$unrealized_gain_or_loss",
+                                                "on": [
+                                                    {
+                                                        "name": null,
+                                                        "datasetId": null,
+                                                        "type": null,
+                                                        "linkedFields": null,
+                                                        "projectionId": "system_p3",
+                                                        "refType": "ROW"
+                                                    }
+                                                ],
+                                                "dataType": "CURRENCY"
+                                            },
+                                            "as": "system_p3",
+                                            "type": "COMPUTED",
+                                            "criteria": null,
+                                            "drilldownDisabled": false,
+                                            "isHidden": false
+                                        },
+                                        {
+                                            "id": "system_p1",
+                                            "of": {
+                                                "operation": null,
+                                                "on": [
+                                                    {
+                                                        "name": "DETAIL_ACCOUNT_ID_REF",
+                                                        "datasetId": "TRANSACTION_DETAILS_V1",
+                                                        "type": "REF",
+                                                        "linkedFields": {
+                                                            "id": "ACCOUNT_NAME",
+                                                            "datasetId": "CHART_OF_ACCOUNT",
+                                                            "type": "RAW"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            "as": "system_p1",
+                                            "type": "RAW",
+                                            "criteria": null,
+                                            "drilldownDisabled": false,
+                                            "isHidden": false
+                                        }
+                                    ],
+                                    "type": "GROUP",
+                                    "hiddenRow": false,
+                                    "extension": true,
+                                    "by": null,
+                                    "disableTotalRow": false,
+                                    "includeOthers": false,
+                                    "limit": 0,
+                                    "rowVisibilityType": "DYNAMIC",
+                                    "sorted": false
+                                },
+                                {
+                                    "description": null,
+                                    "id": "OtherExpensesAccounts",
+                                    "as": null,
+                                    "groupId": "system_g1",
+                                    "rows": null,
+                                    "drilldownTarget": null,
+                                    "filters": null,
+                                    "projections": null,
+                                    "type": "ENTITY",
+                                    "hiddenRow": false,
+                                    "extension": false,
+                                    "by": null,
+                                    "disableTotalRow": false,
+                                    "includeOthers": false,
+                                    "limit": 0,
+                                    "rowVisibilityType": "DYNAMIC",
+                                    "sorted": false
+                                }
+                            ],
+                            "drilldownTarget": null,
+                            "filters": [
+                                {
+                                    "on": {
+                                        "name": "DETAIL_ACCOUNT_TYPE",
+                                        "datasetId": "TRANSACTION_DETAILS_V1",
+                                        "type": "RAW",
+                                        "linkedFields": null
+                                    },
+                                    "operator": "EQUALS",
+                                    "value": "OTHER_EXPENSE",
+                                    "id": null,
+                                    "expression": null,
+                                    "criteria": null,
+                                    "subFilters": null,
+                                    "type": "RAW",
+                                    "isHidden": false,
+                                    "isPrimary": false
+                                }
+                            ],
+                            "projections": [
+                                {
+                                    "id": "system_p3",
+                                    "of": {
+                                        "operation": "TOTAL",
+                                        "on": [
+                                            {
+                                                "name": "DETAIL_NATURAL_HOME_AMOUNT",
+                                                "datasetId": "TRANSACTION_DETAILS_V1",
+                                                "type": "RAW",
+                                                "linkedFields": null
+                                            }
+                                        ]
+                                    },
+                                    "as": null,
+                                    "type": "AGGREGATION",
+                                    "criteria": null,
+                                    "drilldownDisabled": false,
+                                    "isHidden": false
+                                }
+                            ],
+                            "type": "GROUP",
+                            "hiddenRow": false,
+                            "extension": false,
+                            "by": null,
+                            "disableTotalRow": false,
+                            "includeOthers": false,
+                            "limit": 0,
+                            "rowVisibilityType": "DYNAMIC",
+                            "sorted": false
+                        },
+                        {
+                            "description": null,
+                            "id": "net_other_income",
+                            "as": null,
+                            "groupId": null,
+                            "rows": null,
+                            "drilldownTarget": {
+                                "type": "Report",
+                                "reportToken": "PANDL_DET",
+                                "filters": null
+                            },
+                            "filters": null,
+                            "projections": [
+                                {
+                                    "id": "system_p3",
+                                    "of": {
+                                        "operation": "$attr1-$attr2",
+                                        "on": [
+                                            {
+                                                "name": null,
+                                                "datasetId": null,
+                                                "type": null,
+                                                "linkedFields": null,
+                                                "projectionId": "system_p3",
+                                                "id": "attr1",
+                                                "ref": "other_income",
+                                                "refType": "ROW"
+                                            },
+                                            {
+                                                "name": null,
+                                                "datasetId": null,
+                                                "type": null,
+                                                "linkedFields": null,
+                                                "projectionId": "system_p3",
+                                                "id": "attr2",
+                                                "ref": "other_expense",
+                                                "refType": "ROW"
+                                            }
+                                        ],
+                                        "dataType": "CURRENCY"
+                                    },
+                                    "as": null,
+                                    "type": "COMPUTED",
+                                    "criteria": null,
+                                    "drilldownDisabled": false,
+                                    "isHidden": false
+                                }
+                            ],
+                            "type": "FORMULA",
+                            "hiddenRow": false,
+                            "extension": false,
+                            "by": null,
+                            "disableTotalRow": false,
+                            "includeOthers": false,
+                            "limit": 0,
+                            "rowVisibilityType": "DYNAMIC",
+                            "sorted": false
+                        },
+                        {
+                            "description": "Operating, non-operating costs, and taxes are subtracted from total revenue.",
+                            "id": "net_income",
+                            "as": null,
+                            "groupId": null,
+                            "rows": null,
+                            "drilldownTarget": {
+                                "type": "Report",
+                                "reportToken": "PANDL_DET",
+                                "filters": null
+                            },
+                            "filters": null,
+                            "projections": [
+                                {
+                                    "id": "system_p3",
+                                    "of": {
+                                        "operation": "$attr1+$attr2",
+                                        "on": [
+                                            {
+                                                "name": null,
+                                                "datasetId": null,
+                                                "type": null,
+                                                "linkedFields": null,
+                                                "projectionId": "system_p3",
+                                                "id": "attr1",
+                                                "ref": "net_operating_income",
+                                                "refType": "ROW"
+                                            },
+                                            {
+                                                "name": null,
+                                                "datasetId": null,
+                                                "type": null,
+                                                "linkedFields": null,
+                                                "projectionId": "system_p3",
+                                                "id": "attr2",
+                                                "ref": "net_other_income",
+                                                "refType": "ROW"
+                                            }
+                                        ],
+                                        "dataType": "CURRENCY"
+                                    },
+                                    "as": null,
+                                    "type": "COMPUTED",
+                                    "criteria": null,
+                                    "drilldownDisabled": false,
+                                    "isHidden": false
+                                }
+                            ],
+                            "type": "FORMULA",
+                            "hiddenRow": false,
+                            "extension": false,
+                            "by": null,
+                            "disableTotalRow": false,
+                            "includeOthers": false,
+                            "limit": 0,
+                            "sorted": false
+                        }
+                    ],
+                    "columns": []
+                }
+            }
+        ],
+        "paginationOptions": {
+            "pageSize": 100,
+            "viewMode": "EXPANDED"
+        },
+        "includeResponse": true
+    },
+    "visibleToCustomer": true,
+    "multiEntitySupported": false,
+    "evaluatedModeCriteria": false,
+    "modelDimensionsAsLinkedRefTag": true,
+    "baseReportId": "sbg:c46c823a-8641-4641-b08a-dda0e499066f",
+    "uniqueEntities": [
+        "ITEM",
+        "TRANSACTION_DETAILS_V1",
+        "CHART_OF_ACCOUNT",
+        "KLASS",
+        "EMPLOYEE",
+        "CUSTOMER",
+        "VENDOR",
+        "DEPARTMENT"
+    ],
+    "realmId": "9341454233117488",
+    "accountingMethodSource": "SELF_SERVE",
+    "favorite": false
+}

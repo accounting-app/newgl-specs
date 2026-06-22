@@ -1,0 +1,50 @@
+export const payload = {
+    "query": "\n  query GetLedgerAccountsById(\n      $filter: DataAccess_LedgerAccountFilter,\n  ) {\n    dataAccessLedgerAccounts(filter: $filter) {\n      edges {\n          node {\n            ...accountAttributes\n          }\n        }\n      totalCount\n      }\n    }\n    \n  fragment accountAttributes on DataAccess_LedgerAccount {\n    accountNumber {\n      fullNumber\n      prefix\n      extension\n    }\n    alias\n    currencyCode\n    detailAccountType\n    fullName\n    id\n    level\n    name\n    type\n    taxGroupId\n    isNonPosting\n  }\n\n",
+    "variables": {
+        "filter": {
+            "or": [
+                {
+                    "and": [
+                        {
+                            "id": {
+                                "matchesAny": [
+                                    "225"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "first": 100
+    }
+}
+
+export const response = {
+    "data": {
+        "dataAccessLedgerAccounts": {
+            "edges": [
+                {
+                    "node": {
+                        "accountNumber": {
+                            "fullNumber": null,
+                            "prefix": null,
+                            "extension": null
+                        },
+                        "alias": null,
+                        "currencyCode": "USD",
+                        "detailAccountType": "CREDIT_CARD",
+                        "fullName": "CHASE CREDIT 9416",
+                        "id": "225",
+                        "level": null,
+                        "name": "CHASE CREDIT 9416",
+                        "type": "CREDIT_CARD",
+                        "taxGroupId": null,
+                        "isNonPosting": false
+                    }
+                }
+            ],
+            "totalCount": 1
+        }
+    }
+}
