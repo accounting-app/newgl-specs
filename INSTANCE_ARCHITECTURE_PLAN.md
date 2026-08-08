@@ -164,19 +164,37 @@ Write down (and then script) the exact steps to stand up a brand-new instance: s
 
 ## 11. Decisions (answered Aug 8, 2026)
 
-| # | Question | Decision |
-|---|---|---|
-| 1 | **Auth provider per instance** | **Self-hosted Supabase** per instance as the primary model. Tech-savvy users can also **clone the repos and run locally**. Not "one Supabase cloud project per customer" as the main story. |
-| 2 | **AI key model** | **Keep current** BYOK + metered platform-key / quota system as-is, per instance. |
-| 3 | **Provisioning ownership** | **A + B + C together** (see note below). Prefer supporting all three; if forced to pick one path alone, prefer **C** (customer self-service). |
-| 4 | **Existing production deployment** | Becomes **instance #1** (ours). |
-| 5 | **Custom domains** (`grupocastillo.newgl.com`) | **Soon** — treat as near-term after provisioning basics. |
-| 6 | **Self-hosting / "run at home"** | **Near-term priority** — docker-compose + clone-and-run docs. |
-| 7 | **Phase A (multi-company)** | **Start now.** |
+### 1. Auth provider per instance
+**Q:** How should each instance handle login/users?  
+**A:** Self-hosted Supabase per instance as the primary model. Tech-savvy users can also clone the repos and run locally. Not "one Supabase cloud project per customer" as the main story.
+
+### 2. AI key / quota model
+**Q:** How should instances get Anthropic access?  
+**A:** Keep the current BYOK + metered platform-key / quota system as-is, per instance.
+
+### 3. Provisioning ownership
+**Q:** Who stands up a new instance when a customer signs on?  
+**A:** A + B + C together (manual checklist → ops script → customer self-service). Prefer supporting all three; if forced to pick one path alone, prefer C (customer self-service).
+
+### 4. Existing production deployment
+**Q:** What happens to `newgl-api.fly.dev` / `newgl-ai` / quickslike on Vercel?  
+**A:** Becomes **instance #1** (ours).
+
+### 5. Custom domains
+**Q:** When do we want `grupocastillo.newgl.com`-style URLs?  
+**A:** Soon — near-term after provisioning basics.
+
+### 6. Self-hosting / "run at home"
+**Q:** Priority for docker-compose + local clone-and-run?  
+**A:** Near-term priority.
+
+### 7. Phase A (multi-company)
+**Q:** Start list/create ledgers, remove `LEDGER_NAME`, company switcher now?  
+**A:** Start now.
 
 ### Important notes
 
-1. **Don't keep building shared signup SaaS.** Treat each customer as their own stack. Reuse the existing tenancy/ledger code for the instance owner + multi-company inside that stack. Isolation moves from rows → deployments; `tenant` becomes "owner of this instance," usually one row.
+1. **Don't keep building shared signup SaaS.** Each customer is their own stack. Reuse tenancy/ledger code for instance owner + multi-company inside that stack. Isolation moves from rows → deployments; `tenant` becomes "owner of this instance," usually one row.
 
 2. **Provisioning A / B / C are stages of one path, not exclusive choices:**
    - **A — Manual checklist:** David/Hector provision by hand (day one).
