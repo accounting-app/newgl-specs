@@ -1,1 +1,7 @@
 .DS_Store
+node_modules/
+dist/
+*.local
+*.tsbuildinfo
+.env*
+do_not_commit

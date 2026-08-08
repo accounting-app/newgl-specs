@@ -1,8 +1,8 @@
 # New GL — Per-Instance Architecture: What Changes and Why
 
-**Status:** Proposal for discussion, not yet decided or implemented.
-**Author:** Written by Claude (David's AI assistant) based on Hector's WhatsApp feedback from Aug 4–5, summarizing the intended direction and proposing a concrete implementation path.
-**Audience:** David and Hector — this is meant to get both of you aligned on scope before any code changes happen.
+**Status:** Direction decided (Aug 8, 2026). Open questions answered; ready to execute Phase A.
+**Author:** Written by Claude (David's AI assistant) based on Hector's WhatsApp feedback from Aug 4–5, summarizing the intended direction and proposing a concrete implementation path. Decisions recorded after David answered the alignment questions.
+**Audience:** David and Hector — alignment record and implementation guide.
 
 ---
 
@@ -68,7 +68,7 @@ Put differently: **`tenant` doesn't disappear from the schema. It just stops mea
 |---|---|
 | Tenant (one of many customers in a shared SaaS) | Instance's owner account (still stored in `tenants`, but there's normally only one per deployment) |
 | Ledger (the one, unnamed, per-tenant .bean file) | Company (a named ledger — the schema already supports this, we just need to expose it) |
-| Signup (self-service, on our shared public site) | Instance provisioning (an ops step: stand up a new database + deployment for a new customer) |
+| Signup (self-service, on our shared public site) | Instance provisioning (manual → ops script → customer self-service; each instance has its own auth DB) |
 | "Multi-tenant SaaS" | "Multi-instance, self-hostable software" |
 
 ---
@@ -77,11 +77,11 @@ Put differently: **`tenant` doesn't disappear from the schema. It just stops mea
 
 Being direct about this, since you asked:
 
-1. **Stop treating `newgl-api.fly.dev` / `newgl-ai` / the quickslike Vercel deployment as *the* production environment for every customer.** These become, at most, *one reference instance* (maybe the one you and Hector use yourselves, or a demo) — not "the app" that every future customer signs up on.
-2. **Stop building — and be ready to remove — any "public self-service signup" framing.** Right now `/signup` in quickslike lets any visitor create a brand-new tenant against our shared Supabase project. That flow doesn't make sense once each customer gets their own instance with its own Supabase project; provisioning a new customer becomes an ops/deployment action (by you or Hector), not something a stranger does by filling out a form on a shared website.
+1. **Stop treating `newgl-api.fly.dev` / `newgl-ai` / the quickslike Vercel deployment as *the* production environment for every customer.** **Decided:** this shared stack becomes **instance #1** (ours) — not "the app" that every future customer signs up on.
+2. **Stop building — and be ready to remove — any "public self-service signup" framing** against a *shared* Supabase project. Right now `/signup` in quickslike lets any visitor create a brand-new tenant in our shared DB. Per-instance signup (first user bootstrapping *their* instance) still makes sense; a stranger filling out a form on a shared website does not.
 3. **Re-scope (not necessarily delete) the "two signups see two separate sets of books" cross-tenant isolation tests.** Those tests (`tests/tenant-auth.test.ts`, `tests/tenant-ledgers.test.ts`) prove row-level isolation *within one shared database*. That guarantee matters less once isolation is physical. We'd keep the tests (they still validate correct behavior for the future multi-user-per-instance case) but stop treating "many tenants in one DB" as the primary production scenario.
-4. **Reconsider the platform AI key / quota system.** We built BYOK vs. a shared "platform" Anthropic key with a metered monthly quota (`plans`, `ai_usage`, the 402-on-quota-exceeded flow) — that model exists because *we* were going to be the ones paying for AI usage across many customers on a shared deployment. If every customer runs their own instance, the natural default is simply: **you set your own `ANTHROPIC_API_KEY` when you deploy your instance.** The quota/metering system becomes optional — worth keeping as a courtesy feature for less technical users who don't want to get their own Anthropic key, but no longer the default, load-bearing model. *(Flagging this as a decision for you and Hector — not removing it unilaterally.)*
-5. **The custom-domain/subdomain idea (`grupocastillo.newgl.com`) is new work, not a removal** — listed here because it's a piece of infrastructure we don't have today and would need to build or script (see Phase 4 below).
+4. **AI key / quota system — decided: keep current model.** BYOK + metered platform Anthropic key (`plans`, `ai_usage`, 402-on-quota-exceeded) stays as-is per instance. No simplification required for launch; each instance can still use either path.
+5. **The custom-domain/subdomain idea (`grupocastillo.newgl.com`) is new work, not a removal** — **decided: want soon** (see Phase D). Mostly DNS + Vercel/Fly custom domain config, not application code.
 
 ---
 
@@ -104,10 +104,10 @@ This is most of what we built:
    - A `POST /api/ledgers` (or similar) endpoint to create a new named company/ledger.
    - Removing the hardcoded `LEDGER_NAME` env var from `auth.ts`'s middleware — replace it with a per-request "current company" resolved from a header, a URL segment, or a stored user preference.
    - A company switcher in the quickslike UI (sidebar or settings), since accounts/transactions/register/reports all need to know which company's ledger they're reading.
-2. **Instance provisioning process.** Right now, "add a customer" means nothing beyond them visiting `/signup`. In the new model, it means: create a new Supabase project (or a self-hosted Postgres), run the migrations against it, deploy a `newgl-api` + `newgl-ai` Fly app pair pointed at it, deploy a quickslike instance (Vercel project or self-hosted) pointed at those, and configure DNS for their subdomain. This should eventually be scripted — a `provision-instance.sh` or similar — but can start as a documented manual checklist.
-3. **Subdomain / custom domain routing**, if `grupocastillo.newgl.com`-style URLs are wanted per instance. This is mostly DNS + Vercel/Fly custom domain configuration, not application code.
-4. **A decision on the AI key/quota model** (see point 4 in the removals section) — whether every instance requires its own Anthropic key, or the metered platform-key option stays available.
-5. **Self-hosting documentation**, if "run it at home" is a real near-term goal — a `docker-compose.yml` bundling all three services plus a self-hosted Supabase stack, and a setup guide for someone non-technical-ish to run on their own hardware.
+2. **Instance provisioning process.** Right now, "add a customer" means nothing beyond them visiting `/signup`. In the new model: stand up self-hosted Supabase (or clone-and-run locally), run migrations, deploy or run `newgl-api` + `newgl-ai` + quickslike pointed at that stack, configure env vars and (when ready) DNS. **Decided:** support A → B → C as one path (manual checklist → ops script → customer self-service for tech-savvy users). See §11.
+3. **Subdomain / custom domain routing** for `grupocastillo.newgl.com`-style URLs — **wanted soon.** Mostly DNS + Vercel/Fly custom domain configuration, not application code.
+4. **AI key/quota model** — **decided: keep current BYOK + platform quota as-is per instance.** No redesign needed here.
+5. **Self-hosting package** — **near-term priority** (not "later"). A `docker-compose.yml` bundling all three services plus self-hosted Supabase, plus a setup guide. Tech-savvy users should also be able to clone the repos and run locally.
 
 ---
 
@@ -126,11 +126,11 @@ This is most of what we built:
 ```
 1. Push code to newgl-api / newgl-ai / quickslike (same as before — these are still
    the three codebases; every instance runs the same code).
-2. To onboard a new customer: provision a new Supabase project, deploy a new
-   newgl-api + newgl-ai Fly app pair against it, deploy a new quickslike instance,
-   point their subdomain at it.
-3. Each instance is upgraded independently by redeploying it with the latest code
-   whenever you choose to.
+2. To onboard a new customer: provision a self-hosted Supabase (or they clone and run
+   locally), stand up newgl-api + newgl-ai + quickslike against it, point their
+   subdomain at it when custom domains are ready.
+3. Each instance is upgraded independently by redeploying / pulling latest code
+   whenever you (or they) choose to.
 ```
 
 ### End-user workflow
@@ -143,32 +143,55 @@ This is most of what we built:
 
 ## 10. Proposed phasing
 
-Scoped to keep each phase shippable and reversible on its own.
+Scoped to keep each phase shippable and reversible on its own. Priority updated per Aug 8 decisions.
 
-**Phase A — Multi-company support (no deployment changes needed)**
-Build the "list companies" / "create company" endpoints, remove the hardcoded `LEDGER_NAME`, add the company switcher to quickslike. This is useful *regardless* of how the instance-vs-tenant question resolves, and it's the one piece of "new work" that's pure application code — no infrastructure decisions blocking it. Good candidate to start on immediately.
+**Phase A — Multi-company support (no deployment changes needed) — START NOW**
+Build the "list companies" / "create company" endpoints, remove the hardcoded `LEDGER_NAME`, add the company switcher to quickslike. Pure application code; no infrastructure decisions blocking it. **Decided: begin immediately.**
 
-**Phase B — Formalize instance provisioning**
-Write down (and then script) the exact steps to stand up a brand-new instance: Supabase project, migrations, `newgl-api`/`newgl-ai` Fly apps, quickslike deployment, env vars, DNS. Turn the checklist from this conversation's earlier debugging session (Supabase pooler config, `prepare: false`, Bun version, shared internal token, IP lock-down) into a repeatable runbook so provisioning a second instance doesn't require re-deriving all of it from scratch.
+**Phase B — Formalize instance provisioning (A → B → C path)**
+Write down (and then script) the exact steps to stand up a brand-new instance: self-hosted Supabase, migrations, `newgl-api`/`newgl-ai`/quickslike, env vars, DNS. Turn the checklist from earlier debugging (Supabase pooler config, `prepare: false`, Bun version, shared internal token, IP lock-down) into a repeatable runbook, then an ops script, then docs/scripts customers can run themselves. See §11 notes on A/B/C.
 
-**Phase C — Decide and implement the AI key/quota model for self-hosted instances**
-Needs a decision from you and Hector first (see section 6, point 4). Then: either simplify Settings > AI to assume "you provide your own key" as the default, or keep the current BYOK/platform-quota system as-is per instance.
+**Phase C — AI key/quota model — DONE (no code change required for now)**
+**Decided:** keep current BYOK + platform quota system as-is per instance. Revisit later only if self-hosters find the platform path confusing or unused.
 
-**Phase D — Subdomain / custom domain automation**
-Only if `grupocastillo.newgl.com`-style URLs are wanted soon. Otherwise, a plain Fly `.dev` / Vercel `.vercel.app` URL per instance is a fine placeholder while everything else above gets built.
+**Phase D — Subdomain / custom domain automation — SOON**
+`grupocastillo.newgl.com`-style URLs are wanted soon. After provisioning basics exist, automate DNS + custom domain config for Fly/Vercel (or the self-host equivalent).
 
-**Later — Self-hosting package**
-`docker-compose.yml` bundling everything (including a self-hosted Supabase), for the "run it at home" scenario. Lowest priority unless a specific customer needs it soon.
-
----
-
-## 11. Open questions for Hector
-
-1. **Auth provider per instance:** does every instance get its own Supabase cloud project (simple, proven, but means creating a Supabase account per customer), or should we look at self-hosting Supabase (or building something lighter, given "one instance = one user for now" might not need a full Auth-as-a-Service product)?
-2. **AI key model:** required BYOK per instance, or keep the metered platform-key option alive per instance too?
-3. **Provisioning ownership:** who actually stands up a new instance when a new customer signs on — is this something David/Hector do by hand initially, or does it need to be self-service (a script the customer runs themselves) from day one?
-4. **Existing production deployment:** what happens to the current shared `newgl-api.fly.dev` / `newgl-ai` / quickslike-on-Vercel setup we just finished debugging — does it become "instance #1" (yours), get decommissioned, or stay as a demo/reference environment?
+**Phase E — Self-hosting package — NEAR-TERM (was "Later")**
+`docker-compose.yml` bundling everything (including self-hosted Supabase), plus a setup guide. Tech-savvy users should also be able to clone the three repos and run locally. Elevated from lowest priority to near-term.
 
 ---
 
-*This document reflects Claude's interpretation of Hector's WhatsApp messages from Aug 4–5, 2026, written for David to share and confirm alignment before any implementation work begins.*
+## 11. Decisions (answered Aug 8, 2026)
+
+| # | Question | Decision |
+|---|---|---|
+| 1 | **Auth provider per instance** | **Self-hosted Supabase** per instance as the primary model. Tech-savvy users can also **clone the repos and run locally**. Not "one Supabase cloud project per customer" as the main story. |
+| 2 | **AI key model** | **Keep current** BYOK + metered platform-key / quota system as-is, per instance. |
+| 3 | **Provisioning ownership** | **A + B + C together** (see note below). Prefer supporting all three; if forced to pick one path alone, prefer **C** (customer self-service). |
+| 4 | **Existing production deployment** | Becomes **instance #1** (ours). |
+| 5 | **Custom domains** (`grupocastillo.newgl.com`) | **Soon** — treat as near-term after provisioning basics. |
+| 6 | **Self-hosting / "run at home"** | **Near-term priority** — docker-compose + clone-and-run docs. |
+| 7 | **Phase A (multi-company)** | **Start now.** |
+
+### Important notes
+
+1. **Don't keep building shared signup SaaS.** Treat each customer as their own stack. Reuse the existing tenancy/ledger code for the instance owner + multi-company inside that stack. Isolation moves from rows → deployments; `tenant` becomes "owner of this instance," usually one row.
+
+2. **Provisioning A / B / C are stages of one path, not exclusive choices:**
+   - **A — Manual checklist:** David/Hector provision by hand (day one).
+   - **B — Ops script:** Same steps automated; David/Hector run `provision-instance` (or equivalent).
+   - **C — Customer self-service:** Same machinery documented for tech-savvy users (clone + docker-compose / provision script).
+   - Start with A, wrap as B for yourselves, expose as C for self-hosters. Only "pick C alone" if you refuse to ever provision for anyone yourselves.
+
+3. **Self-hosted Supabase + clone-and-run** is the intended auth/deploy story, not per-customer Supabase Cloud accounts. Cloud Supabase remains fine for **instance #1** until we migrate it deliberately.
+
+4. **Multi-company (Phase A) is independent of infra** and unblocks real "several companies per instance" usage even before provisioning automation lands.
+
+5. **Shared `/signup` against one global DB goes away** as the customer-onboarding model. Per-instance first-user bootstrap (`POST /api/tenants/bootstrap` and friends) remains valid.
+
+6. **AI platform-key path stays load-bearing for less technical users**; BYOK stays available for everyone else. No forced "BYOK only" simplification.
+
+---
+
+*Original interpretation of Hector's WhatsApp messages from Aug 4–5, 2026. Decisions in §11 recorded Aug 8, 2026 after David answered the alignment questions. Ready to execute Phase A.*
