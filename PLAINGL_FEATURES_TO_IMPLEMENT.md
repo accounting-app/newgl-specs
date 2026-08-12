@@ -8,7 +8,7 @@
 
 **Branch:** `19-issue-plaingl_features_to_implement_dc` (quickslike, newgl-api, newgl-ai).
 
-**Progress:** #3 (Report compare + columnar statements) is done — see item 10 below for a follow-on gap it surfaced.
+**Progress:** #3 (Report compare + columnar statements) and #2 (Trial Balance) are done — see item 10 below for a follow-on gap #3 surfaced.
 
 ---
 
