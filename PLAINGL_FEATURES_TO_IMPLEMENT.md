@@ -220,7 +220,7 @@
 
 **Why it matters:** small gap, but a real one — sharing or archiving a report as a PDF is a basic accounting-software expectation, and the infrastructure for it already exists in this codebase for the register.
 
-**Build notes:** likely the smallest item in this whole addendum — reuse `use-register-print.ts`'s approach (or the hook itself, generalized) on each report page, with a print stylesheet that hides the header controls/nav and keeps just the statement table. Small.
+**Status: done.** Turned out simpler than reusing `use-register-print.ts` — that hook reconstructs a whole new HTML document because the live register view has interactive chrome unsuited for printing, but a report card is already exactly what should print. Used a plain `@media print` stylesheet (hide side nav/top bar/filter controls, show only the report card) instead, so whatever's on screen — compare mode, columnar statements, an account filter — prints exactly as shown, no separate serialization to maintain. Added to all five report pages (P&L, Balance Sheet, Trial Balance, P&L Detail, By Payee).
 
 ---
 
@@ -262,7 +262,7 @@ Roughly ordered by value-for-effort, per the original audit's backlog, refined w
 **Addendum (11-18) — not yet built, ordered by value-for-effort:**
 
 9. **Chart of Accounts real tree/rollup** (#16) — small, the hierarchy helper already exists in this codebase; likely the single cheapest item in the whole addendum. ✅
-10. **Print/Save-as-PDF for reports** (#17) — small, the register already has this exact pattern to copy.
+10. **Print/Save-as-PDF for reports** (#17) — small, the register already has this exact pattern to copy. ✅
 11. **Income/expense-by-payee report** (#12) — small-to-medium, reuses the existing P&L computation, no schema dependency. ✅
 12. **Bank rules export/import/duplicate** (#14) — small, frontend-only convenience on top of the existing rules CRUD.
 13. **Account opening balance on creation** (#15) — small, the backend field already exists; check whether it needs an Equity-offset fix first.
