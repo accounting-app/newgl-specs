@@ -8,7 +8,9 @@
 
 **Branch:** `19-issue-plaingl_features_to_implement_dc` (quickslike, newgl-api, newgl-ai).
 
-**Progress:** #3 (Report compare + columnar statements), #2 (Trial Balance), #9 (Date-range export), #1 (Chart of Accounts), #8 (Dashboard metrics), and #7 (Deterministic bank rules manager) are done — see item 10 below for a follow-on gap #3 surfaced. All six verified end-to-end locally (self-hosted Docker not required — tested directly against `bunx supabase start` + the dev servers).
+**Progress:** #3 (Report compare + columnar statements), #2 (Trial Balance), #9 (Date-range export), #1 (Chart of Accounts), #8 (Dashboard metrics), #7 (Deterministic bank rules manager), and #4 (P&L Detail) are done — see item 10 below for a follow-on gap #3 surfaced. All seven verified end-to-end locally (self-hosted Docker not required — tested directly against `bunx supabase start` + the dev servers).
+
+**Remaining:** #5 and #6 (Register splits + Journal Entry) — the largest, most structurally invasive items on this list, deliberately saved for last.
 
 **#7 precedence decision (made, not left open):** AI's suggestion (and the learned-payee-memory it checks first) wins by default whenever both an AI suggestion and a deterministic rule match a CSV import row. The rule's match is never silently discarded — it's shown as a one-click "Use instead" override, and it auto-fills a row outright when AI has no suggestion for it.
 
