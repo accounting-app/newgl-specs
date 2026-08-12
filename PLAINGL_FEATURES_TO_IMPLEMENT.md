@@ -8,7 +8,9 @@
 
 **Branch:** `19-issue-plaingl_features_to_implement_dc` (quickslike, newgl-api, newgl-ai).
 
-**Progress:** #3 (Report compare + columnar statements), #2 (Trial Balance), #9 (Date-range export), and #1 (Chart of Accounts) are done — see item 10 below for a follow-on gap #3 surfaced. All four verified end-to-end locally (self-hosted Docker not required — tested directly against `bunx supabase start` + the dev servers).
+**Progress:** #3 (Report compare + columnar statements), #2 (Trial Balance), #9 (Date-range export), #1 (Chart of Accounts), and #8 (Dashboard metrics) are done — see item 10 below for a follow-on gap #3 surfaced. All five verified end-to-end locally (self-hosted Docker not required — tested directly against `bunx supabase start` + the dev servers).
+
+**Known data-model gap surfaced while building #8:** no A/P account category exists (only A/R), and transactions have no due-date field, so A/P outstanding and any aging/overdue reporting (a real part of PlainGL's dashboard) aren't buildable without a schema change first. Not tracked as its own numbered item yet -- worth adding if this becomes a priority.
 
 ---
 
