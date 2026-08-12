@@ -8,7 +8,9 @@
 
 **Branch:** `19-issue-plaingl_features_to_implement_dc` (quickslike, newgl-api, newgl-ai).
 
-**Progress:** #3 (Report compare + columnar statements), #2 (Trial Balance), #9 (Date-range export), #1 (Chart of Accounts), and #8 (Dashboard metrics) are done — see item 10 below for a follow-on gap #3 surfaced. All five verified end-to-end locally (self-hosted Docker not required — tested directly against `bunx supabase start` + the dev servers).
+**Progress:** #3 (Report compare + columnar statements), #2 (Trial Balance), #9 (Date-range export), #1 (Chart of Accounts), #8 (Dashboard metrics), and #7 (Deterministic bank rules manager) are done — see item 10 below for a follow-on gap #3 surfaced. All six verified end-to-end locally (self-hosted Docker not required — tested directly against `bunx supabase start` + the dev servers).
+
+**#7 precedence decision (made, not left open):** AI's suggestion (and the learned-payee-memory it checks first) wins by default whenever both an AI suggestion and a deterministic rule match a CSV import row. The rule's match is never silently discarded — it's shown as a one-click "Use instead" override, and it auto-fills a row outright when AI has no suggestion for it.
 
 **Known data-model gap surfaced while building #8:** no A/P account category exists (only A/R), and transactions have no due-date field, so A/P outstanding and any aging/overdue reporting (a real part of PlainGL's dashboard) aren't buildable without a schema change first. Not tracked as its own numbered item yet -- worth adding if this becomes a priority.
 
