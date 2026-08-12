@@ -8,9 +8,9 @@
 
 **Branch:** `19-issue-plaingl_features_to_implement_dc` (quickslike, newgl-api, newgl-ai).
 
-**Progress:** #3 (Report compare + columnar statements), #2 (Trial Balance), #9 (Date-range export), #1 (Chart of Accounts), #8 (Dashboard metrics), #7 (Deterministic bank rules manager), and #4 (P&L Detail) are done — see item 10 below for a follow-on gap #3 surfaced. All seven verified end-to-end locally (self-hosted Docker not required — tested directly against `bunx supabase start` + the dev servers).
+**Progress:** All nine items are done -- #3 (Report compare + columnar statements), #2 (Trial Balance), #9 (Date-range export), #1 (Chart of Accounts), #8 (Dashboard metrics), #7 (Deterministic bank rules manager), #4 (P&L Detail), and #5 + #6 (Register splits + Journal Entry) last, as planned. See item 10 below for a follow-on gap #3 surfaced -- the only thing left on this list. All verified end-to-end locally (self-hosted Docker not required -- tested directly against `bunx supabase start` + the dev servers).
 
-**Remaining:** #5 and #6 (Register splits + Journal Entry) — the largest, most structurally invasive items on this list, deliberately saved for last.
+**#5/#6 turned out smaller than expected:** the backend's `postings` array was already N-generic (no 2-leg cap anywhere in `newgl-api` -- confirmed by reading the schema and the double-entry validator before writing any code), so both features were pure frontend work. Known gaps left out of scope on purpose, not silently skipped: editing an existing split/multi-leg transaction's line items, and CSV import row splitting (categorizing one imported row across multiple accounts).
 
 **#7 precedence decision (made, not left open):** AI's suggestion (and the learned-payee-memory it checks first) wins by default whenever both an AI suggestion and a deterministic rule match a CSV import row. The rule's match is never silently discarded — it's shown as a one-click "Use instead" override, and it auto-fills a row outright when AI has no suggestion for it.
 
