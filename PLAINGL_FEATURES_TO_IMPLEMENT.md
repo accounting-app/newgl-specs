@@ -208,9 +208,7 @@
 
 **Why it matters:** for anyone with a deep chart of accounts (the seed data alone has several 2-3 level hierarchies under Travel, Medical Expenses, Office Expenses, Payroll Tax), a flat list makes it hard to see the big picture at a glance — the whole point of a "Travel" rollup is answering "how much did we spend on travel total" without manually adding up six sub-line items.
 
-**Why it's a small lift:** the hierarchy-building logic already exists and is already used elsewhere in this exact codebase — `buildHierarchyRows`/`buildHierarchyRowsMulti` (`src/lib/accounting/account-hierarchy.ts`), built for the P&L/Balance Sheet/Trial Balance reports this session, already does colon-segment parent/child grouping with rollup totals. This is very likely a matter of feeding the Chart of Accounts page's account list through the same helper instead of its current flat `.filter().sort()`, not new logic.
-
-**Build notes:** swap the Chart of Accounts page's per-section flat list for `buildHierarchyRows`, matching the indentation/collapse pattern `ReportAccountRows` already renders. Small.
+**Status: done.** Turned out `buildHierarchyRows` itself does *not* sum children into a parent's total (correct for reports — a statement that already lists both "Travel" and "Travel:Airfare" as separate lines would double-count if summed) and skips parent segments with no account of their own entirely. Added a sibling function, `buildRollupHierarchyRows`, that does the actual PlainGL-style summing and always emits a row per path segment, used only by the Chart of Accounts page — the existing report-facing helper was left untouched. Verified live: "Office Expenses" correctly reads as the sum of its children, collapse/expand works, and synthetic parent rows (no account of their own) correctly show no register link or Archive button.
 
 ---
 
@@ -263,7 +261,7 @@ Roughly ordered by value-for-effort, per the original audit's backlog, refined w
 
 **Addendum (11-18) — not yet built, ordered by value-for-effort:**
 
-9. **Chart of Accounts real tree/rollup** (#16) — small, the hierarchy helper already exists in this codebase; likely the single cheapest item in the whole addendum.
+9. **Chart of Accounts real tree/rollup** (#16) — small, the hierarchy helper already exists in this codebase; likely the single cheapest item in the whole addendum. ✅
 10. **Print/Save-as-PDF for reports** (#17) — small, the register already has this exact pattern to copy.
 11. **Income/expense-by-payee report** (#12) — small-to-medium, reuses the existing P&L computation, no schema dependency. ✅
 12. **Bank rules export/import/duplicate** (#14) — small, frontend-only convenience on top of the existing rules CRUD.
