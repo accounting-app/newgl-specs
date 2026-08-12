@@ -8,7 +8,7 @@
 
 **Branch:** `19-issue-plaingl_features_to_implement_dc` (quickslike, newgl-api, newgl-ai).
 
-**Progress:** #3 (Report compare + columnar statements), #2 (Trial Balance), and #9 (Date-range export) are done — see item 10 below for a follow-on gap #3 surfaced. All three verified end-to-end locally (self-hosted Docker not required — tested directly against `bunx supabase start` + the dev servers).
+**Progress:** #3 (Report compare + columnar statements), #2 (Trial Balance), #9 (Date-range export), and #1 (Chart of Accounts) are done — see item 10 below for a follow-on gap #3 surfaced. All four verified end-to-end locally (self-hosted Docker not required — tested directly against `bunx supabase start` + the dev servers).
 
 ---
 
