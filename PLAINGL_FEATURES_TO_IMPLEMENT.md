@@ -156,7 +156,7 @@
 
 **What PlainGL has:** `ReportsView`'s management summary includes an income/expense-by-payee rollup (`byPayee()` in `lib/beancount/report.ts`) — same P&L postings, grouped by payee instead of by account.
 
-**What we have:** nothing — our P&L and P&L Detail both group strictly by account.
+**Status: done.** New `/reports/by-payee` tab, verified live (income/expense totals matched the ending Cash balance exactly).
 
 **Why it matters:** confirmed this one does **not** depend on the A/R/A/P aging gap noted under Dashboard metrics (#8) — it's a pure regrouping of data we already have in full (every transaction already carries a `payee` field). A genuinely buildable report, not blocked on a schema change.
 
@@ -265,7 +265,7 @@ Roughly ordered by value-for-effort, per the original audit's backlog, refined w
 
 9. **Chart of Accounts real tree/rollup** (#16) — small, the hierarchy helper already exists in this codebase; likely the single cheapest item in the whole addendum.
 10. **Print/Save-as-PDF for reports** (#17) — small, the register already has this exact pattern to copy.
-11. **Income/expense-by-payee report** (#12) — small-to-medium, reuses the existing P&L computation, no schema dependency.
+11. **Income/expense-by-payee report** (#12) — small-to-medium, reuses the existing P&L computation, no schema dependency. ✅
 12. **Bank rules export/import/duplicate** (#14) — small, frontend-only convenience on top of the existing rules CRUD.
 13. **Account opening balance on creation** (#15) — small, the backend field already exists; check whether it needs an Equity-offset fix first.
 14. **Bank feed dedup/exclude memory** (#11) — medium, a real day-to-day friction point once someone re-imports overlapping statements.
