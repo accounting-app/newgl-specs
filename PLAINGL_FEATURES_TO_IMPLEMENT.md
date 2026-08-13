@@ -176,6 +176,8 @@
 
 **Build notes:** two independent pieces — (a) starter templates: a small, static set of category-account presets (data-only, no new endpoint shape, just alternate seed documents alongside `defaultDocument()`); (b) duplicate-existing: a new code path that copies another ledger's chart-of-accounts structure (not its transactions or balances) into the new company — needs a new backend action, not just new frontend UI. Medium lift, mostly backend.
 
+**Status: done.** `POST /api/companies` now takes optional `templateId` or `duplicateFromName` (mutually exclusive; omitting both keeps today's blank behavior). Templates are three small static presets (`src/domain/company-templates.ts`: Freelancer/Consultant, Retail/E-commerce, Real Estate) listed via a new `GET /api/company-templates`. Duplicate-existing loads the source company's beancount content, parses it, and rebuilds a `LedgerStore` with fresh account ids and zeroed balances but no transactions -- both paths reuse the existing `storeToDocument`/`documentToStore` round-trip in `mapper.ts` rather than hand-building beancount text, so this stayed small despite touching the storage layer. Frontend: the "New Company" inline form (`company-picker.tsx`) gained a "Starting point" selector wired to the two new fields. Verified live: created "Freelance Co" from the freelancer template (all 8 accounts appeared correctly, including the colon-hierarchy "Office Expenses:Software & Apps"), then created "Cloned Co" by duplicating the seeded "company" -- the full ~90-account chart of accounts appeared with every balance at $0.00 and an empty register, confirming structure-only duplication.
+
 ---
 
 ## 14. Bank rules export / import / duplicate
@@ -273,6 +275,6 @@ Roughly ordered by value-for-effort, per the original audit's backlog, refined w
 12. **Bank rules export/import/duplicate** (#14) — small, frontend-only convenience on top of the existing rules CRUD. ✅
 13. **Account opening balance on creation** (#15) — small, the backend field already exists; check whether it needs an Equity-offset fix first. ✅
 14. **Bank feed dedup/exclude memory** (#11) — medium, a real day-to-day friction point once someone re-imports overlapping statements. ✅
-15. **Company creation: templates + duplicate-existing** (#13) — medium, matters more as multi-company usage grows.
+15. **Company creation: templates + duplicate-existing** (#13) — medium, matters more as multi-company usage grows. ✅
 16. **Generic multi-account paste import** (#18) — medium, narrower value (one-time bulk historical loads, not day-to-day use).
 17. **Report columns/compare by dimension** (#10) — lowest priority, a reporting refinement rather than a core gap; the two sub-pieces (dimension columns, percent-of-total display) can be split further if only one turns out to be worth doing.
