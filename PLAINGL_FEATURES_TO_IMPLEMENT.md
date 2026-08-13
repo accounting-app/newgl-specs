@@ -186,6 +186,8 @@
 
 **Build notes:** small, mostly frontend. Export = serialize the existing `GET /api/bank-rules` response to a downloadable JSON file (client-side only, no new endpoint). Import = parse a JSON file client-side and call the existing `POST /api/bank-rules` once per rule (same batching pattern already used for Chart of Accounts bulk import). Duplicate = pre-fill the "New rule" form from an existing rule's fields, a pure client-side convenience.
 
+**Status: done.** Export serializes rules to a `PortableRule` shape (name/targetAccountId/conditions/enabled/priority only — id/createdAt/updatedAt deliberately stripped, since importing into another company or re-importing a backup should always create fresh rules rather than reuse another tenant's ids) and downloads it as `bank-rules.json`. Import accepts either that file or a bare array, validates each entry, calls `POST /api/bank-rules` per valid rule, and reports a count plus any skipped/malformed entries instead of failing the whole batch. Duplicate pre-fills the New Rule form from an existing rule. Verified live: exported the rule set, duplicated a rule and submitted it as a new rule, and re-imported a hand-crafted file containing one valid rule and one malformed entry — got "Imported 1 of 2 rules." with the malformed one correctly reported and skipped.
+
 ---
 
 ## 15. Account opening balance on creation
@@ -264,7 +266,7 @@ Roughly ordered by value-for-effort, per the original audit's backlog, refined w
 9. **Chart of Accounts real tree/rollup** (#16) — small, the hierarchy helper already exists in this codebase; likely the single cheapest item in the whole addendum. ✅
 10. **Print/Save-as-PDF for reports** (#17) — small, the register already has this exact pattern to copy. ✅
 11. **Income/expense-by-payee report** (#12) — small-to-medium, reuses the existing P&L computation, no schema dependency. ✅
-12. **Bank rules export/import/duplicate** (#14) — small, frontend-only convenience on top of the existing rules CRUD.
+12. **Bank rules export/import/duplicate** (#14) — small, frontend-only convenience on top of the existing rules CRUD. ✅
 13. **Account opening balance on creation** (#15) — small, the backend field already exists; check whether it needs an Equity-offset fix first.
 14. **Bank feed dedup/exclude memory** (#11) — medium, a real day-to-day friction point once someone re-imports overlapping statements.
 15. **Company creation: templates + duplicate-existing** (#13) — medium, matters more as multi-company usage grows.
