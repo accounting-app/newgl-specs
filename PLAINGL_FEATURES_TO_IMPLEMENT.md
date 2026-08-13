@@ -150,6 +150,8 @@
 
 **Build notes:** needs both a signature function (deterministic hash of date + payee + amount, mirroring PlainGL's `feedSignature()`) and two new persisted lists scoped to tenant/ledger — "signatures already posted" (checked automatically, computed from existing transactions, no new table needed if derivable on the fly) and "signatures explicitly excluded" (does need a small new table, since exclusion is a user decision with no other source of truth). In the review table, a row matching either list would be pre-unchecked with a "Looks like a duplicate" / "Previously excluded" note, with an explicit action to exclude a row going forward. Medium lift — new backend table + matching logic + review-table UI changes.
 
+**Status: done.** Split exactly as anticipated: duplicate-import detection needs no persistence at all — computed client-side each time the review table builds, matching date+payee+amount against `listTransactions({sourceAccountId, status: "POSTED"})` (already an existing call, just newly used here). Exclude memory does need real storage since it's a user decision with no other source of truth, so it got its own tenant-scoped Postgres table (`excluded_feed_rows`, same pattern as `bank_rules`/`payee_rules`) plus a list/create/delete route — deliberately matched on payee+amount only, *not* date, since the whole point is catching the same recurring row (e.g. a monthly bank fee) across different statement periods, unlike duplicate detection which needs the exact date to match. Added `src/lib/accounting/feed-dedup.ts` (quickslike) with the two matching functions, wired into the CSV import review table with "Looks like a duplicate" / "Previously excluded" notes (rows pre-unchecked either way) and a per-row "Exclude" action. Verified live: imported 2 rows, re-imported the identical file and both rows correctly showed "Looks like a duplicate" pre-unchecked; excluded one row, confirmed "Previously excluded" appeared; then imported a third file with the same payee/amount but a different date and confirmed the exclusion still matched (date correctly ignored).
+
 ---
 
 ## 12. Income/expense-by-payee report
@@ -270,7 +272,7 @@ Roughly ordered by value-for-effort, per the original audit's backlog, refined w
 11. **Income/expense-by-payee report** (#12) — small-to-medium, reuses the existing P&L computation, no schema dependency. ✅
 12. **Bank rules export/import/duplicate** (#14) — small, frontend-only convenience on top of the existing rules CRUD. ✅
 13. **Account opening balance on creation** (#15) — small, the backend field already exists; check whether it needs an Equity-offset fix first. ✅
-14. **Bank feed dedup/exclude memory** (#11) — medium, a real day-to-day friction point once someone re-imports overlapping statements.
+14. **Bank feed dedup/exclude memory** (#11) — medium, a real day-to-day friction point once someone re-imports overlapping statements. ✅
 15. **Company creation: templates + duplicate-existing** (#13) — medium, matters more as multi-company usage grows.
 16. **Generic multi-account paste import** (#18) — medium, narrower value (one-time bulk historical loads, not day-to-day use).
 17. **Report columns/compare by dimension** (#10) — lowest priority, a reporting refinement rather than a core gap; the two sub-pieces (dimension columns, percent-of-total display) can be split further if only one turns out to be worth doing.
