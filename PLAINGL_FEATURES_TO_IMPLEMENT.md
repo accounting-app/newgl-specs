@@ -200,6 +200,8 @@
 
 **Build notes:** small. Add an optional "Opening balance" field to the Chart of Accounts creation form (the backend field already exists — this may be almost entirely a frontend change), confirming first whether `createAccount`'s existing handling already posts the correct offsetting Equity entry or just stores the number on the account with no corresponding ledger effect (worth checking `account-service.ts` before assuming either way).
 
+**Status: done.** Confirmed the backend gap first: `createAccount` just stored `openingBalance` as a bare field on the account row with no offsetting entry — harmless for that one account's own balance (reports already seed from `account.openingBalance` before applying postings) but it silently left the trial balance out of balance company-wide, since nothing credited an equity account for the same amount. Fixed server-side: `createAccount` now stores `openingBalance`/`currentBalance` as `0` on the account row and, when a nonzero opening balance is given, posts a real `POSTED` `JOURNAL_ENTRY` transaction against a find-or-created "Opening Balance Equity" account (code `9000`), debit/credit direction chosen from `DEBIT_NORMAL_CATEGORIES` so it's correct for both debit-normal (Bank, Expense, etc.) and credit-normal (Liability, Equity, Income) accounts — mirrors the existing `importTransactions` pattern of building a `POSTED` transaction directly and calling `rebuildDerivedViews`/`updateAccountBalances`. Added the "Opening balance" input to the Chart of Accounts "Add an account" form. Verified live: created a Bank account with a $500 opening balance — it showed $500.00 immediately, "Opening Balance Equity" picked up the offsetting $500.00 credit, and the Trial Balance report showed no out-of-balance warning with both sides ties out exactly.
+
 ---
 
 ## 16. Chart of Accounts: real hierarchy tree, not just root-grouped list
@@ -267,7 +269,7 @@ Roughly ordered by value-for-effort, per the original audit's backlog, refined w
 10. **Print/Save-as-PDF for reports** (#17) — small, the register already has this exact pattern to copy. ✅
 11. **Income/expense-by-payee report** (#12) — small-to-medium, reuses the existing P&L computation, no schema dependency. ✅
 12. **Bank rules export/import/duplicate** (#14) — small, frontend-only convenience on top of the existing rules CRUD. ✅
-13. **Account opening balance on creation** (#15) — small, the backend field already exists; check whether it needs an Equity-offset fix first.
+13. **Account opening balance on creation** (#15) — small, the backend field already exists; check whether it needs an Equity-offset fix first. ✅
 14. **Bank feed dedup/exclude memory** (#11) — medium, a real day-to-day friction point once someone re-imports overlapping statements.
 15. **Company creation: templates + duplicate-existing** (#13) — medium, matters more as multi-company usage grows.
 16. **Generic multi-account paste import** (#18) — medium, narrower value (one-time bulk historical loads, not day-to-day use).
