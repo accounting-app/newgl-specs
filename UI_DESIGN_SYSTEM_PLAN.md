@@ -1,6 +1,8 @@
 # UI Design System & Apps Navigation — Implementation Plan
 
-**Status:** Stage 3 done, including a follow-up revision from user feedback (quickslike commits `65a868a`, `e168d14`, `d7901b2`, branch `21-issue_ui_fixes_and_updates_dc`). Stages 4-5 not started.
+**Status:** Stage 3 done, including two rounds of user-feedback revisions (quickslike commits `65a868a`, `e168d14`, `d7901b2`, `eb5fe08`, branch `21-issue_ui_fixes_and_updates_dc`). Stages 4-5 not started.
+
+**Layout-density revision (second round of feedback, with QBO screenshots):** subpages (Settings, All Apps, and everything under them), Home, and the Reports index were all being shrunk into a narrow centered column (`mx-auto max-w-3xl`/`max-w-6xl`) with wasted space on either side -- QBO's own screens fill the space next to the sidebar instead. Settings/All-Apps layouts and Home now use flat `p-5` (20px) padding with no centering wrapper, so Chart of Accounts' table etc. stretch full-width. The Reports index was rebuilt from a card grid into QBO's own flat-list style (name + trailing icon, thin dividers) on the same full-width shell.
 
 **Stage 3 notes:** built richer than the original flat-pill sketch in Part 3, per user-provided QBO screenshots of the actual "All apps" menu -- implemented as a real two-level hover flyout (category list + nested sub-items panel), matching QBO's interaction exactly, still with zero locked/"coming soon" placeholders.
 
