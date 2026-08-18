@@ -1,8 +1,10 @@
 # UI Design System & Apps Navigation — Implementation Plan
 
-**Status:** Stage 1 done (quickslike commit `09b9bfb`, branch `21-issue_ui_fixes_and_updates_dc`). Stages 2-5 not started.
+**Status:** Stage 2 done (quickslike commit `00fd9f6`, branch `21-issue_ui_fixes_and_updates_dc`). Stages 3-5 not started.
 
 **Stage 1 notes:** built exactly as planned -- see Part 1's component table, all present in `src/components/ui/`. The `.button` bug from Part 2 is fixed (verified live: `/login`'s "Sign in" button rendered with zero styling before, renders correctly now); the now-redundant `.tw-override .button`/`.input-field`/`.selector-field`/`.selector-option*` CSS blocks were removed in the same commit rather than deferred, since the components no longer emit those class names at all (nothing left to conflict). `.tw-override` rules still needed by not-yet-migrated screens (register cluster, payee modal, page-chrome) are untouched, per plan. `/dev/ui-kit` is live and confirmed to return a real 404 in a production build (`next build` + `next start`, checked via curl) while working normally in dev.
+
+**Stage 2 notes:** Chart of Accounts (`chart-of-accounts-page.tsx`) migrated to `Card`/`Select`/`NumberField`/`Textarea`/`InputField`'s built-in label prop, and the account hierarchy tree (indentation, collapse/expand, rollup balances, register links, Archive) now renders through `Table.*` primitives with each root category as a spanning header row inside one continuous table. No behavior changes -- verified live end-to-end (create, archive, bulk import, collapse/expand) in both themes, plus a clean `next build`. This is the template the rest of Stage 5's screens will follow.
 
 **Scope:** `quickslike` only. Modeled after QuickBooks Online's design language (screenshots provided by the user: Receipts, Reconcile, Chart of accounts, Bank transactions), applied to this app's own real sections — not a port of QBO's product lineup or visual identity, just its component discipline and its "Apps" navigation pattern.
 
