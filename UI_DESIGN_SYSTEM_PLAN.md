@@ -1,6 +1,8 @@
 # UI Design System & Apps Navigation — Implementation Plan
 
-**Status:** Stage 3 done, including two rounds of user-feedback revisions (quickslike commits `65a868a`, `e168d14`, `d7901b2`, `eb5fe08`, branch `21-issue_ui_fixes_and_updates_dc`). Stages 4-5 not started.
+**Status:** Stage 4 done (quickslike commit `ed6dcd1`, branch `21-issue_ui_fixes_and_updates_dc`). Stage 5 not started.
+
+**Stage 4 notes:** wired real `useToast()` success/error toasts into the two screens migrated in earlier stages -- Chart of Accounts and Bank Rules -- replacing every silent-refresh-on-success and inline `text-red-600` error `<p>` with a toast: account create/archive/bulk-import, rule create/enable-disable/delete/export/import. `loadError`/`loading` states (initial page load, not an action result) were deliberately left as inline text -- toasts are for one-shot action feedback, not persistent page state. Ledger (`/all-apps/ledger`) was left for Stage 5's full sweep since it wasn't touched in Stages 2-3 and hasn't been migrated to the `ui/` component set yet. Verified live: create-account and disable-rule toasts both confirmed rendering with correct copy in the browser, plus a clean `tsc --noEmit` and `next build` (run under Node 20 via nvm -- this machine's default `node` is 18, which Next.js 16 rejects).
 
 **Layout-density revision (second round of feedback, with QBO screenshots):** subpages (Settings, All Apps, and everything under them), Home, and the Reports index were all being shrunk into a narrow centered column (`mx-auto max-w-3xl`/`max-w-6xl`) with wasted space on either side -- QBO's own screens fill the space next to the sidebar instead. Settings/All-Apps layouts and Home now use flat `p-5` (20px) padding with no centering wrapper, so Chart of Accounts' table etc. stretch full-width. The Reports index was rebuilt from a card grid into QBO's own flat-list style (name + trailing icon, thin dividers) on the same full-width shell.
 
