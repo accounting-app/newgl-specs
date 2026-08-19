@@ -1,6 +1,8 @@
 # UI Design System & Apps Navigation — Implementation Plan
 
-**Status:** Stage 5 complete -- all four groups (A: Register cluster, B: CSV import flow, C: Reports, D: Home & auth) done (quickslike commits `20deea4`, `d9afd40`, `ec57923`, `f896bd9`, `b72adb9`, branch `21-issue_ui_fixes_and_updates_dc`). This closes out the originally-planned Stages 1-5.
+**Status:** Stage 5 complete, including the closing `SettingsCard` cleanup (quickslike commits `20deea4`, `d9afd40`, `ec57923`, `f896bd9`, `b72adb9`, `095e9a5`, branch `21-issue_ui_fixes_and_updates_dc`). The entire originally-planned Stages 1-5 are now done.
+
+**Final cleanup notes:** the 6 remaining `SettingsCard` consumers (`settings/ai`, `settings/organization`, `settings/billing`, `all-apps/ledger`, `bulk-paste-import.tsx`, `bank-rules-page.tsx`) now use `Card` directly, and `SettingsCard` itself is deleted -- the plan's closing cleanup line is done. `settings/ai/page.tsx`'s manual API-key label was also folded into `InputField`'s built-in `label` prop while the file was open. Verified live across AI, Billing, Organization, Bank Rules, and Ledger, plus a clean `tsc --noEmit` and `next build`.
 
 **Stage 5 Group D notes:** `dashboard-metrics.tsx`'s 5 hand-built bordered tiles now use `ui/Card`; the `(auth)` layout's card wrapper now uses `Card` (`padding="lg"`, matching its `p-8` exactly); login/signup's manual `<label><span>` wrappers move to `InputField`'s built-in `label` prop. Verified live (login page, full home dashboard) plus a clean `tsc --noEmit` and `next build`.
 
