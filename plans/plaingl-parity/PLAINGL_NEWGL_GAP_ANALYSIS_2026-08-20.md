@@ -1,5 +1,12 @@
 # PlainGL → New GL Feature Gap Analysis (2026-08-20)
 
+**Status:** Phase 1 (Quick wins) done -- branch `23-issue_plaingl_fetaures_to_implement_dc` (quickslike, newgl-api). Phases 2-4 not started.
+
+**Phase 1 notes:**
+- **Journal Entry CSV export** (quickslike `af72fdc`): downloads the on-screen entry as `journal-entry-<date>.csv`, mirroring the Blob-download pattern already used by Bank Rules' export.
+- **Duplicate-detection deep link** (quickslike `7d64b86`): CSV review's "Looks like a duplicate" now links straight to the matching transaction in the Register (new `tx` query param, threaded through the same way `account` already was).
+- **True account deletion** (quickslike `cc6c25e`, newgl-api `a0d4452`): new `AccountService.deleteAccount` / `DELETE /api/accounts/:id`, rejecting accounts with any posting activity (verified live both ways, plus two new backend tests). Chart of Accounts now has Delete next to Archive.
+
 **Reviewed:** PlainGL (`/plaingl`, live at `localhost:3020`, v1.0.28) vs. New GL (`quickslike`).
 **Method:** Full source review of both codebases, plus a live click-through of every PlainGL tab against its seeded demo data.
 
