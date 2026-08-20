@@ -1,11 +1,15 @@
 # PlainGL → New GL Feature Gap Analysis (2026-08-20)
 
-**Status:** Phase 1 (Quick wins) done -- branch `23-issue_plaingl_fetaures_to_implement_dc` (quickslike, newgl-api). Phases 2-4 not started.
+**Status:** Phases 1-2 done -- branch `23-issue_plaingl_fetaures_to_implement_dc` (quickslike, newgl-api). Phases 3-4 not started.
 
 **Phase 1 notes:**
 - **Journal Entry CSV export** (quickslike `af72fdc`): downloads the on-screen entry as `journal-entry-<date>.csv`, mirroring the Blob-download pattern already used by Bank Rules' export.
 - **Duplicate-detection deep link** (quickslike `7d64b86`): CSV review's "Looks like a duplicate" now links straight to the matching transaction in the Register (new `tx` query param, threaded through the same way `account` already was).
 - **True account deletion** (quickslike `cc6c25e`, newgl-api `a0d4452`): new `AccountService.deleteAccount` / `DELETE /api/accounts/:id`, rejecting accounts with any posting activity (verified live both ways, plus two new backend tests). Chart of Accounts now has Delete next to Archive.
+
+**Phase 2 notes:** the "uniform compare/columnar reporting" item was dropped as a false gap -- see the correction under "Real functional gaps" below, made mid-phase after re-reading the original PlainGL audit more carefully. The only real item was A/R & A/P aging:
+- **Accounts Payable category + transaction due date** (newgl-api `d9da374`, quickslike `8d665a0`): the schema prerequisite the original audit flagged -- no A/P category existed at all, and transactions had no due-date field. New `ACCOUNTS_PAYABLE` category wired everywhere `ACCOUNTS_RECEIVABLE` already was; new optional `dueDate` on transactions, falling back to `transactionDate` when unset (matching PlainGL's own `due`-metadata fallback).
+- **A/R & A/P Aging report** (quickslike `fb64316`): new `/reports/aging`, in the report switcher alongside the other 5. Buckets each posting to an A/R/A/P account by age (Current/1-30/31-60/61-90/90+), grouped by payee -- ages individual postings rather than matched invoice/payment pairs (no invoice-matching exists in this app, same simplification PlainGL itself makes), so per-payee Total is always the correct net balance even though individual bucket columns are an approximation. Also added a "Due date" field to the Journal Entry modal. Verified live end-to-end (created an A/P account, posted a bill, confirmed it aged correctly); bucket-boundary math checked separately.
 
 **Reviewed:** PlainGL (`/plaingl`, live at `localhost:3020`, v1.0.28) vs. New GL (`quickslike`).
 **Method:** Full source review of both codebases, plus a live click-through of every PlainGL tab against its seeded demo data.
@@ -25,7 +29,7 @@
 - **Postgres as source of truth** — with the `.bean` file as an export/interchange format, vs. PlainGL's flat file *being* the database.
 
 ### Real functional gaps
-1. **A/R and A/P aging** — PlainGL has Current/1-30/31-60/61-90/90+ aging buckets for both receivables and payables, plus a "needs attention" panel surfacing overdue amounts. New GL has an `ACCOUNTS_RECEIVABLE` category but no aging report or overdue tracking anywhere. **Unchanged from the older audit's known blocker**: no A/P account category exists at all, and transactions have no due-date field — this needs schema work before any UI.
+1. ~~A/R and A/P aging~~ **Done (Phase 2).** PlainGL has Current/1-30/31-60/61-90/90+ aging buckets for both receivables and payables, plus a "needs attention" panel surfacing overdue amounts. New GL now has an `ACCOUNTS_PAYABLE` category, an optional transaction due date, and a dedicated `/reports/aging` report bucketing outstanding A/R and A/P by payee. Not ported: PlainGL's dashboard "needs attention" panel (a separate dashboard-widget item, not tracked here).
 2. ~~Period comparison + columnar reporting isn't uniform.~~ **Correction (2026-08-20, after starting Phase 2): this was wrong, struck from the gap list.** Re-reading the original PlainGL audit closely, its own text says compare/columnar is scoped to "P&L and Balance Sheet only" in PlainGL itself — it was never applied to Trial Balance, P&L Detail, or By Payee there either. New GL already matches PlainGL's actual scope (both features exist on P&L + Balance Sheet). Structurally, forcing this onto the other three wouldn't even fit well: Trial Balance is a point-in-time Debit/Credit snapshot (not period activity), and P&L Detail is a raw transaction list — neither composes with "compare two periods" or "one column per period" the way P&L/Balance Sheet's rolled-up account totals do. No work needed here.
 3. **No split categorization during CSV/bank-feed review** — PlainGL lets you split a single imported row into multiple category legs with a live balance check, right in the review grid. New GL's `csv-review-table.tsx` still only allows one category per row. This is the exact item the old backlog called out as "left out of scope on purpose" under items #5/#6 ("CSV import row splitting") — still not built.
 4. **No bank-rule auto-post** — PlainGL rules can carry an auto-post flag plus a one-click "Auto-post N" bulk action. New GL's rules only ever *suggest* a category as an override you still accept manually per row.
@@ -48,7 +52,7 @@
 | Auth | SHA-256 "convenience lock" per entity | Real Supabase per-user auth | New GL ahead |
 | Themes | 5 cosmetic skins | Light/dark only | Minor gap |
 | Dashboard KPIs | Cash, A/R, A/P, net income, health check | Cash flow, bank balances, P&L snippet, expenses donut, AI usage | Different focus, no A/P/A/R |
-| A/R & A/P aging | Full aging buckets + "needs attention" panel | None | **Gap** (schema-blocked) |
+| A/R & A/P aging | Full aging buckets + "needs attention" panel | Aging buckets by payee (dedicated report); no dashboard "needs attention" panel | Mostly closed |
 | P&L / Balance Sheet | Hierarchical, drill-down | Hierarchical, drill-down | Parity |
 | Trial Balance | Basic only (no compare/columnar in PlainGL either) | Basic only | Parity |
 | P&L Detail | Basic only (no compare/columnar in PlainGL either) | Basic only | Parity |
@@ -83,7 +87,7 @@
 
 ### Phase 2 — Reporting parity
 ~~4. Uniform compare/columnar reporting~~ -- **dropped, see the correction above under "Real functional gaps": this was never actually a gap.**
-4. **A/R & A/P aging report** — the biggest real remaining gap in this phase. Data model first: add an `ACCOUNTS_PAYABLE` account category and an optional due-date field on transactions (falling back to the transaction date when unset, matching PlainGL), then build the aging report itself.
+4. ~~A/R & A/P aging report~~ ✅ **Done** -- see Phase 2 notes above.
 
 ### Phase 3 — Bank feed & rules depth
 *Moderate effort, touches the import/posting pipeline — sequenced last because correctness matters most here.*
