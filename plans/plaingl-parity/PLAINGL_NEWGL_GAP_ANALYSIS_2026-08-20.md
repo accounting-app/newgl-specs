@@ -26,7 +26,7 @@
 
 ### Real functional gaps
 1. **A/R and A/P aging** — PlainGL has Current/1-30/31-60/61-90/90+ aging buckets for both receivables and payables, plus a "needs attention" panel surfacing overdue amounts. New GL has an `ACCOUNTS_RECEIVABLE` category but no aging report or overdue tracking anywhere. **Unchanged from the older audit's known blocker**: no A/P account category exists at all, and transactions have no due-date field — this needs schema work before any UI.
-2. **Period comparison + columnar reporting isn't uniform.** New GL's `reports-page.tsx` (P&L, Balance Sheet) already has "Compare to" (prior year/custom) and "Display columns by" (month/quarter) — this is `PLAINGL_FEATURES_TO_IMPLEMENT.md` item #3, wired and done. PlainGL applies both to *all four* statement types through one shared engine. Trial Balance, P&L Detail, and By Payee were built afterward as separate items (#2, #4, #12) and never inherited #3's compare/columnar capability — this gap is the refinement item #17 in the old backlog ("Report columns/compare by dimension") was gesturing at, but scoped more precisely here: it's not about a new *dimension* (customer/vendor columns), it's that three existing reports simply don't have the compare/columnar controls the other two already have.
+2. ~~Period comparison + columnar reporting isn't uniform.~~ **Correction (2026-08-20, after starting Phase 2): this was wrong, struck from the gap list.** Re-reading the original PlainGL audit closely, its own text says compare/columnar is scoped to "P&L and Balance Sheet only" in PlainGL itself — it was never applied to Trial Balance, P&L Detail, or By Payee there either. New GL already matches PlainGL's actual scope (both features exist on P&L + Balance Sheet). Structurally, forcing this onto the other three wouldn't even fit well: Trial Balance is a point-in-time Debit/Credit snapshot (not period activity), and P&L Detail is a raw transaction list — neither composes with "compare two periods" or "one column per period" the way P&L/Balance Sheet's rolled-up account totals do. No work needed here.
 3. **No split categorization during CSV/bank-feed review** — PlainGL lets you split a single imported row into multiple category legs with a live balance check, right in the review grid. New GL's `csv-review-table.tsx` still only allows one category per row. This is the exact item the old backlog called out as "left out of scope on purpose" under items #5/#6 ("CSV import row splitting") — still not built.
 4. **No bank-rule auto-post** — PlainGL rules can carry an auto-post flag plus a one-click "Auto-post N" bulk action. New GL's rules only ever *suggest* a category as an override you still accept manually per row.
 5. **Bank rules match fewer condition types** — PlainGL rules scope by money-in/money-out direction and by a specific source account, and match against raw bank-memo text separately from the cleaned description. New GL only conditions on payee/memo/amount.
@@ -50,11 +50,11 @@
 | Dashboard KPIs | Cash, A/R, A/P, net income, health check | Cash flow, bank balances, P&L snippet, expenses donut, AI usage | Different focus, no A/P/A/R |
 | A/R & A/P aging | Full aging buckets + "needs attention" panel | None | **Gap** (schema-blocked) |
 | P&L / Balance Sheet | Hierarchical, drill-down | Hierarchical, drill-down | Parity |
-| Trial Balance | Has compare + columnar | Basic only | **Gap** |
-| P&L Detail | Has compare + columnar | Basic only | **Gap** |
+| Trial Balance | Basic only (no compare/columnar in PlainGL either) | Basic only | Parity |
+| P&L Detail | Basic only (no compare/columnar in PlainGL either) | Basic only | Parity |
 | By Payee report | Folded into Summary tab, not first-class | Dedicated report page | New GL ahead |
-| Period comparison (prior year/custom) | On all 4 statement types | Only P&L + Balance Sheet | **Gap** |
-| Columnar (month/quarter/week) | On all 4 statement types | Only P&L + Balance Sheet | **Gap** |
+| Period comparison (prior year/custom) | P&L + Balance Sheet only | P&L + Balance Sheet only | Parity |
+| Columnar (month/quarter/week) | P&L + Balance Sheet only | P&L + Balance Sheet only | Parity |
 | Print/PDF | Reports tab only | All 5 report pages | New GL ahead |
 | Register inline edit | Yes, plus single-line "Excel mode" | Yes (expanded-form style) | Parity (different UX) |
 | Splits in register | Yes | Yes | Parity |
@@ -82,9 +82,8 @@
 3. **True account deletion** — add a delete action alongside Archive, gated on zero activity.
 
 ### Phase 2 — Reporting parity
-*Moderate effort, reuses an existing pattern already built once.*
-4. **Uniform compare/columnar reporting** — port the "Compare to" + "Display columns by" controls from `reports-page.tsx` into Trial Balance, P&L Detail, and By Payee.
-5. **A/R & A/P aging report** — the biggest single gap, but plan the data model first: PlainGL ages off a `due` metadata field we don't currently store on transactions/invoices, and we have no A/P account category at all yet.
+~~4. Uniform compare/columnar reporting~~ -- **dropped, see the correction above under "Real functional gaps": this was never actually a gap.**
+4. **A/R & A/P aging report** — the biggest real remaining gap in this phase. Data model first: add an `ACCOUNTS_PAYABLE` account category and an optional due-date field on transactions (falling back to the transaction date when unset, matching PlainGL), then build the aging report itself.
 
 ### Phase 3 — Bank feed & rules depth
 *Moderate effort, touches the import/posting pipeline — sequenced last because correctness matters most here.*
