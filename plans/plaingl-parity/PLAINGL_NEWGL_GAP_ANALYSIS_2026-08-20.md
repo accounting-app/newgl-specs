@@ -1,6 +1,6 @@
 # PlainGL → New GL Feature Gap Analysis (2026-08-20)
 
-**Status:** Phases 1-2 done -- branch `23-issue_plaingl_fetaures_to_implement_dc` (quickslike, newgl-api). Phases 3-4 not started.
+**Status:** Phases 1-3 done -- branch `23-issue_plaingl_fetaures_to_implement_dc` (quickslike, newgl-api). Phase 4 not started.
 
 **Phase 1 notes:**
 - **Journal Entry CSV export** (quickslike `af72fdc`): downloads the on-screen entry as `journal-entry-<date>.csv`, mirroring the Blob-download pattern already used by Bank Rules' export.
@@ -89,11 +89,11 @@
 ~~4. Uniform compare/columnar reporting~~ -- **dropped, see the correction above under "Real functional gaps": this was never actually a gap.**
 4. ~~A/R & A/P aging report~~ ✅ **Done** -- see Phase 2 notes above.
 
-### Phase 3 — Bank feed & rules depth
+### Phase 3 — Bank feed & rules depth ✅ Done
 *Moderate effort, touches the import/posting pipeline — sequenced last because correctness matters most here.*
-6. **Split categorization in CSV review** — extend `ReviewRow` to hold multiple category legs instead of one, with a live balance-check UI like the register's existing split editor.
-7. **Bank rule auto-post** — add an `autoPost` flag to rules plus a bulk "Auto-post N" action.
-8. **Bank rule condition scope** — add direction (money in/out) and source-account scoping to rule conditions.
+6. ~~Split categorization in CSV review~~ ✅ **Done** -- `ReviewRow` holds multiple category legs (`categorySplits`), with a live balance-check UI mirroring the register's existing split editor. Backend generalizes single-category posting to the N=1 case of a split.
+7. ~~Bank rule auto-post~~ ✅ **Done** -- rules carry an `autoPost` flag (new `bank_rules.auto_post` column); the CSV review table shows an "Auto-post N" bulk action that posts matched rows immediately, bypassing the confirm dialog.
+8. ~~Bank rule condition scope~~ ✅ **Done** -- rules carry `direction` (`ANY`/`INFLOW`/`OUTFLOW`, matched against the row's amount sign) and `scopedAccountId` (restricts the rule to imports into one specific account); new `bank_rules.direction`/`scoped_account_id` columns.
 
 ### Phase 4 — Polish
 *Low priority, do opportunistically.*
