@@ -1,5 +1,7 @@
 # Features to Implement, Based on PlainGL
 
+**Status: all 18 items below are done.** For gaps found in a fresh re-audit done after this backlog was completed, see [`PLAINGL_NEWGL_GAP_ANALYSIS_2026-08-20.md`](./PLAINGL_NEWGL_GAP_ANALYSIS_2026-08-20.md).
+
 **Source:** `PLAINGL_NEWGL_FEATURE_COMPARISON.md` (the audit) — this document turns that audit's "Not Implemented" list into an actual build plan, with concrete detail pulled from PlainGL's own source (`plaingl/app/`), grouped by area, in priority order.
 
 **Scope reminder from the audit doc, worth repeating here:** the target is PlainGL's *accounting functionality*, built in **our own QBO-inspired UI** — icon rail, register chrome, report filter bar, Settings pattern. Nothing here means porting PlainGL's look, its 8-tab shell, or its component structure. Where a description below says "like PlainGL's X," that's describing the *capability*, not the UI to copy.
