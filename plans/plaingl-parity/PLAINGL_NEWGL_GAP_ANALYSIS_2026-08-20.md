@@ -1,6 +1,52 @@
 # PlainGL → New GL Feature Gap Analysis (2026-08-20)
 
-**Status:** Phases 1-4 done -- branch `23-issue_plaingl_fetaures_to_implement_dc` (quickslike, newgl-api). All originally scoped gaps closed; see "Remaining gaps" note at the end of this doc for what's still open.
+**Status:** Phases 1-4 done, plus a post-Phase-4 follow-up -- branch `23-issue_plaingl_fetaures_to_implement_dc` (quickslike, newgl-api). Every gap this doc ever identified is closed. See "Final Status" immediately below for the complete implemented/left-out breakdown and the parity verdict; the rest of this doc is the working log kept for history.
+
+---
+
+## Final Status (2026-08-21)
+
+### What was implemented
+
+Everything below shipped on `23-issue_plaingl_fetaures_to_implement_dc`, verified live in the browser (not just typechecked), with tests added where the surface already had test coverage precedent.
+
+| # | Feature | quickslike | newgl-api |
+|---|---|---|---|
+| 1 | Journal Entry CSV export | `af72fdc` | — |
+| 2 | Duplicate-detection deep link (clickable, not just text) | `7d64b86` | — |
+| 3 | True account deletion (Delete next to Archive, zero-activity only) | `cc6c25e` | `a0d4452` |
+| 4 | `ACCOUNTS_PAYABLE` category + transaction due date | `8d665a0` | `d9da374` |
+| 5 | A/R & A/P Aging report (`/reports/aging`) | `fb64316` | — |
+| 6 | Split categorization in CSV/bank-feed review (multi-leg, live balance check) | ✅ | ✅ (posting logic generalized to N-way) |
+| 7 | Bank rule auto-post (`autoPost` flag + "Auto-post N" bulk action) | ✅ | ✅ (`bank_rules.auto_post` column) |
+| 8 | Bank rule condition scope (direction: money in/out; scoped to one account) | ✅ | ✅ (`bank_rules.direction`/`scoped_account_id`) |
+| 9 | Company/entity deletion (`DELETE /api/companies/{name}`, primary-delete guard, active-ledger fallback) | ✅ | ✅ |
+| 10 | Additional visual themes: Modern, America 250, **and** Pretty (all 5 of PlainGL's skins) | ✅ | — |
+| 11 | Bank rules match raw bank-memo text separately from cleaned memo (`rawMemo` field) | ✅ | ✅ (schema) |
+| 12 | Dashboard "needs attention" panel (overdue A/R/A/P banner, linked to the aging report) | ✅ | — |
+| 13 | `/api/companies` route test coverage (list/create/switch/delete) | — | `tests/companies.test.ts` |
+
+Item 10 (themes) is the one case where the actual delivered scope exceeds what was originally planned: the plan only called for "additional visual themes" generically, and PlainGL's 5th skin ("Pretty," a gradient/backdrop-blur look) was initially written off as not implementable with this app's CSS-token system — a second look found a workable trick (a CSS variable can hold a full `background` value, gradients included, wherever the app already renders a token via the `background` shorthand) and it shipped anyway. See "What was left out" for the one piece of Pretty that still doesn't fully render, and why.
+
+### What was left out, and why
+
+| Item | Why it wasn't implemented |
+|---|---|
+| Backdrop-blur (frosted glass) on the Pretty theme's sidebar/header | Not a design decision — it's a build-tool limitation. The `backdrop-filter` CSS property is stripped from the compiled stylesheet by this project's Next.js/Tailwind/lightningcss pipeline (confirmed by inspecting the actual served CSS: only the `-webkit-`-prefixed declaration survives, the standard one is silently dropped). Chasing this further would mean changing build tooling for one cosmetic detail on one of five themes. The theme still ships and still looks distinctly different from the other four — it just renders as a plain translucent panel instead of a blurred one. |
+| Uniform compare/columnar reporting across all 4 statement types (Trial Balance, P&L Detail, By Payee, in addition to P&L/Balance Sheet) | Not a real gap, so nothing to implement — this was in the original audit but was **wrong**, caught and struck mid-Phase-2. PlainGL itself only supports compare/columnar on P&L and Balance Sheet; it was never on Trial Balance, P&L Detail, or By Payee in PlainGL either. New GL already matches PlainGL's actual scope. It also wouldn't fit structurally even if desired: Trial Balance is a point-in-time Debit/Credit snapshot and P&L Detail is a raw transaction list — neither composes with "compare two periods" or "one column per period" the way P&L/Balance Sheet's rolled-up account totals do. |
+| PlainGL's per-entity SHA-256 password ("convenience lock") | Never scoped as something to port — New GL already has real Supabase per-user authentication, which is strictly stronger. PlainGL's own code documents its password as not real access control. Copying it would be a downgrade, not parity. |
+
+No other item from any phase of this doc, or from the follow-up pass, was skipped or deferred.
+
+### Where New GL stands vs. PlainGL
+
+**Yes — every PlainGL feature this audit found has a New GL equivalent or better**, with one caveat: the frosted-glass visual effect on one of five themes doesn't fully render, for the build-tooling reason above. That is the only remaining PlainGL behavior without a byte-for-byte equivalent in New GL.
+
+Beyond parity, New GL is ahead of PlainGL in several areas that were never gaps to begin with (see "Where New GL is already ahead" below for details): real per-user authentication vs. PlainGL's documented-as-fake password lock, full ledger version history with restore vs. PlainGL's no-undo flat-file overwrites, AI-assisted CSV mapping and categorization (PlainGL has none), Postgres as the system of record with the `.bean` file as an export format rather than *being* the database, print/PDF coverage on all 5 reports vs. PlainGL's one tab, and a dedicated By Payee report vs. PlainGL folding it into Summary.
+
+This verdict is scoped to what a source-level review plus a live click-through of PlainGL v1.0.28 found as of 2026-08-20, re-verified through 2026-08-21. It is not a formal spec-by-spec certification — a future PlainGL release could add features this audit never saw.
+
+---
 
 **Phase 1 notes:**
 - **Journal Entry CSV export** (quickslike `af72fdc`): downloads the on-screen entry as `journal-entry-<date>.csv`, mirroring the Blob-download pattern already used by Bank Rules' export.
@@ -29,18 +75,18 @@
 - **Postgres as source of truth** — with the `.bean` file as an export/interchange format, vs. PlainGL's flat file *being* the database.
 
 ### Real functional gaps
-1. ~~A/R and A/P aging~~ **Done (Phase 2).** PlainGL has Current/1-30/31-60/61-90/90+ aging buckets for both receivables and payables, plus a "needs attention" panel surfacing overdue amounts. New GL now has an `ACCOUNTS_PAYABLE` category, an optional transaction due date, and a dedicated `/reports/aging` report bucketing outstanding A/R and A/P by payee. Not ported: PlainGL's dashboard "needs attention" panel (a separate dashboard-widget item, not tracked here).
+1. ~~A/R and A/P aging~~ ✅ **Done (Phase 2 + follow-up).** PlainGL has Current/1-30/31-60/61-90/90+ aging buckets for both receivables and payables, plus a "needs attention" panel surfacing overdue amounts. New GL now has an `ACCOUNTS_PAYABLE` category, an optional transaction due date, a dedicated `/reports/aging` report bucketing outstanding A/R and A/P by payee, and (added in the post-Phase-4 follow-up) a dashboard "needs attention" banner surfacing the same overdue totals.
 2. ~~Period comparison + columnar reporting isn't uniform.~~ **Correction (2026-08-20, after starting Phase 2): this was wrong, struck from the gap list.** Re-reading the original PlainGL audit closely, its own text says compare/columnar is scoped to "P&L and Balance Sheet only" in PlainGL itself — it was never applied to Trial Balance, P&L Detail, or By Payee there either. New GL already matches PlainGL's actual scope (both features exist on P&L + Balance Sheet). Structurally, forcing this onto the other three wouldn't even fit well: Trial Balance is a point-in-time Debit/Credit snapshot (not period activity), and P&L Detail is a raw transaction list — neither composes with "compare two periods" or "one column per period" the way P&L/Balance Sheet's rolled-up account totals do. No work needed here.
-3. **No split categorization during CSV/bank-feed review** — PlainGL lets you split a single imported row into multiple category legs with a live balance check, right in the review grid. New GL's `csv-review-table.tsx` still only allows one category per row. This is the exact item the old backlog called out as "left out of scope on purpose" under items #5/#6 ("CSV import row splitting") — still not built.
-4. **No bank-rule auto-post** — PlainGL rules can carry an auto-post flag plus a one-click "Auto-post N" bulk action. New GL's rules only ever *suggest* a category as an override you still accept manually per row.
-5. **Bank rules match fewer condition types** — PlainGL rules scope by money-in/money-out direction and by a specific source account, and match against raw bank-memo text separately from the cleaned description. New GL only conditions on payee/memo/amount.
-6. **Journal Entry has no export** — PlainGL can download the on-screen entry as CSV. New GL's `journal-entry-modal.tsx` only has paste-in import, no export.
-7. **Duplicate detection isn't a clickable link** — PlainGL's "already posted ↗" opens the exact matching transaction in a new tab. New GL just shows "Looks like a duplicate" as plain text.
+3. ~~No split categorization during CSV/bank-feed review~~ ✅ **Done (Phase 3).** `ReviewRow` holds multiple category legs with a live balance-check UI mirroring the register's existing split editor.
+4. ~~No bank-rule auto-post~~ ✅ **Done (Phase 3).** Rules carry an `autoPost` flag plus a one-click "Auto-post N" bulk action in the CSV review table.
+5. ~~Bank rules match fewer condition types~~ ✅ **Done (Phase 3 + follow-up).** Direction (money in/out) and account scope shipped in Phase 3; raw-bank-memo-vs-cleaned-memo matching shipped in the post-Phase-4 follow-up.
+6. ~~Journal Entry has no export~~ ✅ **Done (Phase 1).**
+7. ~~Duplicate detection isn't a clickable link~~ ✅ **Done (Phase 1).**
 
 ### Smaller / nice-to-have gaps
-8. **No true account deletion** — PlainGL allows deleting a zero-activity account; New GL only supports Archive.
-9. **Only 2 themes** (light/dark) vs. PlainGL's 5 cosmetic skins — pure polish, no functional impact.
-10. **No company/entity deletion in the UI** — `CompanyPicker` can create/switch but not delete.
+8. ~~No true account deletion~~ ✅ **Done (Phase 1).**
+9. ~~Only 2 themes~~ ✅ **Done (Phase 4 + follow-up).** All 5 of PlainGL's skins now exist.
+10. ~~No company/entity deletion in the UI~~ ✅ **Done (Phase 4).**
 
 ---
 
@@ -48,11 +94,11 @@
 
 | Feature | PlainGL | New GL (quickslike) | Status |
 |---|---|---|---|
-| Multi-company/entity management | Create (blank/template/duplicate), switch, delete, per-entity password | Create (blank/template/duplicate), switch | No delete-company UI |
+| Multi-company/entity management | Create (blank/template/duplicate), switch, delete, per-entity password | Create (blank/template/duplicate), switch, delete | Parity (password lock intentionally not ported — see "What was left out") |
 | Auth | SHA-256 "convenience lock" per entity | Real Supabase per-user auth | New GL ahead |
-| Themes | 5 cosmetic skins | Light/dark only | Minor gap |
-| Dashboard KPIs | Cash, A/R, A/P, net income, health check | Cash flow, bank balances, P&L snippet, expenses donut, AI usage | Different focus, no A/P/A/R |
-| A/R & A/P aging | Full aging buckets + "needs attention" panel | Aging buckets by payee (dedicated report); no dashboard "needs attention" panel | Mostly closed |
+| Themes | 5 cosmetic skins | 5 cosmetic skins (light/dark/modern/america250/pretty) | Parity (Pretty's backdrop-blur doesn't render — see "What was left out") |
+| Dashboard KPIs | Cash, A/R, A/P, net income, health check | Cash flow, bank balances, P&L snippet, expenses donut, AI usage, overdue-A/R/A/P "needs attention" banner | Parity |
+| A/R & A/P aging | Full aging buckets + "needs attention" panel | Aging buckets by payee (dedicated report) + dashboard "needs attention" banner | Parity |
 | P&L / Balance Sheet | Hierarchical, drill-down | Hierarchical, drill-down | Parity |
 | Trial Balance | Basic only (no compare/columnar in PlainGL either) | Basic only | Parity |
 | P&L Detail | Basic only (no compare/columnar in PlainGL either) | Basic only | Parity |
@@ -62,16 +108,16 @@
 | Print/PDF | Reports tab only | All 5 report pages | New GL ahead |
 | Register inline edit | Yes, plus single-line "Excel mode" | Yes (expanded-form style) | Parity (different UX) |
 | Splits in register | Yes | Yes | Parity |
-| Splits during CSV/bank-feed review | Yes, per-row, live balance check | One category per row only | **Gap** |
+| Splits during CSV/bank-feed review | Yes, per-row, live balance check | Yes, per-row, live balance check | Parity |
 | CSV import wizard | Basic paste + header detection | Header detection + AI-suggested mapping | New GL ahead (AI) |
 | AI categorization suggestions | None | Yes (AI suggest + BYOK key) | New GL ahead |
-| Bank rules — condition fields | Payee/memo/ref/bank-text/amount + direction + account scope | Payee/memo/amount only | **Gap** |
-| Bank rules — auto-post | Yes, one-click bulk | No — always manual review | **Gap** |
+| Bank rules — condition fields | Payee/memo/ref/bank-text/amount + direction + account scope | Payee/memo/raw-memo/amount + direction + account scope | Parity |
+| Bank rules — auto-post | Yes, one-click bulk | Yes, "Auto-post N" bulk action | Parity |
 | Bank rules — export/import JSON | Yes | Yes | Parity |
-| Duplicate detection | Flagged + clickable link to the exact duplicate | Flagged text only, no link | **Gap** |
+| Duplicate detection | Flagged + clickable link to the exact duplicate | Flagged + clickable link to the exact duplicate | Parity |
 | Journal Entry — import | Paste from Excel/CSV | Paste from Excel/CSV | Parity |
-| Journal Entry — export | CSV download of on-screen entry | None | **Gap** |
-| Chart of Accounts | Hierarchy, bulk import, delete-if-unused | Hierarchy, bulk import, archive only | **Gap** |
+| Journal Entry — export | CSV download of on-screen entry | CSV download of on-screen entry | Parity |
+| Chart of Accounts | Hierarchy, bulk import, delete-if-unused | Hierarchy, bulk import, delete (zero-activity) or archive | Parity |
 | Ledger file versioning | None — every save overwrites | Full version history + restore | New GL ahead |
 | Storage | Filesystem/Vercel Blob, flat file is the DB | Postgres (source of truth) + exportable `.bean` file | New GL ahead |
 
