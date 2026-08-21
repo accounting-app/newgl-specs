@@ -98,13 +98,20 @@
 ### Phase 4 — Polish ✅ Done
 *Low priority, do opportunistically.*
 9. ~~Company/entity deletion in the `CompanyPicker` UI~~ ✅ **Done** -- `DELETE /api/companies/{name}` refuses to delete the primary company and clears any membership's `active_ledger_name` pointing at the deleted one; the picker shows a hover-revealed trash icon with an inline "can't be undone" confirmation, and a full reload if the deleted company was active.
-10. ~~Additional visual themes~~ ✅ **Done** -- added "Modern" (violet accent) and "America 250" (navy/red) skins alongside light/dark, matching PlainGL's naming. Still 4 vs. PlainGL's 5 (no "Pretty" equivalent), but no longer just light/dark.
+10. ~~Additional visual themes~~ ✅ **Done** -- added "Modern" (violet), "America 250" (navy/red), and "Pretty" (teal/indigo gradient) skins alongside light/dark. New GL now has all 5 of PlainGL's cosmetic skins.
 
 **Rationale:** Phase 1 ships in isolation with immediate value. Phase 2 is the highest-impact functional gap but sequenced after the easier reporting-parity win since it reuses code that already exists. Phase 3 goes last because it's the riskiest — it touches the import/posting pipeline where correctness really matters. Phase 4 is deferred since neither item blocks real usage.
 
-## Remaining gaps (2026-08-21, after Phase 4)
+## Post-Phase-4 follow-up (2026-08-21)
 
-Everything scoped in this doc is done. What's still open, for anyone picking this back up:
-- **A 5th theme ("Pretty")** — PlainGL's teal/indigo gradient skin has no equivalent here; not scoped since it leans on backdrop-filter/gradient effects PlainGL's simpler CSS uses freely and this app's token system doesn't have a slot for.
-- **No automated tests for the `/api/companies` routes** (list/create/switch/delete) — verified live end-to-end this session, but there's no test file for this route group at all, unlike most other route groups.
+A second pass closed every item the first "Remaining gaps" note (below, kept for history) had flagged as either missing or skipped, plus one more found on re-inspection:
+- **Pretty theme** — added. Uses a CSS-var-holds-a-gradient trick for the page-wash background (works because `body` renders it via `background:`, not `background-color:`) and new `.btn-primary`/`.avatar-circle`/`.ui-card` marker classes for the gradient buttons/avatar and elevated-card hover lift (`bg-[var(...)]` compiles to `background-color`, which can't hold a gradient, so those needed a different hook).
+- **`/api/companies` test coverage** — added `tests/companies.test.ts` (list/create/switch/delete, including the primary-delete guard and active-ledger fallback).
+- **Bank rules raw-memo matching** — added a `rawMemo` condition field, matched against a CSV row's `rawDescription` independently of the cleaned `memo`, closing the last piece of gap #5 that direction/account scoping (Phase 3) hadn't covered.
+- **Dashboard "needs attention" panel** (not previously listed as its own gap, found while reviewing the aging report against PlainGL again) — added an amber banner on the dashboard summarizing overdue A/R and A/P, shown only when something is actually overdue, linking to `/reports/aging`.
+
+## Remaining gaps (2026-08-21, superseded by the follow-up above where noted)
+
+- ~~A 5th theme ("Pretty")~~ — done, see above.
+- ~~No automated tests for the `/api/companies` routes~~ — done, see above.
 - Nothing else identified as missing relative to PlainGL at this time; a fresh feature audit would be needed to catch drift since 2026-08-20.
