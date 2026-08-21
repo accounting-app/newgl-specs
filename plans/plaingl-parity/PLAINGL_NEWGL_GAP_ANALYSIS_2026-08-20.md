@@ -1,6 +1,6 @@
 # PlainGL → New GL Feature Gap Analysis (2026-08-20)
 
-**Status:** Phases 1-3 done -- branch `23-issue_plaingl_fetaures_to_implement_dc` (quickslike, newgl-api). Phase 4 not started.
+**Status:** Phases 1-4 done -- branch `23-issue_plaingl_fetaures_to_implement_dc` (quickslike, newgl-api). All originally scoped gaps closed; see "Remaining gaps" note at the end of this doc for what's still open.
 
 **Phase 1 notes:**
 - **Journal Entry CSV export** (quickslike `af72fdc`): downloads the on-screen entry as `journal-entry-<date>.csv`, mirroring the Blob-download pattern already used by Bank Rules' export.
@@ -95,9 +95,16 @@
 7. ~~Bank rule auto-post~~ ✅ **Done** -- rules carry an `autoPost` flag (new `bank_rules.auto_post` column); the CSV review table shows an "Auto-post N" bulk action that posts matched rows immediately, bypassing the confirm dialog.
 8. ~~Bank rule condition scope~~ ✅ **Done** -- rules carry `direction` (`ANY`/`INFLOW`/`OUTFLOW`, matched against the row's amount sign) and `scopedAccountId` (restricts the rule to imports into one specific account); new `bank_rules.direction`/`scoped_account_id` columns.
 
-### Phase 4 — Polish
+### Phase 4 — Polish ✅ Done
 *Low priority, do opportunistically.*
-9. Company/entity deletion in the `CompanyPicker` UI (needs careful confirmation UX given data-loss risk).
-10. Additional visual themes.
+9. ~~Company/entity deletion in the `CompanyPicker` UI~~ ✅ **Done** -- `DELETE /api/companies/{name}` refuses to delete the primary company and clears any membership's `active_ledger_name` pointing at the deleted one; the picker shows a hover-revealed trash icon with an inline "can't be undone" confirmation, and a full reload if the deleted company was active.
+10. ~~Additional visual themes~~ ✅ **Done** -- added "Modern" (violet accent) and "America 250" (navy/red) skins alongside light/dark, matching PlainGL's naming. Still 4 vs. PlainGL's 5 (no "Pretty" equivalent), but no longer just light/dark.
 
 **Rationale:** Phase 1 ships in isolation with immediate value. Phase 2 is the highest-impact functional gap but sequenced after the easier reporting-parity win since it reuses code that already exists. Phase 3 goes last because it's the riskiest — it touches the import/posting pipeline where correctness really matters. Phase 4 is deferred since neither item blocks real usage.
+
+## Remaining gaps (2026-08-21, after Phase 4)
+
+Everything scoped in this doc is done. What's still open, for anyone picking this back up:
+- **A 5th theme ("Pretty")** — PlainGL's teal/indigo gradient skin has no equivalent here; not scoped since it leans on backdrop-filter/gradient effects PlainGL's simpler CSS uses freely and this app's token system doesn't have a slot for.
+- **No automated tests for the `/api/companies` routes** (list/create/switch/delete) — verified live end-to-end this session, but there's no test file for this route group at all, unlike most other route groups.
+- Nothing else identified as missing relative to PlainGL at this time; a fresh feature audit would be needed to catch drift since 2026-08-20.
