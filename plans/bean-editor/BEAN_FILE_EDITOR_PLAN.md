@@ -1,6 +1,6 @@
 # In-app .bean File Editor & Linter
 
-**Status:** Planning -- not started.
+**Status:** ✅ Done -- `quickslike` branch `24-issue_bean_file_editor_dc`. See "Implementation notes" after the Approach section for how this differs from the original plan (a better community package was found mid-implementation).
 
 ## Context
 
@@ -66,6 +66,14 @@ A pure-TypeScript module, no DOM/React dependency, so it's usable both by CodeMi
 - **CodeMirror theme**: build a small custom CodeMirror theme mapping to this app's existing `--color-*` CSS variables (same var-driven approach the 5 app themes already use) rather than pulling in a prebuilt CodeMirror theme package, so the editor automatically matches whichever of the 5 app themes (light/dark/modern/america250/pretty) is active.
 - **Full-file only, no date-range editing**: unlike download (which supports `from`/`to` query params for a scoped export), the editor always loads and saves the entire file -- partial-file editing would risk silently dropping content outside the selected range on save, which is a correctness risk not worth taking for an editing feature.
 
+## Implementation notes (2026-08-24, after building this)
+
+- **Section 1's "hand-roll a StreamLanguage tokenizer" was superseded before any hand-rolling happened.** A quick npm search (the plan's own "worth a quick license/dependency-fit check" note) turned up [`lezer-beancount`](https://github.com/robinvdvleuten/lezer-beancount): a complete, MIT-licensed Lezer grammar for Beancount, published for CodeMirror 6 specifically (its only peer deps are `@codemirror/language`, `@lezer/highlight`, `@lezer/lr`), covering every directive in the cheat sheet plus a few more (`query`, `custom`, `include`, `plugin`). Verified directly (parsed a valid ledger -> zero error nodes; parsed a deliberately corrupted one -> exact error-node ranges) before adopting it. This is a strictly better foundation than a hand-rolled grammar: real Lezer parse-error recovery instead of ad hoc line-regex rules, and correct highlight tags shipped by the package itself (confirmed via `highlightTree` -- no manual `styleTags()` mapping needed). `quickslike/src/lib/beancount/language.ts` just wires it into an `LRLanguage`; there is no custom tokenizer.
+- **The linter (`quickslike/src/lib/beancount/lint.ts`) is a thin tree-walk**, not a hand-written rule table: it walks the Lezer syntax tree for `node.type.isError` and reports each as a diagnostic. This covers the same "syntax only" scope the plan called for (malformed dates, bad directive keywords, malformed amounts/currencies, unclosed strings, mismatched cost/price braces, misplaced metadata) for free, since those are exactly what makes the grammar's parser emit an error node -- no rule needed per error class.
+- **Editor colors**: three new `--bean-accent-{1,2,3}` CSS tokens were added to all 5 theme blocks in `tailwind-overrides.css` (`--bean-accent-1` tracks each theme's own brand accent for keywords; `--bean-accent-2`/`--bean-accent-3` stay a fixed green/amber pair for strings/numbers across every light-background theme) rather than the plan's more open-ended "small custom CodeMirror theme" -- same var-driven mechanism, just following the app's existing per-theme-token convention exactly instead of inventing a separate scheme.
+- Everything else (the Edit tab placement, reusing the existing upload endpoint as-is, the unsaved-changes guard, full-file-only editing, the `source: "upload"` label) shipped exactly as planned.
+- Verified live: syntax highlighting across all 5 themes, a live error appearing/clearing as a date is corrupted/fixed with Save disabling/re-enabling in step, a real save going through the upload endpoint and appearing in the shared version-history list, and the unsaved-changes guard blocking a tab switch.
+
 ## Open questions for a future iteration (not blocking this plan)
 
 - Should large ledgers (multi-thousand-line `.bean` files) get any special handling (virtualized rendering, lazy diagnostics) or is CodeMirror 6's native performance sufficient at this app's realistic file sizes? Worth a quick check against the largest real tenant ledger before implementation, not worth speculating about now.
@@ -81,12 +89,16 @@ A pure-TypeScript module, no DOM/React dependency, so it's usable both by CodeMi
 ## Critical files
 
 - `newgl-specs/plans/bean-editor/BEAN_FILE_EDITOR_PLAN.md` -- this doc
-- `quickslike/src/app/(app)/all-apps/ledger/page.tsx` -- gains the tab switcher and the new Edit tab
-- `quickslike/src/lib/beancount/lint.ts` (new) -- the tokenizer + syntax linter, pure TS
-- `quickslike/src/components/bean-editor/bean-editor.tsx` (new) -- the CodeMirror React wrapper
-- `newgl-api/src/infra/beancount/parser.ts` -- read-only reference for this plan (its line-grammar shape informs the client tokenizer); not modified by this plan
-- `newgl-api/src/http/routes/ledgers.ts` -- the existing upload/download/versions/restore endpoints this plan reuses as-is; not modified by this plan
-- `Assets/Beancount - Syntax Cheat Sheet.pdf` -- the syntax reference this plan's lint rules are drawn from
+- `quickslike/src/app/(app)/all-apps/ledger/page.tsx` -- gained the tab switcher and the new Edit tab
+- `quickslike/src/components/settings/ledger-edit-tab.tsx` -- the Edit tab: load/save wiring, dirty-state tracking, the error-count/Save-disabled UI
+- `quickslike/src/components/bean-editor/bean-editor.tsx` -- the CodeMirror React wrapper (ref-based mount/teardown)
+- `quickslike/src/lib/beancount/language.ts` -- wires the `lezer-beancount` grammar into a CodeMirror `LRLanguage`
+- `quickslike/src/lib/beancount/lint.ts` -- the syntax-error tree-walk (`@codemirror/lint` linter + a plain `countBeancountErrors` used by the Save button)
+- `quickslike/src/lib/beancount/theme.ts` -- editor theme + highlight-style mapping onto the app's CSS tokens
+- `quickslike/src/styles/tailwind-overrides.css` -- gained `--bean-accent-{1,2,3}` in all 5 theme blocks
+- `newgl-api/src/infra/beancount/parser.ts` -- read-only reference during planning; not modified
+- `newgl-api/src/http/routes/ledgers.ts` -- the existing upload/download/versions/restore endpoints, reused as-is; not modified
+- `Assets/Beancount - Syntax Cheat Sheet.pdf` -- the syntax reference this plan was scoped against
 
 ## Verification
 

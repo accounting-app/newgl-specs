@@ -17,7 +17,7 @@ Read in this order:
 
 ## [`bean-editor/`](./bean-editor/) — In-app .bean file editor & linter
 
-- [`BEAN_FILE_EDITOR_PLAN.md`](./bean-editor/BEAN_FILE_EDITOR_PLAN.md) — adds a CodeMirror-based editor with live syntax-error linting to the existing Ledger settings page, so `.bean` files can be edited in the browser instead of download-edit-reupload. **Status: planning, not started.**
+- [`BEAN_FILE_EDITOR_PLAN.md`](./bean-editor/BEAN_FILE_EDITOR_PLAN.md) — adds a CodeMirror-based editor with live syntax-error linting to the existing Ledger settings page, so `.bean` files can be edited in the browser instead of download-edit-reupload. **Status: complete.**
 
 ## [`import-wizard/`](./import-wizard/) — Bank transaction import wizard
 
