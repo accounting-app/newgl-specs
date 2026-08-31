@@ -19,6 +19,10 @@ Read in this order:
 
 - [`BEAN_FILE_EDITOR_PLAN.md`](./bean-editor/BEAN_FILE_EDITOR_PLAN.md) — adds a CodeMirror-based editor with live syntax-error linting to the existing Ledger settings page, so `.bean` files can be edited in the browser instead of download-edit-reupload. **Status: complete.**
 
+## [`quality-audit/`](./quality-audit/) — Automated quality/accessibility audits
+
+- [`QUALITY_AUDIT_2026-08.md`](./quality-audit/QUALITY_AUDIT_2026-08.md) — a react-doctor + impeccable audit-and-fix pass across Ledger settings, global nav, Reports, both modal patterns, the All Apps flyout, the register cluster, and a `?next=` open-redirect fix, plus a related loading-state/skeleton pass (header layout shift on company/user load, independent per-section dashboard loading). **Status: complete** for its stated scope; see the doc's own "Deferred, on purpose" section for what was consciously left out and why.
+
 ## [`import-wizard/`](./import-wizard/) — Bank transaction import wizard
 
 - [`Plan-v1.md`](./import-wizard/Plan-v1.md) — the current design/architecture plan for a 4-step import wizard (CSV/OFX/PDF/image upload → preview → account mapping → commit). **Read this one.**
