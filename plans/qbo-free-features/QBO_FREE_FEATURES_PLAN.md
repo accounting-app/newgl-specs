@@ -23,7 +23,15 @@ Transcribed from the screenshots, free items only (💎 = premium, excluded):
 2. **Phased, not all-at-once.** Phase 1 (this plan) covers **Accounting** + **Expenses & Bills** -- both extend the app's existing accounting domain. **Sales & Get Paid**, **Customer Hub**, and **Team** are named as Phase 2/3 but not designed yet.
 3. **Accounting ▸ Bank transactions and Reconcile already exist** (the Register page, its reconcile-status cycling, and the CSV import flow) and should be left as-is, not rebuilt -- Accounting's job in this plan is to add the two genuinely new items (Receipts, plus a Chart of Accounts link) and route "Bank transactions"/"Reconcile" into what's already there.
 
-## Phase 1 scope
+## Phase 1 revised scope (UI first, no backend yet)
+
+Per follow-up direction: Phase 1 is now **UI-only** -- get every screen in the Accounting and Expenses & Bills categories built, navigable, and feeling real, before any Postgres/API work happens. Concretely:
+
+- Every screen gets a proper **empty state** (e.g. "No vendors yet" + an Add button), not a placeholder/"coming soon" page.
+- Add/edit/delete work against **local-only state** (React state persisted to `localStorage` per browser, not a server) -- interactive enough to demo and review, explicitly not real data. Each local store is written so swapping it for real API calls later is a contained change (a `useLocalCollection`-style hook, not data access scattered through each screen).
+- The Postgres schema / API routes described below under each item are the **Phase 1.5 target**, written down now so the local-state shape matches what the real backend will look like, but not built yet.
+
+## Phase 1 scope (data-model target for Phase 1.5)
 
 ### Accounting ▸
 
