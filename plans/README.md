@@ -23,6 +23,10 @@ Read in this order:
 
 - [`QUALITY_AUDIT_2026-08.md`](./quality-audit/QUALITY_AUDIT_2026-08.md) — a react-doctor + impeccable audit-and-fix pass across Ledger settings, global nav, Reports, both modal patterns, the All Apps flyout, the register cluster, and a `?next=` open-redirect fix, plus a related loading-state/skeleton pass (header layout shift on company/user load, independent per-section dashboard loading). **Status: complete** for its stated scope; see the doc's own "Deferred, on purpose" section for what was consciously left out and why.
 
+## [`qbo-free-features/`](./qbo-free-features/) — QuickBooks Online free-tier features → All Apps
+
+- [`QBO_FREE_FEATURES_PLAN.md`](./qbo-free-features/QBO_FREE_FEATURES_PLAN.md) — scoped from QBO's own All Apps flyout, free (non-diamond) items only. Phase 1: Accounting (mostly routing to the existing Register/reconcile, plus new Receipts) and Expenses & Bills (new Vendors/Bills/Mileage/Contractors/1099s domain, Postgres-only alongside the beancount ledger, a Bill becomes a real posted transaction once paid). Phase 2/3 (Sales & Get Paid, Customer Hub, Team) named but not designed. Lending and Business Tax explicitly out of scope -- QBO's own regulated financial products. **Status: planning, has open questions before implementation starts.**
+
 ## [`import-wizard/`](./import-wizard/) — Bank transaction import wizard
 
 - [`Plan-v1.md`](./import-wizard/Plan-v1.md) — the current design/architecture plan for a 4-step import wizard (CSV/OFX/PDF/image upload → preview → account mapping → commit). **Read this one.**
