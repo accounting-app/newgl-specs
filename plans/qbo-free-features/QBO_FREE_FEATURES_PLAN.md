@@ -65,6 +65,7 @@ This is the phase's real work -- five new concepts, none of which exist today. B
 - **Lending** (Term loan, Line of credit, Credit cards, QuickBooks Checking) -- QBO's own embedded-finance product. No plan; revisit only if there's ever a real path to actual lending infrastructure or a partner integration.
 - **Business Tax** (Tax summary, Year-end filing) -- real tax e-filing needs tax-prep licensing/integration (e.g. a provider like Column Tax or Track1099 for the 1099 side specifically, which is more tractable than full e-filing). Revisit if/when a filing provider integration is actually planned.
 - **Marketing, Payroll, Time, Inventory, Projects, Sales Tax** -- entirely premium in QBO itself, so out of scope by the "free only" rule, not a separate decision.
+- **Online invoice payments / Payouts** (Sales & Get Paid ▸ Payouts, "Get paid online" actions) -- needs a real payments processor (e.g. Stripe Connect) wired up: a merchant account, API keys, and business verification, none of which exist yet. The UI already has an honest "not connected yet" placeholder (`quickslike/src/components/sales/payouts-page.tsx` and the disabled actions on `sales/overview-page.tsx`) rather than a fake stand-in. Revisit once a processor account + keys are available to integrate against.
 
 ## Phase 2/3 (named only, not designed yet)
 
